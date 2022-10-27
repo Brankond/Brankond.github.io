@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js"
+        integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT"
+        crossorigin="anonymous"></script>
+        <script src="js/book.js"></script>
+        <script src="js/script.js"></script>    
+    <link rel="stylesheet" href="css/book.css">
+    <link rel="stylesheet" href="css/calendar.css">
+    <title>Aurora Medical</title>
+    <link rel="icon"
+        href="https://i.natgeofe.com/n/63527567-9a8b-4b08-819d-a6142fb2b350/aurora-kirkjufell-iceland_4x3.jpg"
+        type="image/x-icon">
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+
+
+    <style>
+        ::selection {
+            color: white;
+            background: #FEBB60;
+        }
+
+
+
+
+        .row {
+            width: 100%;
+        }
+
+        body {
+            background-color: white;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+
+        }
+
+
+        #fixedheader {
+            position: fixed;
+        }
+
+        .header {
+            margin: 0;
+            z-index: 100;
+            width: 100%;
+            padding: 0.5%;
+
+            color: white;
+            background-color: #41B188;
+
+            transition-duration: 0.4s;
+        }
+
+
+        .navbtn {
+            font-family: 'Playfair Display', serif;
+            font-weight: 400;
+            text-decoration: none;
+            color: white;
+            cursor: pointer;
+            font-size: 1.2vw;
+
+        }
+
+
+        .navbox {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+
+        }
+
+        .navbtn:hover {
+            color: #FEBB60;
+
+        }
+
+        .logo {
+            font-family: 'Playfair Display', serif;
+            font-weight: 400;
+            text-decoration: none;
+            color: white;
+            font-size: 2.7vw;
+            transition: all 0.3s linear;
+            white-space: nowrap;
+
+        }
+
+        .logo:hover {
+            animation: logoanimation 5s linear infinite;
+
+        }
+
+        @keyframes logoanimation {
+            0% {
+                color: white;
+            }
+
+            25% {
+                color: purple;
+            }
+
+            50% {
+                color: blue;
+            }
+
+            75% {
+                color: cornflowerblue;
+            }
+
+            100% {
+                color: white;
+            }
+
+        }
+
+
+        .hover-underline-animation {
+            display: inline-block;
+            position: relative;
+            color: white;
+        }
+
+        .hover-underline-animation:after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            transform: scaleX(0);
+            height: 2px;
+            bottom: 0;
+            left: 0;
+            background-color: #FEBB60;
+            transform-origin: bottom right;
+            transition: transform 0.25s ease-out;
+        }
+
+        .hover-underline-animation:hover:after {
+            transform: scaleX(1);
+            transform-origin: bottom left;
+        }
+
+        .bookbtn {
+            font-family: 'Playfair Display', serif;
+            font-weight: 600;
+            border: none;
+            border-radius: 3px;
+            padding: 0.3vw 0.7vw;
+            white-space: nowrap;
+            font-size: 1.2vw;
+            transition: 0.25s ease-in-out;
+
+            color: white;
+            background-color: #FEBB60;
+        }
+
+        .bookbtn:hover {
+            color: #FEBB60;
+            background-color: white;
+        }
+
+
+        .hero {
+            background-image: url("https://media.istockphoto.com/photos/northern-lights-green-aurora-borealis-over-alesund-norway-picture-id626429848?k=20&m=626429848&s=612x612&w=0&h=lTmLenUgbPtFjY_M2zquFR_7uVaZuMUHIAdyQr9csjk=");
+            background-repeat: no-repeat;
+            background-size: cover;
+
+            background-color: red;
+
+            width: 100%;
+            margin: 0;
+            height: 45vw;
+            color: white;
+        }
+
+        .herotitle {
+            font-family: 'Playfair Display', serif;
+            font-size: 128px;
+            transform: translateY(30%);
+            font-size: 10vw;
+        }
+
+        .herotext {
+            font-family: 'Noto Sans', sans-serif;
+            font-weight: 300;
+            width: 40vw;
+            margin: 5% 0 0 30%;
+            padding: 0;
+            font-size: 1vw;
+            height: fit-content;
+        }
+
+        img {
+            object-fit: cover;
+        }
+
+        .herobtn {
+            font-size: 2.5vw;
+        }
+
+        h2 {
+            text-align: left;
+            margin: 5%;
+        }
+
+        h3 {
+            text-align: left;
+            margin: 3%;
+        }
+
+        .checkout-border {
+            border-style: solid;
+            border-color: grey;
+            border-width: thin;
+        }
+
+        .form-control {
+            margin: 2%;
+        }
+
+        .form-select {
+            margin: 2%;
+        }
+
+
+        .form-label {
+            text-align: left;
+            float: left;
+            margin-left: 3%;
+            margin-top: 2%;
+        }
+
+
+        @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@100;200;300;400;500;600;700&display=swap');
+
+:root {
+    --calendar-bg-color: #262829;
+    --calendar-font-color: #FFF;
+    --weekdays-border-bottom-color: #404040;
+    --calendar-date-hover-color: #505050;
+    --calendar-current-date-color: #1b1f21;
+    --calendar-today-color: linear-gradient(to bottom, #03a9f4, #2196f3);
+    --calendar-today-innerborder-color: transparent;
+    --calendar-nextprev-bg-color: transparent;
+    --next-prev-arrow-color : #FFF;
+    --calendar-border-radius: 16px;
+    --calendar-prevnext-date-color: #484848
+}
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+.calendar {
+    font-family: 'IBM Plex Sans', sans-serif;
+    position: relative;
+    max-width: 400px; /*change as per your design need */
+    min-width: 320px;
+    background: var(--calendar-bg-color);
+    color: var(--calendar-font-color);
+    margin: 20px auto;
+    box-sizing: border-box;
+    overflow: hidden;
+    font-weight: normal;
+    border-radius: var(--calendar-border-radius);
+}
+
+.calendar-inner {
+    padding: 10px 10px;
+}
+
+.calendar .calendar-inner .calendar-body {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    text-align: center;
+}
+
+.calendar .calendar-inner .calendar-body div {
+    padding: 4px;
+    min-height: 30px;
+    line-height: 30px;
+    border: 1px solid transparent;
+    margin: 10px 2px 0px;
+}
+
+.calendar .calendar-inner .calendar-body div:nth-child(-n+7) {
+    border: 1px solid transparent;
+    border-bottom: 1px solid var(--weekdays-border-bottom-color);
+}
+
+.calendar .calendar-inner .calendar-body div:nth-child(-n+7):hover {
+    border: 1px solid transparent;
+    border-bottom: 1px solid var(--weekdays-border-bottom-color);
+}
+
+.calendar .calendar-inner .calendar-body div>a {
+    color: var(--calendar-font-color);
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+}
+
+.calendar .calendar-inner .calendar-body div:hover {
+    border: 1px solid var(--calendar-date-hover-color);
+    border-radius: 4px;
+}
+
+.calendar .calendar-inner .calendar-body div.empty-dates:hover {
+    border: 1px solid transparent;
+}
+
+.calendar .calendar-inner .calendar-controls {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.calendar .calendar-inner .calendar-today-date {
+    display: grid;
+    text-align: center;
+    cursor: pointer;
+    margin: 3px 0px;
+    background: var(--calendar-current-date-color);
+    padding: 8px 0px;
+    border-radius: 10px;
+    width: 80%;
+    margin: auto;
+}
+
+.calendar .calendar-inner .calendar-controls .calendar-year-month {
+    display: flex;
+    min-width: 100px;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.calendar .calendar-inner .calendar-controls .calendar-next {
+    text-align: right;
+}
+
+.calendar .calendar-inner .calendar-controls .calendar-year-month .calendar-year-label,
+.calendar .calendar-inner .calendar-controls .calendar-year-month .calendar-month-label {
+    font-weight: 500;
+    font-size: 20px;
+}
+
+.calendar .calendar-inner .calendar-body .calendar-today {
+    background: var(--calendar-today-color);
+    border-radius: 4px;
+}
+
+.calendar .calendar-inner .calendar-body .calendar-today:hover {
+    border: 1px solid transparent;
+}
+
+.calendar .calendar-inner .calendar-body .calendar-today a {
+    outline: 2px solid var(--calendar-today-innerborder-color);
+}
+
+.calendar .calendar-inner .calendar-controls .calendar-next a,
+.calendar .calendar-inner .calendar-controls .calendar-prev a {
+    color: var(--calendar-font-color);
+    font-family: arial, consolas, sans-serif;
+    font-size: 26px;
+    text-decoration: none;
+    padding: 4px 12px;
+    display: inline-block;
+    background: var(--calendar-nextprev-bg-color);
+    margin: 10px 0 10px 0;
+}
+
+.calendar .calendar-inner .calendar-controls .calendar-next a svg,
+.calendar .calendar-inner .calendar-controls .calendar-prev a svg {
+    height: 20px;
+    width: 20px;
+}
+
+.calendar .calendar-inner .calendar-controls .calendar-next a svg path,
+.calendar .calendar-inner .calendar-controls .calendar-prev a svg path{
+    fill: var(--next-prev-arrow-color);
+}
+
+.calendar .calendar-inner .calendar-body .prev-dates,
+.calendar .calendar-inner .calendar-body .next-dates {
+    color: var(--calendar-prevnext-date-color);
+}
+
+.calendar .calendar-inner .calendar-body .prev-dates:hover,
+.calendar .calendar-inner .calendar-body .next-dates:hover {
+  border: 1px solid transparent;
+  pointer-events: none;
+}
+    </style>
+</head>
+
+<body>
+    <div id="fixedheader" class="row header">
+        <div class="col-3 navbox"><a href="home.html" class="logo">Aurora Medical</a></div>
+        <div class="col-3"></div>
+        <div class="col navbox "><a href="#" class="navbtn hover-underline-animation">Products</a></div>
+        <div class="col navbox"><a href="#" class="navbtn hover-underline-animation">FAQ</a></div>
+        <div class="col navbox"><a href="#" class="navbtn hover-underline-animation">Contact Us</a></div>
+        <div class="col navbox"><a href="#" class="navbtn hover-underline-animation">News</a></div>
+        <div class="col navbox"><a href="#"><button href="#" class="bookbtn">Book Now</button></a></div>
+
+    </div>
+
+    <!--This is a duplicate header to create the spacing between the top of the screen and the next element, leave it as part of the header-->
+    <div class="row header">
+        <div class="col-3 navbox"><a href="home.html" class="logo">Aurora Medical</a></div>
+        <div class="col-2"></div>
+        <div class="col navbox "><a href="#" class="navbtn hover-underline-animation">Products</a></div>
+        <div class="col navbox"><a href="#" class="navbtn hover-underline-animation">FAQ</a></div>
+        <div class="col navbox"><a href="#" class="navbtn hover-underline-animation">Contact Us</a></div>
+        <div class="col navbox"><a href="#" class="navbtn hover-underline-animation">News</a></div>
+        <div class="col navbox"><a href="#"><button href="#" class="bookbtn">Book Now</button></a></div>
+        <div class="col"></div>
+    </div>
+
+    <div class="container text-center">
+        <!-- Stack the columns on mobile by making one full-width and the other half-width -->
+        <div class="row">
+            <div class="col-md-8">
+                <h2>Checkout Information</h2>
+                <div class="checkout-border">
+                    <div class="col-md-8">
+                        <label for="exampleFormControlInput1" class="form-label">Email address</label>
+                        <input type="email" class="form-control" id="exampleFormControlInput1"
+                            placeholder="name@example.com">
+                    </div>
+                    <div>
+                        <hr>
+                    </div>
+                    <h3> Billing Address</h3>
+                    <div class="col-md-8">
+                        <label for="exampleFormControlInput1" class="form-label">Full Name</label>
+                        <input class="form-control" type="text" placeholder="Default input"
+                            aria-label="default input example">
+                        <label for="exampleFormControlInput1" class="form-label">Street Address</label>
+                        <input class="form-control" type="text" placeholder="Default input"
+                            aria-label="default input example">
+                        <input class="form-control" type="text" placeholder="Default input"
+                            aria-label="default input example">
+                        <label for="exampleFormControlInput1" class="form-label">Postal Code</label>
+                        <input class="form-control" type="text" placeholder="Default input"
+                            aria-label="default input example">
+                        <label for="exampleFormControlInput1" class="form-label">City</label>
+                        <input class="form-control" type="text" placeholder="Default input"
+                            aria-label="default input example">
+                        <label for="exampleFormControlInput1" class="form-label">Country</label>
+                        <select class="form-select" aria-label="Default select example">
+                            <option selected>Open this select menu</option>
+                            <option value="1">One</option>
+                            <option value="2">Two</option>
+                            <option value="3">Three</option>
+                        </select>
+                        <label for="exampleFormControlInput1" class="form-label">Phone Number</label>
+                        <input class="form-control" type="text" placeholder="Default input"
+                            aria-label="default input example">
+                        
+                        <div>
+                        <script src="js/script.js"></script>
+                        <div class="calendar"></div>
+                        </div>
+
+
+                    </div>
+                    
+
+                </div>
+
+            </div>
+            <div class="col-6 col-md-4">
+                <div class="checkout-border">
+                    <h2>Order Summary</h2>
+                    <hr>
+
+
+                </div>
+            </div>
+        </div>
+
+
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+            crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+            integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+            crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.min.js"
+            integrity="sha384-IDwe1+LCz02ROU9k972gdyvl+AESN10+x7tBKgc9I5HFtuNz0wWnPclzo6p9vxnk"
+            crossorigin="anonymous"></script>
+</body>
+
+</html>
