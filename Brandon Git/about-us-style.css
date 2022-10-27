@@ -1,0 +1,24 @@
+/* style for about us page */
+section {
+    height: 700px;
+}
+
+.hero-banner {
+    background-image: url('./about-us-hero-banner-image.jpeg');
+}
+
+.hero-banner h1, .hero-banner p, .our-customers h1, .our-customers p {
+    color: white;
+}
+
+.motivation-section {
+    background-image: url('./about-us-hero-banner-image.jpeg');
+}
+
+.motivation-section h1, .motivation-section p {
+    color: #112F24;
+}
+
+.our-customers {
+    background-image: url('./about-us-hero-banner-image.jpeg');
+}
