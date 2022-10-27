@@ -1,0 +1,183 @@
+::selection {
+    color: white;
+    background: #FEBB60;
+}
+
+
+
+
+.row {
+    width: 100%;
+}
+
+body {
+    background-color: white;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+
+}
+
+
+#fixedheader {
+    position: fixed;
+}
+
+.header {
+    margin: 0;
+    z-index: 100;
+    width: 100%;
+    padding: 0.5%;
+
+    color: white;
+    background-color: #41B188;
+
+    transition-duration: 0.4s;
+}
+
+
+.navbtn {
+    font-family: 'Playfair Display', serif;
+    font-weight: 400;
+    text-decoration: none;
+    color: white;
+    cursor: pointer;
+    font-size: 1.2vw;
+
+}
+
+
+.navbox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+}
+
+.navbtn:hover {
+    color: #FEBB60;
+
+}
+
+.logo {
+    font-family: 'Playfair Display', serif;
+    font-weight: 400;
+    text-decoration: none;
+    color: white;
+    font-size: 2.7vw;
+    transition: all 0.3s linear;
+    white-space: nowrap;
+
+}
+
+.logo:hover {
+    animation: logoanimation 5s linear infinite;
+
+}
+
+@keyframes logoanimation {
+    0% {
+        color: white;
+    }
+
+    25% {
+        color: purple;
+    }
+
+    50% {
+        color: blue;
+    }
+
+    75% {
+        color: cornflowerblue;
+    }
+
+    100% {
+        color: white;
+    }
+
+}
+
+
+.hover-underline-animation {
+    display: inline-block;
+    position: relative;
+    color: white;
+}
+
+.hover-underline-animation:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #FEBB60;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+
+.hover-underline-animation:hover:after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+.bookbtn {
+    font-family: 'Playfair Display', serif;
+    font-weight: 600;
+    border: none;
+    border-radius: 3px;
+    padding: 0.3vw 0.7vw;
+    white-space: nowrap;
+    font-size: 1.2vw;
+    transition: 0.25s ease-in-out;
+
+    color: white;
+    background-color: #FEBB60;
+}
+
+.bookbtn:hover {
+    color: #FEBB60;
+    background-color: white;
+}
+
+
+.hero {
+    height: 600px;
+    background-image: url(./);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.hero h1 {
+    font-size: 3.5rem !important;
+}
+
+.hero .row {
+    height: 100%;
+}
+
+.hero .text-area {
+    height: 100%;
+    padding: 0 1rem 3 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #9dc1dd8a;
+    text-align: center;
+}
+
+.hero .btn {
+    width: 25%;
+    border-color: #1B4965 !important;
+    background-color: #1B4965 !important;
+    color: #f5feff !important;
+}
+
+.hero .btn:hover {
+    background-color: transparent !important;
+    color: #1B4965 !important;
+}
