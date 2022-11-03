@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js"
+        integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT"
+        crossorigin="anonymous"></script>
+    <title>Aurora Medical</title>
+    <link rel="icon"
+        href="https://i.natgeofe.com/n/63527567-9a8b-4b08-819d-a6142fb2b350/aurora-kirkjufell-iceland_4x3.jpg"
+        type="image/x-icon">
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+
+
+    <style>
+        ::selection {
+            color: white;
+            background: #FEBB60;
+        }
+
+
+
+
+        .row {
+            width: 100%;
+        }
+
+        body {
+            background-color: white;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+
+        }
+
+
+        #fixedheader {
+            position: fixed;
+        }
+
+        .header {
+            margin: 0;
+            z-index: 100;
+            width: 100%;
+            padding: 0.5%;
+
+            color: white;
+            background-color: #41B188;
+
+            transition-duration: 0.4s;
+        }
+
+
+        .navbtn {
+            font-family: 'Playfair Display', serif;
+            font-weight: 400;
+            text-decoration: none;
+            color: white;
+            cursor: pointer;
+            font-size: 1.2vw;
+
+        }
+
+
+        .navbox {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+
+        }
+
+        .navbtn:hover {
+            color: #FEBB60;
+
+        }
+
+        .logo {
+            font-family: 'Playfair Display', serif;
+            font-weight: 400;
+            text-decoration: none;
+            color: white;
+            font-size: 2.7vw;
+            transition: all 0.3s linear;
+            white-space: nowrap;
+
+        }
+
+        .logo:hover {
+            animation: logoanimation 5s linear infinite;
+
+        }
+
+        @keyframes logoanimation {
+            0% {
+                color: white;
+            }
+
+            25% {
+                color: purple;
+            }
+
+            50% {
+                color: blue;
+            }
+
+            75% {
+                color: cornflowerblue;
+            }
+
+            100% {
+                color: white;
+            }
+
+        }
+
+
+        .hover-underline-animation {
+            display: inline-block;
+            position: relative;
+            color: white;
+        }
+
+        .hover-underline-animation:after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            transform: scaleX(0);
+            height: 2px;
+            bottom: 0;
+            left: 0;
+            background-color: #FEBB60;
+            transform-origin: bottom right;
+            transition: transform 0.25s ease-out;
+        }
+
+        .hover-underline-animation:hover:after {
+            transform: scaleX(1);
+            transform-origin: bottom left;
+        }
+
+        .bookbtn {
+            font-family: 'Playfair Display', serif;
+            font-weight: 600;
+            border: none;
+            border-radius: 3px;
+            padding: 0.3vw 0.7vw;
+            white-space: nowrap;
+            font-size: 1.2vw;
+            transition: 0.25s ease-in-out;
+
+            color: white;
+            background-color: #FEBB60;
+        }
+
+        .bookbtn:hover {
+            color: #FEBB60;
+            background-color: white;
+        }
+
+
+        .hero {
+            background-image: url("https://media.istockphoto.com/photos/northern-lights-green-aurora-borealis-over-alesund-norway-picture-id626429848?k=20&m=626429848&s=612x612&w=0&h=lTmLenUgbPtFjY_M2zquFR_7uVaZuMUHIAdyQr9csjk=");
+            background-repeat: no-repeat;
+            background-size: cover;
+
+            background-color: red;
+
+            width: 100%;
+            margin: 0;
+            height: 45vw;
+            color: white;
+        }
+
+        .herotitle {
+            font-family: 'Playfair Display', serif;
+            font-size: 128px;
+            transform: translateY(30%);
+            font-size: 10vw;
+        }
+
+        .herotext {
+            font-family: 'Noto Sans', sans-serif;
+            font-weight: 300;
+            width: 40vw;
+            margin: 5% 0 0 30%;
+            padding: 0;
+            font-size: 1vw;
+            height: fit-content;
+        }
+
+        img {
+            object-fit: cover;
+        }
+
+        .herobtn {
+            font-size: 2.5vw;
+        }
+
+        h2 {
+            text-align: center;
+            margin-top: 3%;
+        }
+
+        h3 {
+            text-align: left;
+
+        }
+
+        .checkout-border {
+            background-color: #41B188;
+            padding-left: 3%;
+            border-radius: 25px;
+            padding-right: 3%;
+            margin-bottom: 5%;
+        }
+
+        .form-control {
+            margin: auto;
+        }
+
+        .form-select {
+            margin: auto;
+        }
+
+
+        .form-label {
+            text-align: left;
+            float: left;
+            margin-left: auto;
+            margin-top: 2%;
+        }
+
+        .form-group {
+            margin: auto;
+        }
+
+        @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@100;200;300;400;500;600;700&display=swap');
+
+
+        .responsive {
+            width: 100%;
+            height: auto;
+        }
+
+        label {
+            color: white;
+            font-family: 'Noto Sans', serif;
+        }
+        .big {
+            font-size: 3vw;
+            margin-top: 5%;
+            margin-bottom: 5%;
+            border-radius: 10px;
+        }
+        .preface {
+            font-family: 'Playfair Display', serif;
+            color:#41B188;
+            text-align: center;
+            margin-top: 1%;
+            margin-left: 5%;
+            margin-right: 5%;
+            padding-bottom: 3%;
+
+        }
+
+        .preface h2 {
+            font-size: 6vw;
+        }
+        .preface a {
+            font-size: 1.5vw;
+        }
+        option {
+            font-family: 'Noto Sans', serif;
+        }
+
+
+    </style>
+</head>
+
+<body>
+    <div id="fixedheader" class="row header">
+        <div class="col-3 navbox"><a href="home.html" class="logo">Aurora Medical</a></div>
+        <div class="col-3"></div>
+        <div class="col navbox "><a href="#" class="navbtn hover-underline-animation">Products</a></div>
+        <div class="col navbox"><a href="#" class="navbtn hover-underline-animation">FAQ</a></div>
+        <div class="col navbox"><a href="#" class="navbtn hover-underline-animation">Contact Us</a></div>
+        <div class="col navbox"><a href="#" class="navbtn hover-underline-animation">News</a></div>
+        <div class="col navbox"><a href="#"><button href="#" class="bookbtn">Book Now</button></a></div>
+
+    </div>
+
+    <!--This is a duplicate header to create the spacing between the top of the screen and the next element, leave it as part of the header-->
+    <div class="row header">
+        <div class="col-3 navbox"><a href="home.html" class="logo">Aurora Medical</a></div>
+        <div class="col-2"></div>
+        <div class="col navbox "><a href="#" class="navbtn hover-underline-animation">Products</a></div>
+        <div class="col navbox"><a href="#" class="navbtn hover-underline-animation">FAQ</a></div>
+        <div class="col navbox"><a href="#" class="navbtn hover-underline-animation">Contact Us</a></div>
+        <div class="col navbox"><a href="#" class="navbtn hover-underline-animation">News</a></div>
+        <div class="col navbox"><a href="#"><button href="#" class="bookbtn">Book Now</button></a></div>
+        <div class="col"></div>
+    </div>
+
+    <div class="preface">
+        <h2> Booking</h2>
+        <a>Fill up your personal details,preferred timings and selection of test to be taken, and proceed to billing information in the next page</a>
+    </div>
+    <div class="container text-center">
+        <!-- Stack the columns on mobile by making one full-width and the other half-width -->
+        <div class="row">
+            <div class="checkout-border" style="margin-top: 5%;">
+
+                <label for="exampleFormControlInput1" class="form-label">Full Name</label>
+                <input class="form-control" type="text" required placeholder="Enter name of person taking the test" id="enteredName">
+                <label for="exampleFormControlInput1" class="form-label">Contact Number</label>
+                <input class="form-control" type="number" required placeholder="Enter contact number of person or guardian" id="enteredNumber">
+                <label for="exampleFormControlInput1" class="form-label">Email Address</label>
+                <input class="form-control" type="email" required placeholder="Enter contact email" id="enteredEmail">
+                <label for="exampleFormControlInput1" class="form-label">Covid-Test</label>
+                <select class="form-select" aria-label="Default select example" id="covid-test" required
+                    onchange="changeResult()">
+                    <option selected value="emptycovid" disabled>Choose your Covid Test</option>
+                    <option value="PCR Test" action:>PCR Test</option>
+                    <option value="Supervised ART">Supervised ART</option>
+                    <option value="3">Three</option>
+                </select>
+                <label for="exampleFormControlInput1" class="form-label">Preferred Location</label>
+                <select class="form-select" aria-label="Default select example" id="location-list"
+                    onchange="changeResult()">
+                    <option selected value="emptylocation">Choose your preferred location</option>
+                    <option value="Mandai Ave Branch 123456">Mandai</option>
+                    <option value="Jurong Branch 213565">Jurong</option>
+                    <option value="NTU Branch 123564">NTU</option>
+                </select>
+                <label for="exampleFormControlInput1" class="form-label">Preferred Date</label>
+                <select class="form-select" aria-label="Default select example" id="dropdown-list"
+                    onchange="changeResult()">
+                    <option selected value="emptydate" disabled >Choose your preferred date</option>
+                    <option value="1 November 2022" action:>1 November : 2 vacancies remaining</option>
+                    <option value="2 November 2022">2 November</option>
+                    <option value="3 November 2022">3 November</option>
+                </select>
+                <div class="form-group">
+                    <label for="exampleFormControlInput1" class="form-label">Remarks</label>
+                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Enter any remarks you have here"></textarea>
+                  </div>
+             
+                  <input type="submit" onClick="submit()" Value="BOOK" class="bookbtn big">
+            </div>
+        </div>
+    </div>
+
+        <script>
+            function submit() {
+                if (document.getElementById("covid-test").value == "emptycovid"){
+                    alert("Please input your choice of covid test!");
+                }
+                if (document.getElementById("location-list").value == "emptylocation"){
+                    alert("Please input your preferred location!");
+                }
+                if (document.getElementById("dropdown-list").value == "emptydate"){
+                    alert("Please input your preferred date!");
+                }
+
+                else {
+                    window.location.href="cart.html";
+                }
+            }
+            function changeResult() {
+                var nameD = document.getElementById("enteredName").value;
+                sessionStorage.setItem('nameKey', nameD);
+                var enteredPhone = document.getElementById("enteredNumber").value;
+                sessionStorage.setItem('phoneKey', enteredPhone);
+                var email = document.getElementById("enteredEmail").value;
+                sessionStorage.setItem('emailKey', email);
+                var covidValue = document.getElementById("covid-test").value;
+                sessionStorage.setItem('covidKey', covidValue);
+                var x = document.getElementById("dropdown-list").value;
+                sessionStorage.setItem('choice', x);
+                var locationValue = document.getElementById("location-list").value;
+                sessionStorage.setItem('locationKey', locationValue);
+                
+                
+            }
+        </script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+            crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+            integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+            crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.min.js"
+            integrity="sha384-IDwe1+LCz02ROU9k972gdyvl+AESN10+x7tBKgc9I5HFtuNz0wWnPclzo6p9vxnk"
+            crossorigin="anonymous"></script>
+</body>
+
+</html>

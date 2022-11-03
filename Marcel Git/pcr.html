@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js"
+        integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT"
+        crossorigin="anonymous"></script>
+    <title>Aurora Medical</title>
+    <link rel="icon"
+        href="https://i.natgeofe.com/n/63527567-9a8b-4b08-819d-a6142fb2b350/aurora-kirkjufell-iceland_4x3.jpg"
+        type="image/x-icon">
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+
+
+    <style>
+        ::selection {
+            color: white;
+            background: #FEBB60;
+        }
+
+
+
+
+        .row {
+            width: 100%;
+        }
+
+        body {
+            background-color: white;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+
+        }
+
+
+        #fixedheader {
+            position: fixed;
+        }
+
+        .header {
+            margin: 0;
+            z-index: 100;
+            width: 100%;
+            padding: 0.5%;
+
+            color: white;
+            background-color: #41B188;
+
+            transition-duration: 0.4s;
+        }
+
+
+        .navbtn {
+            font-family: 'Playfair Display', serif;
+            font-weight: 400;
+            text-decoration: none;
+            color: white;
+            cursor: pointer;
+            font-size: 1.2vw;
+
+        }
+
+
+        .navbox {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+
+        }
+
+        .navbtn:hover {
+            color: #FEBB60;
+
+        }
+
+        .logo {
+            font-family: 'Playfair Display', serif;
+            font-weight: 400;
+            text-decoration: none;
+            color: white;
+            font-size: 2.7vw;
+            transition: all 0.3s linear;
+            white-space: nowrap;
+
+        }
+
+        .logo:hover {
+            animation: logoanimation 5s linear infinite;
+
+        }
+
+        @keyframes logoanimation {
+            0% {
+                color: white;
+            }
+
+            25% {
+                color: purple;
+            }
+
+            50% {
+                color: blue;
+            }
+
+            75% {
+                color: cornflowerblue;
+            }
+
+            100% {
+                color: white;
+            }
+
+        }
+
+
+        .hover-underline-animation {
+            display: inline-block;
+            position: relative;
+            color: white;
+        }
+
+        .hover-underline-animation:after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            transform: scaleX(0);
+            height: 2px;
+            bottom: 0;
+            left: 0;
+            background-color: #FEBB60;
+            transform-origin: bottom right;
+            transition: transform 0.25s ease-out;
+        }
+
+        .hover-underline-animation:hover:after {
+            transform: scaleX(1);
+            transform-origin: bottom left;
+        }
+
+        .bookbtn {
+            font-family: 'Playfair Display', serif;
+            font-weight: 600;
+            border: none;
+            border-radius: 3px;
+            padding: 0.3vw 0.7vw;
+            white-space: nowrap;
+            font-size: 1.2vw;
+            transition: 0.25s ease-in-out;
+
+            color: white;
+            background-color: #FEBB60;
+        }
+
+        .bookbtn:hover {
+            color: #FEBB60;
+            background-color: white;
+        }
+
+
+        .hero {
+            background-image: url("image/bg.png");
+            background-repeat: no-repeat;
+            background-size: cover;
+
+            background-color: red;
+
+            width: 100%;
+            margin: 0;
+            height: 30vw;
+            color: #41B188;
+
+            padding-bottom: 20%;
+        }
+
+        .herotitle {
+            font-family: 'Playfair Display', serif;
+            font-size: 128px;
+            transform: translateY(30%);
+            font-size: 8vw;
+        }
+
+        .herotext {
+            font-family: 'Noto Sans', sans-serif;
+            font-weight: 300;
+            width: 40vw;
+            margin: 5% 0 0 30%;
+            padding: 0;
+            font-size: 1vw;
+            height: fit-content;
+        }
+
+        img {
+            object-fit: cover;
+        }
+
+        .herobtn {
+            font-size: 2.5vw;
+            text-align: center;
+            align-items: center;
+            justify-content: center;
+        }
+
+        h2 {
+            text-align: center;
+            margin-top: 3%;
+        }
+
+        h3 {
+            text-align: left;
+
+        }
+
+        .checkout-border {
+            background-color: #41B188;
+            padding-left: 3%;
+            border-radius: 25px
+        }
+
+        .form-control {
+            margin: auto;
+        }
+
+        .form-select {
+            margin: auto;
+        }
+
+
+        .form-label {
+            text-align: left;
+            float: left;
+            margin-left: auto;
+            margin-top: 2%;
+        }
+
+        .form-group {
+            margin: auto;
+        }
+
+        @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@100;200;300;400;500;600;700&display=swap');
+
+
+        .responsive {
+            width: 100%;
+            height: auto;
+        }
+
+        label {
+            color: white;
+        }
+
+        .big {
+            font-size: 3vw;
+            margin-top: 5%;
+            margin-bottom: 5%;
+            border-radius: 10px;
+        }
+
+        .box1 {
+            padding-top: 3%;
+            padding-left: 15%;
+            padding-right: 15%;
+            padding-bottom: 10%;
+        }
+
+        .box2 {
+            padding-top: 3%;
+            padding-left: 15%;
+            padding-right: 15%;
+            background-color: #41B188;
+            text-align: center;
+            color: white;
+            padding-bottom: 5%;
+        }
+
+
+        .who {
+            height: 10vw;
+            width: auto;
+            filter: brightness(0) invert(1);
+            margin-top: 10%;
+        }
+
+        .second {
+            margin-top: 10%;
+            text-align: left;
+        }
+
+        .steps {
+            margin-top: 10%;
+            text-align: left;
+            display: flex;
+            justify-content: center;
+        }
+
+        .steps2 {
+            margin-top: 10%;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+        }
+
+        img {
+            margin-top: 5%;
+        }
+
+        .plans {
+            border-style: solid;
+            border-radius: 15px;
+            text-align: center;
+            justify-items: center;
+            height: 50vw;
+            padding: 10%;
+        }
+        h5 {
+            font-size: 2.8vw;
+        }
+        h4 {
+            font-size: 3vw;
+        }
+        .accordion-button {
+            font-size: 2vw;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="fixedheader" class="row header">
+        <div class="col-3 navbox"><a href="home.html" class="logo">Aurora Medical</a></div>
+        <div class="col-3"></div>
+        <div class="col navbox "><a href="#" class="navbtn hover-underline-animation">Products</a></div>
+        <div class="col navbox"><a href="#" class="navbtn hover-underline-animation">FAQ</a></div>
+        <div class="col navbox"><a href="#" class="navbtn hover-underline-animation">Contact Us</a></div>
+        <div class="col navbox"><a href="#" class="navbtn hover-underline-animation">News</a></div>
+        <div class="col navbox"><a href="#"><button href="#" class="bookbtn">Book Now</button></a></div>
+
+    </div>
+
+    <!--This is a duplicate header to create the spacing between the top of the screen and the next element, leave it as part of the header-->
+    <div class="row header">
+        <div class="col-3 navbox"><a href="home.html" class="logo">Aurora Medical</a></div>
+        <div class="col-2"></div>
+        <div class="col navbox "><a href="#" class="navbtn hover-underline-animation">Products</a></div>
+        <div class="col navbox"><a href="#" class="navbtn hover-underline-animation">FAQ</a></div>
+        <div class="col navbox"><a href="#" class="navbtn hover-underline-animation">Contact Us</a></div>
+        <div class="col navbox"><a href="#" class="navbtn hover-underline-animation">News</a></div>
+        <div class="col navbox"><a href="#"><button href="#" class="bookbtn">Book Now</button></a></div>
+        <div class="col"></div>
+    </div>
+    <div class="row hero text-center ">
+        <h1 class="herotitle">PCR</h1>
+        <h1 class="herotitle">Swab Test</h1>
+
+    </div>
+
+    </div>
+    <div class="box1">
+        <div class="row">
+            <div class="col-sm-8">
+                <h2 style="text-align: justify">What is a PCR Test?</h2>
+                <a style="text-align: justify;">
+                    The nose swab PCR test for COVID-19 is an accurate and reliable test for diagnosing COVID-19. A
+                    positive test means you likely have COVID-19. A negative test means you probably did not have
+                    COVID-19 at the time of the test. Get tested if you have symptoms of COVID-19 or have been exposed
+                    to someone who tested positive for COVID-19.
+                    <br>
+                    <br>
+                    <h3>We offer multiple options for travelers booking in advance and last minute</h3>
+                    <br>
+                    <h3>Book an express pre-departure PCR test with us. Test result will be available within 6 hours
+                        (last appointment at 4.30pm).</h3>
+                </a>
+            </div>
+            <div class="col-sm-4" style="display:flex; align-items: center;">
+                <img src="image/pcrtest.png"
+                    style="object-fit: contain; height: 20vw; width: auto; vertical-align: center;">
+            </div>
+        </div>
+        <div style=" align-items: center; justify-content: center; display: flex; margin-top: 5%;">
+            <a href="booknow.html"><button href="#" class="bookbtn herobtn">Book Now</button></a>
+        </div>
+    </div>
+    <div class="box2">
+        <h3 style="text-align:Left; color:white; font-size: 2.8vw;">Options</h3>
+        <br>
+        <div class="row">
+            <div class="col">
+                <div class="plans">
+                    <div class="row" style="height: 33%;">
+                        <h3 style="text-align: center; font-size: 4vw">Standard</h3>
+                        <hr>
+                    </div>
+                    <div class="row" style="height: 33%;">
+
+                        <h5>Applies to all destinations</h5>
+                    </div>
+                    <div class="row" style="height: 33%;">
+                        <hr>
+                        <h4>S$69</h4>
+                        <a href="booknow.html"><button href="#" class="bookbtn herobtn">Book Now</button></a>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="plans">
+                    <div class="row" style="height: 33%;">
+                        <h3 style="text-align: center; font-size: 4vw;">Express</h3>
+                        <hr>
+                    </div>
+                    <div class="row" style="height: 33%;">
+                        <h5>Results sent to your email in less than 5 hours!</h5>
+                    </div>
+                    <div class="row" style="height: 33%;">
+                        <hr>
+                        <h4>S$250</h4>
+                        <a href="booknow.html"><button href="#" class="bookbtn herobtn">Book Now</button></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+   <div class="box1">
+    <h3 style="font-size: 2.8vw;">Branches</h3>
+    <div class="accordion accordion-flush" id="accordionFlushExample">
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="flush-headingOne">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+              Mandai
+            </button>
+          </h2>
+          <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+            <div class="accordion-body">Mandai Ave 1234124<br>
+                Singapore 123124<br>
+                Contact: 123412
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.6194581434756!2d103.7884388500985!3d1.404612661783859!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31da13d91b72b4d3%3A0x900f5e4b86449d19!2s80%20Mandai%20Lake%20Rd%2C%20Singapore%20729826!5e0!3m2!1sen!2ssg!4v1665648782937!5m2!1sen!2ssg" width="100%" height="200vw" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="flush-headingTwo">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+              NTU
+            </button>
+          </h2>
+          <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+            <div class="accordion-body">NTU Ave 1239819283<br>
+                Contact: 123891283
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="flush-headingThree">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+              Jurong East
+            </button>
+          </h2>
+          <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+            <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the third item's accordion body. Nothing more exciting happening here in terms of content, but just filling up the space to make it look, at least at first glance, a bit more representative of how this would look in a real-world application.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+        integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.min.js"
+        integrity="sha384-IDwe1+LCz02ROU9k972gdyvl+AESN10+x7tBKgc9I5HFtuNz0wWnPclzo6p9vxnk"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
