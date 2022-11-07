@@ -160,30 +160,28 @@ section {
 .hero-banner {
     height: 100vh;
     background-image: url('./about-us-hero-banner-image.jpeg');
-    background-size: cover;
-    background-repeat: no-repeat;
 }
 
-.hero-banner h1, .hero-banner p, .our-team h1, .our-team p {
+.hero-banner h1, .hero-banner p, .our-customers h1, .our-team h1, .our-team p{
     color: white;
-}
-
-.our-customers p, .our-customers h1, .motivation-section h1, .motivation-section p, .achievements p, .achievements h1, .achievements h2 {
-    color: #112F24
 }
 
 .motivation-section {
     height: 700px;
     background-image: url('./about-us-hero-banner-image.jpeg');
-    background-size: cover;
-    background-repeat: no-repeat;
+}
+
+.motivation-section h1, .motivation-section p {
+    color: #112F24;
 }
 
 .our-customers {
     height: 700px;
     background-image: url('./about-us-hero-banner-image.jpeg');
-    background-size: cover;
-    background-repeat: no-repeat;
+}
+
+.our-customers p, .our-customers h1 {
+    color: white;
 }
 
 .our-team, .achievements {
@@ -200,4 +198,8 @@ section {
 
 .achievements {
     background-color: #febc60db;
+}
+
+.achievements p, .achievements h1, .achievements h2 {
+    color: #112F24;
 }
