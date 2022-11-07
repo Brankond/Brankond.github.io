@@ -440,7 +440,7 @@
                     <a id="covidPrice"></a>
                     <hr>
                     <h4>ORDER TOTAL:</h4>
-                    <h4 id="covidPrice"></h4>
+                    <h4 id="covidPrice2"></h4>
                     <div class="row">
                         <div id="sart2" class="col-5">
                             <input type="submit" Value="Send" data-bs-toggle="modal" data-bs-target="#exampleModal" class="bookbtn big">
@@ -462,7 +462,7 @@
                     <input class="form-control" type="text" 
                     aria-label="default input example">
                     <label for="exampleFormControlInput1" class="form-label">CVV</label>
-                    <input class="form-control" type="number" maxlength="3"
+                    <input class="form-control" type="number" maxlength="10" 
                     aria-label="default input example" style="flex-grow:0; flex-basis: 5px;">
                     <input type="submit" Value="Send" data-bs-toggle="modal" data-bs-target="#exampleModal" class="bookbtn big">
                 </div>
@@ -508,6 +508,7 @@
             switch(covidChoice) {
                 case "PCR Test":
                     document.getElementById("covidPrice").innerHTML = "€ 150";
+                    document.getElementById("covidPrice2").innerHTML = "€ 150";
                     break;
                 case "Antigen Test":
                     document.getElementById("covidPrice").innerHTML = "€ 100";
