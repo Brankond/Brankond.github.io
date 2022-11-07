@@ -3,6 +3,139 @@ body {
     overflow-x: hidden;
 }
 
+h1 {
+    font-weight: bold;
+    font-family: 'Playfair Display', serif !important; 
+}
+
+p {
+    font-family: 'Noto Sans', sans-serif !important;
+    font-weight: 300 !important;
+}
+
+#fixedheader {
+    position: fixed;
+}
+
+.header {
+    margin: 0;
+    z-index: 100;
+    width: 100%;
+    padding: 0.5%;
+
+    color: white;
+    background-color: #41B188;
+
+    transition-duration: 0.4s;
+}
+
+
+.navbtn {
+    font-family: 'Noto Sans', sans-serif;
+    font-weight: 300;
+    text-decoration: none;
+    color: white;
+    cursor: pointer;
+    font-size: 1.2vw;
+
+}
+
+.navbox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+}
+
+.navbtn:hover {
+    color: #FEBB60;
+
+}
+
+.logo {
+    font-family: 'Playfair Display', serif;
+    font-weight: 400;
+    text-decoration: none;
+    color: white;
+    font-size: 2.7vw;
+    transition: all 0.3s linear;
+    white-space: nowrap;
+
+}
+
+.logo:hover {
+    animation: logoanimation 5s linear infinite;
+
+}
+
+@keyframes logoanimation {
+    0% {
+        color: white;
+    }
+
+    25% {
+        color: purple;
+    }
+
+    50% {
+        color: blue;
+    }
+
+    75% {
+        color: cornflowerblue;
+    }
+
+    100% {
+        color: white;
+    }
+
+}
+
+.hover-underline-animation {
+    display: inline-block;
+    position: relative;
+    color: white;
+}
+
+.hover-underline-animation:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #FEBB60;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+
+.hover-underline-animation:hover:after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+.bookbtn {
+    font-family: 'Noto Sans', sans-serif;
+    font-weight: 400;
+    border: none;
+    border-radius: 10px;
+    padding: 0.3vw 0.7vw;
+
+    white-space: nowrap;
+    font-size: 1.2vw;
+    transition: 0.25s ease-in-out;
+
+    color: white;
+    background-color: #FEBB60;
+}
+
+.bookbtn:hover {
+    color: #FEBB60;
+    background-color: white;
+}
+
 section {
     min-height: 700px;
 }
@@ -51,11 +184,22 @@ section {
     color: white;
 }
 
-.our-team {
+.our-team, .achievements {
     padding: 10rem 0;
+}
+
+.our-team {
     background-color: #41b188;
 }
 
 .our-team p {
     font-weight: 300;
+}
+
+.achievements {
+    background-color: #febc60db;
+}
+
+.achievements p, .achievements h1, .achievements h2 {
+    color: #112F24;
 }
