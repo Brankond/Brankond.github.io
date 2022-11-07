@@ -248,6 +248,7 @@
             padding-left: 10%;
             padding-right: 10%;
             padding-top: 5%;
+            padding-bottom: 5%;
         }
 
         .checkout-border3 {
@@ -373,7 +374,7 @@
                 <h2>Checkout Information</h2>
             </div>
             <div class="col-md-8">
-                <a href="booknow.html"><img src="image/arrow.png" style="height: 1vw" class="back"></img></a>
+                <img  src="image/arrow.png" onclick="history.back()" style="height: 1vw; cursor: pointer;"class="back"></img>
                 <div class="checkout-border">
                     <div class="col-md-8">
                         <br>
@@ -392,25 +393,27 @@
                     <h3> Billing Address</h3>
                     <div class="col-md-8">
                         <label for="exampleFormControlInput1" class="form-label">Full Name</label>
-                        <input class="form-control" type="text" placeholder="Default input"
+                        <input class="form-control" type="text"
                             aria-label="default input example">
                         <label for="exampleFormControlInput1" class="form-label">Street Address</label>
-                        <input class="form-control" type="text" placeholder="Default input"
+                        <input class="form-control" type="text" 
                             aria-label="default input example">
-                        <input class="form-control" type="text" placeholder="Default input"
+                        <input class="form-control" type="text" 
                             aria-label="default input example">
                         <label for="exampleFormControlInput1" class="form-label">Postal Code</label>
-                        <input class="form-control" type="text" placeholder="Default input"
+                        <input class="form-control" type="text" 
                             aria-label="default input example">
                         <label for="exampleFormControlInput1" class="form-label">City</label>
-                        <input class="form-control" type="text" placeholder="Default input"
+                        <input class="form-control" type="text" 
                             aria-label="default input example">
                         <label for="exampleFormControlInput1" class="form-label">Country</label>
                         <select class="form-select" aria-label="Default select example">
-                            <option selected>Open this select menu</option>
-                            <option value="1">One</option>
-                            <option value="2">Two</option>
-                            <option value="3">Three</option>
+                            <option selected disabled>Choose your billing address country</option>
+                            <option value="Singapore">Singapore</option>
+                            <option disabled>--------------------------------------------------------------------</option>
+                            <option value="Indonesia">Indonesia</option>
+                            <option value="Malaysia">Malaysia</option>
+                            <option value="Beijing">Phillipines</option>
                         </select>
                         <label for="exampleFormControlInput1" class="form-label">Phone Number</label>
                         <input class="form-control" type="text" placeholder="Default input"
@@ -430,18 +433,20 @@
                     <h2>Order Summary</h2>
                     <hr>
                     <img src="image/pcr.jpg" alt="pcr" class="responsive">
-                    <h4 id="covidtestOrder"> PCR Test</h4>
+                    <h4 id="covidtestOrder"></h4>
                     <a>Qty: 1</a>
                     <br>
-                    <a>SUBTOTAL: $100</a>
+                    <a>SUBTOTAL:</a>
+                    <a id="covidPrice"></a>
                     <hr>
-                    <h4>ORDER TOTAL: $100</h4>
+                    <h4>ORDER TOTAL:</h4>
+                    <h4 id="covidPrice"></h4>
                     <div class="row">
-                        <div id="sart2" class="col">
+                        <div id="sart2" class="col-5">
                             <input type="submit" Value="Send" data-bs-toggle="modal" data-bs-target="#exampleModal" class="bookbtn big">
                         </div>
-                        <div id="sart3" clas="col">
-                            <a href="#"><button href="#" onclick="hideSend()" class="bookbtn">Pay Now</button></a>
+                        <div id="sart3" class="col-5">
+                            <a href="#"><button href="#" onclick="hideSend()" class="bookbtn big">Pay Now</button></a>
                         </div>
                 
                     </div>
@@ -451,13 +456,13 @@
                 <div class="checkout-border3" id="sart">
                     <h3>Payment Information</h3>
                     <label for="exampleFormControlInput1" class="form-label">Name of Cardholder</label>
-                    <input class="form-control" type="text" placeholder="Default input"
+                    <input class="form-control" type="text" "
                     aria-label="default input example">
                     <label for="exampleFormControlInput1" class="form-label">Credit Card Number</label>
-                    <input class="form-control" type="text" placeholder="Default input"
+                    <input class="form-control" type="text" 
                     aria-label="default input example">
                     <label for="exampleFormControlInput1" class="form-label">CVV</label>
-                    <input class="form-control" type="number" placeholder="Default input"
+                    <input class="form-control" type="number" maxlength="3"
                     aria-label="default input example" style="flex-grow:0; flex-basis: 5px;">
                     <input type="submit" Value="Send" data-bs-toggle="modal" data-bs-target="#exampleModal" class="bookbtn big">
                 </div>
@@ -500,6 +505,15 @@
             let covidChoice = sessionStorage.getItem('covidKey');
             document.getElementById("covidtest").innerHTML = "Test Chosen: " + covidChoice;
             document.getElementById("covidtestOrder").innerHTML = covidChoice;
+            switch(covidChoice) {
+                case "PCR Test":
+                    document.getElementById("covidPrice").innerHTML = "€ 150";
+                    break;
+                case "Antigen Test":
+                    document.getElementById("covidPrice").innerHTML = "€ 100";
+                    break;
+            }
+
 
             function hideSend() {
                 document.getElementById("sart").style.visibility = "visible"
