@@ -84,6 +84,7 @@
             transition-duration: 0.4s;
 
             box-shadow: 0px 0px grey;
+            
         }
 
 
@@ -93,7 +94,7 @@
             text-decoration: none;
             color: #41B188;
             cursor: pointer;
-            font-size: 1.2vw;
+            font-size: 1.3em
 
         }
 
@@ -116,7 +117,7 @@
             font-weight: 400;
             text-decoration: none;
             color: #41B188;
-            font-size: 2.7vw;
+            font-size: 3rem;
             transition: all 0.3s linear;
             white-space: nowrap;
 
@@ -171,7 +172,7 @@
             padding: 0.3vw 0.7vw;
 
             white-space: nowrap;
-            font-size: 1.2vw;
+            font-size: 1.2rem;
             transition: 0.25s ease-in-out;
 
             color: white;
@@ -196,14 +197,13 @@
             width: 100%;
             height: 30vw;
             position: relative;
+            z-index: -1;
         }
 
         .heromodule::before {
             content: "";
-            top: 0;
-            left: 0;
             width: 100%;
-            height: 100%;
+            height: 30vw;
             position: absolute;
             background-image: url(https://media.istockphoto.com/id/1023119736/photo/national-flags.jpg?s=612x612&w=0&k=20&c=d_h3bhP7W9BRv1_YXEwJCGPScus6OWuLDg_n4Jn4kBo=);
 
@@ -223,6 +223,7 @@
             margin: 0;
             height: 45vw;
             color: white;
+            
         }
 
         .herotitle {
@@ -325,75 +326,82 @@
             margin: 5% 0%;
         }
 
-        .country-row{
-            margin: 5% 0%;
-        }
-
-        .card {
-            width: 25vw;
-            border-color: #333333;
-            border-radius: 0;
-        }
-        .card-body{
-            margin-bottom: 4%;
-        }
-
-        .card-title {
-            font-size: 3vw;
-            font-weight: 300;
-            /* font-family: 'Playfair Display', serif;*/
-        }
-
-        .card-img-top{
-            border-radius: 0;
-            height: auto;
-        }
-
-        .card-text{
-            margin:7% 0%; 
-            font-weight: 300;
-            font-size: 1vw;
+        .country-row {
+            padding: 5% 0%;
+            z-index: 1;
+            border-bottom: 1px #333333 solid;
         }
 
 
-        .btn-country-hollow, .btn-country-filled{
-            color:white;
+        .btn-country-hollow,
+        .btn-country-filled {
+            color: white;
             background-color: #41B188;
             border-color: #41B188;
-            margin:0% 2%;
+            margin: 0% 2%;
         }
 
-        .btn-country-filled:hover{
+        .btn-country-filled:hover {
             background-color: #FEBB60;
-            color:white;
+            color: white;
             border-color: #FEBB60;
         }
 
-        .btn-country-filled:active{
+        .btn-country-filled:active {
             background-color: #FEBB60;
-            color:white;
+            color: white;
             border-color: #FEBB60;
         }
 
-        .btn-country-hollow:active{
+        .btn-country-hollow:active {
             background-color: #FEBB60;
-            color:white;
+            color: white;
             border-color: #FEBB60;
         }
 
-        .btn-country-hollow{
+        .btn-country-hollow {
             background-color: white;
-            color:#41B188;
-            border-color: #41B188; 
+            color: #41B188;
+            border-color: #41B188;
         }
 
-    .btn-country-hollow:hover{
-        background-color: white;
-            color:#41B188;
-            border-color: #41B188; 
-    }
+        .btn-country-hollow:hover {
+            background-color: white;
+            color: #41B188;
+            border-color: #41B188;
+        }
 
-        
+
+
+
+        .country-flag{
+            width: 5vw;
+            height:5vw;
+            margin: 5%;
+            
+        }
+
+        .country-title{
+            font-size: 4vw;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .country-details{
+           margin: 6% 0%;
+        }
+        .country-list{
+            margin: 0;
+            padding: 0;
+            font-weight: 300;
+            font-size: 1vw;
+            list-style: none;
+
+        }
+        .btn-col{
+            padding:3% 0%;
+        }
     </style>
 </head>
 
@@ -404,7 +412,7 @@
                 class="logo logopt2">Medical</a></div>
         <div class="col-3"></div>
         <div class="col navbox "><a href="#" class="navbtn hover-underline-animation">Products</a></div>
-        <div class="col navbox"><a href="#" class="navbtn hover-underline-animation">FAQ</a></div>
+        <div class="col navbox"><a href="Ricardo\FAQ.html" class="navbtn hover-underline-animation">FAQ</a></div>
         <div class="col navbox"><a href="#" class="navbtn hover-underline-animation">Contact Us</a></div>
         <div class="col navbox"><a href="#" class="navbtn hover-underline-animation">News</a></div>
         <div class="col navbox"><a href="#"><button href="#" class="bookbtn">Book Now</button></a></div>
@@ -442,111 +450,113 @@
 
     <!--Countries List-->
     <div class="container-fluid text-center country-container ">
-        <div class="row country-row justify-content-center">
-            <div class="col-4 ">
-                <div class="card mx-auto">
-                    <img src="https://media.gettyimages.com/photos/chinese-flag-in-the-wind-picture-id1341058517?k=20&m=1341058517&s=612x612&w=0&h=Po5RyGFDlJdSRqjx9GkqmvNPK72StImHBR_oK0c4bJs="
-                        class="card-img-top" alt="Country Flag">
-                    <div class="card-body">
-                        <h5 class="card-title">China</h5>
-                        <div class="card-text">
-                            <div class="">PCR Test Required</div>
-                            <div class="">48 Hour Qurantine</div>
-                            <div class="">Mask Required</div>
-                        </div>
-                        <a href="#" class="btn btn-outline-secondary btn-country-hollow">More Details</a>
-                        <a href="#" class="btn btn-primary btn-country-filled">Buy Plan</a>
-                    </div>
+        <div class="row country-row">
+            <div class="col-2"></div>
+            <div class="col-3 ">
+                <div class="country-title "><span class="fi fi-cn country-flag"></span>China</div>
+            </div>
+            <div class="col-3">
+                
+                <div class="country-details">
+                    <ul class = "country-list">
+                        <li>PCR Test Required</li>
+                        <li>48 Hour Qurantine</li>
+                        <li>Mask Required</li>
+                    </ul>
                 </div>
             </div>
-            <div class="col-4 ">
-                <div class="card mx-auto">
-                    <img src="https://media.gettyimages.com/photos/chinese-flag-in-the-wind-picture-id1341058517?k=20&m=1341058517&s=612x612&w=0&h=Po5RyGFDlJdSRqjx9GkqmvNPK72StImHBR_oK0c4bJs="
-                        class="card-img-top" alt="Country Flag">
-                    <div class="card-body">
-                        <h5 class="card-title">China</h5>
-                        <div class="card-text">
-                            <div class="">PCR Test Required</div>
-                            <div class="">48 Hour Qurantine</div>
-                            <div class="">Mask Required</div>
-                        </div>
-                        <a href="#" class="btn btn-outline-secondary btn-country-hollow">More Details</a>
-                        <a href="#" class="btn btn-primary btn-country-filled">Buy Plan</a>
-                    </div>
-                </div>
+
+            <div class="col-2 btn-col">
+                <a href="#" class="btn btn-outline-secondary btn-country-hollow">More Details</a>
+                <a href="#" class="btn btn-primary btn-country-filled">Buy Plan</a>
             </div>
-            <div class="col-4 ">
-                <div class="card mx-auto">
-                    <img src="https://media.gettyimages.com/photos/chinese-flag-in-the-wind-picture-id1341058517?k=20&m=1341058517&s=612x612&w=0&h=Po5RyGFDlJdSRqjx9GkqmvNPK72StImHBR_oK0c4bJs="
-                        class="card-img-top" alt="Country Flag">
-                    <div class="card-body">
-                        <h5 class="card-title">China</h5>
-                        <div class="card-text">
-                            <div class="">PCR Test Required</div>
-                            <div class="">48 Hour Qurantine</div>
-                            <div class="">Mask Required</div>
-                        </div>
-                        <a href="#" class="btn btn-outline-secondary btn-country-hollow">More Details</a>
-                        <a href="#" class="btn btn-primary btn-country-filled">Buy Plan</a>
-                    </div>
-                </div>
-            </div>
+            <div class="col-2"></div>
         </div>
 
-        <div class="row country-row justify-content-center">
-            <div class="col-4 ">
-                <div class="card mx-auto">
-                    <img src="https://media.gettyimages.com/photos/chinese-flag-in-the-wind-picture-id1341058517?k=20&m=1341058517&s=612x612&w=0&h=Po5RyGFDlJdSRqjx9GkqmvNPK72StImHBR_oK0c4bJs="
-                        class="card-img-top" alt="Country Flag">
-                    <div class="card-body">
-                        <h5 class="card-title">China</h5>
-                        <div class="card-text">
-                            <div class="">PCR Test Required</div>
-                            <div class="">48 Hour Qurantine</div>
-                            <div class="">Mask Required</div>
-                        </div>
-                        <a href="#" class="btn btn-outline-secondary btn-country-hollow">More Details</a>
-                        <a href="#" class="btn btn-primary btn-country-filled">Buy Plan</a>
-                    </div>
+
+        <div class="row country-row">
+            <div class="col-2"></div>
+            <div class="col-3 ">
+                
+                <div class="country-title "><span class="fi fi-fr country-flag"></span>France</div>
+            </div>
+            <div class="col-3">
+                
+                <div class="country-details">
+                    <ul class = "country-list">
+                        <li>PCR Test Required</li>
+                        <li>48 Hour Qurantine</li>
+                        <li>Mask Required</li>
+                    </ul>
                 </div>
             </div>
+
+            <div class="col-2 btn-col">
+                <a href="#" class="btn btn-outline-secondary btn-country-hollow">More Details</a>
+                <a href="#" class="btn btn-primary btn-country-filled">Buy Plan</a>
+            </div>
+            <div class="col-2"></div>
+        </div>
+
+        <div class="row country-row">
+            <div class="col-1"></div>
             <div class="col-4 ">
-                <div class="card mx-auto">
-                    <img src="https://media.gettyimages.com/photos/chinese-flag-in-the-wind-picture-id1341058517?k=20&m=1341058517&s=612x612&w=0&h=Po5RyGFDlJdSRqjx9GkqmvNPK72StImHBR_oK0c4bJs="
-                        class="card-img-top" alt="Country Flag">
-                    <div class="card-body">
-                        <h5 class="card-title">China</h5>
-                        <div class="card-text">
-                            <div class="">PCR Test Required</div>
-                            <div class="">48 Hour Qurantine</div>
-                            <div class="">Mask Required</div>
-                        </div>
-                        <a href="#" class="btn btn-outline-secondary btn-country-hollow">More Details</a>
-                        <a href="#" class="btn btn-primary btn-country-filled">Buy Plan</a>
-                    </div>
+                
+                <div class="country-title "><span class="fi fi-de country-flag"></span>Germany</div>
+            </div>
+            <div class="col-3">
+                
+                <div class="country-details">
+                    <ul class = "country-list">
+                        <li>PCR Test Required</li>
+                        <li>48 Hour Qurantine</li>
+                        <li>Mask Required</li>
+                    </ul>
                 </div>
             </div>
+
+            <div class="col-2 btn-col">
+                <a href="#" class="btn btn-outline-secondary btn-country-hollow">More Details</a>
+                <a href="#" class="btn btn-primary btn-country-filled">Buy Plan</a>
+            </div>
+            <div class="col-2"></div>
+        </div>
+
+        <div class="row country-row">
+            <div class="col-1"></div>
             <div class="col-4 ">
-                <div class="card mx-auto">
-                    <img src="https://media.gettyimages.com/photos/chinese-flag-in-the-wind-picture-id1341058517?k=20&m=1341058517&s=612x612&w=0&h=Po5RyGFDlJdSRqjx9GkqmvNPK72StImHBR_oK0c4bJs="
-                        class="card-img-top" alt="Country Flag">
-                    <div class="card-body">
-                        <h5 class="card-title">China</h5>
-                        <div class="card-text">
-                            <div class="">PCR Test Required</div>
-                            <div class="">48 Hour Qurantine</div>
-                            <div class="">Mask Required</div>
-                        </div>
-                        <a href="#" class="btn btn-outline-secondary btn-country-hollow">More Details</a>
-                        <a href="#" class="btn btn-primary btn-country-filled">Buy Plan</a>
-                    </div>
+                
+                <div class="country-title "><span class="fi fi-it country-flag"></span>Italy</div>
+            </div>
+            <div class="col-3">
+                
+                <div class="country-details">
+                    <ul class = "country-list">
+                        <li>PCR Test Required</li>
+                        <li>48 Hour Qurantine</li>
+                        <li>Mask Required</li>
+                    </ul>
                 </div>
             </div>
+
+            <div class="col-2 btn-col">
+                <a href="#" class="btn btn-outline-secondary btn-country-hollow">More Details</a>
+                <a href="#" class="btn btn-primary btn-country-filled">Buy Plan</a>
+            </div>
+            <div class="col-2"></div>
         </div>
 
 
         
+
+
+
+
+
     </div>
+
+
+
 
 
 
