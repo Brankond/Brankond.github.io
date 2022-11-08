@@ -37,8 +37,6 @@
     <!--Flags import https://github.com/lipis/flag-icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lipis/flag-icons@6.6.6/css/flag-icons.min.css" />
 
-    <!--Font awesome-->
-    <script src="https://kit.fontawesome.com/0ef6f85575.js" crossorigin="anonymous"></script>
 
     <style>
         ::selection {
@@ -46,14 +44,10 @@
             background: #FEBB60;
         }
 
-        .container-fluid {
-            margin: 0;
-            padding: 0;
-        }
 
         a {
             text-decoration: none;
-            color: #333333;
+            color: black;
 
         }
 
@@ -71,9 +65,8 @@
             padding: 0;
             overflow-x: hidden;
             cursor: default;
-            color: #333333;
+            /*height: 200vw;*/
         }
-
 
         /*Start of Navbar*/
         #fixedheader {
@@ -197,10 +190,13 @@
 
         /*Navbar css ends here*/
 
+
+
         .heromodule {
             width: 100%;
-            height: 45vw;
+            height: 30vw;
             position: relative;
+            z-index: -1;
         }
 
         .heromodule::before {
@@ -208,11 +204,14 @@
             top: 0;
             left: 0;
             width: 100%;
-            height: 100%;
+            height: 30vw;
             position: absolute;
-            background-image: url(https://st3.depositphotos.com/1643295/18071/i/450/depositphotos_180717236-stock-photo-confident-smiling-asian-doctors-looking.jpg);
+            background-image: url(https://media.istockphoto.com/id/1023119736/photo/national-flags.jpg?s=612x612&w=0&k=20&c=d_h3bhP7W9BRv1_YXEwJCGPScus6OWuLDg_n4Jn4kBo=);
+
             background-size: cover;
-            filter: brightness(75%);
+
+            background-position-y: 50%;
+            filter: brightness(50%);
         }
 
         .hero-module-inside {
@@ -221,350 +220,31 @@
 
 
         .hero {
+            height: 30vw;
             width: 100%;
             margin: 0;
             height: 45vw;
             color: white;
+            
         }
 
         .herotitle {
+            margin-top: 7%;
             font-family: 'Playfair Display', serif;
             transform: translateY(30%);
-            font-size: 9vw;
+            font-size: 7vw;
             padding: 20px;
-            height:9vw;
+            height: 1vw;
         }
 
         .herotext {
             font-family: 'Noto Sans', sans-serif;
             font-weight: 300;
-            width: 40vw;
-            margin: 1% 0 0 30%;
-            padding: 0;
-            font-size: 1vw;
-            height: 1vw;
-        }
-
-        img {
-            object-fit: cover;
-        }
-
-        .herobtn {}
-
-        .whyuscontainer {
-            background-color: #41B188;
-            color: white;
-            margin: 0;
-            height: 45vw;
-
-        }
-
-        .whyustitle {
-            font-family: 'Playfair Display', serif;
-            font-family: 'Noto Sans', sans-serif;
-
-            font-weight: 150;
-            font-size: 7vw;
-            transform: translateY(35%);
-            margin: 0;
-            /* border: 1px white solid;*/
-        }
-
-        .iconrow {
-            margin-top: 10%;
-        }
-
-        .icontextrow {
-            font-family: 'Noto Sans', sans-serif;
-            font-size: 3vw;
-            font-weight: 200;
-            margin-top: 2%;
-        }
-
-        .countrycontainer {
-            height: 45vw;
             width: 100%;
-            margin: 0;
             padding: 0;
-            margin-bottom: 10%;
-        }
-
-        .countrytitle {
-            font-size: 5vw;
-            font-weight: 150;
-            color: #333333;
-            margin: 0;
-            margin-top: 3%;
-            white-space: nowrap;
-
-
-        }
-
-        .dropdownrow {
-            margin: 0;
-            margin-top: 3%;
-
-        }
-
-        .countrydropdown {
-            width: 100%;
-            text-align: left;
-            background-color: white;
-            color: #333333;
-            font-weight: 300;
-            font-size: 1.5vw;
-
-        }
-
-        .countrydropdown:hover {
-            background-color: #41B188;
-            color: white;
-        }
-
-        .countrydropdown:focus {
-            background-color: #41B188;
-            color: white;
-        }
-
-
-        .dropdown-item:active{
-            background-color: #41B188;
-            color:white;
-        }
-
-        .dropdown-toggle::after {
-            right: 0%;
-
-        }
-
-        .dropdown-menu {
-            width: 100%;
-            max-height: 10vw;
-            overflow-y: auto;
-            cursor: pointer;
-            font-size: 1.2vw;
-            border: 1px #333333 solid;
-            border-radius: 0;
-        }
-
-
-        .recommplancontainer {
-            padding: 0;
-            width: 48vw;
-            height: auto;
-            margin-top: 3%;
-            border: 1px solid #333333;
-        }
-
-        .recommplantitle {
-
-            font-size: 2.4vw;
-            font-weight: 200;
-            white-space: nowrap;
-            margin-top: 3%;
-
-
-        }
-
-        .planname {
-            margin-top: 5%;
-            margin-bottom: 5%;
-            font-size: 3.5vw;
-            color: #41B188;
-
-        }
-
-        .plannamefadein {
-            animation: fadein 1s ease-in-out -0.1s;
-        }
-
-        .plannamefadeout {
-            animation: fadeout 0.6s ease-in-out -0.1s;
-        }
-
-        @keyframes fadeout {
-            from {
-                opacity: 100;
-            }
-
-            to {
-                opacity: 0;
-            }
-
-        }
-
-        @keyframes fadein {
-            from {
-                opacity: 0;
-            }
-
-            to {
-                opacity: 1;
-            }
-
-        }
-
-        .plandetailslistrow {}
-
-        .plandetailslist {
-            font-weight: 300;
             font-size: 1.3vw;
-            transition: 0.3s ease-in-out;
-        }
-
-        .planmoredetailsrow {
-            margin-top: 5%;
-            margin-bottom: 5%;
 
         }
-
-        .planmoredetails {
-            text-decoration-line: underline;
-            text-decoration-thickness: 1px;
-            transition: 0.3s ease-in-out;
-            font-size: 1.2vw;
-        }
-
-        .planmoredetails:hover {
-            color: #41B188;
-        }
-
-        .detailsbtn {
-            margin-bottom: 35%;
-            font-weight: 300;
-        }
-
-        .pcrcontainer {
-            margin: 0;
-            padding: 0;
-            background-color: white;
-            height: 45vw;
-        }
-
-        .pcrrow {
-            margin: 0;
-            padding: 0;
-            color: #333333;
-            padding-top: 2%;
-            margin-left: 10%;
-
-        }
-
-        .pcrtitle {
-            font-size: 7vw;
-            margin-top: 10%;
-            font-weight: 150;
-
-        }
-
-        .pcrdetails {
-            margin-top: 2%;
-            text-align: left;
-            padding-left: 5%;
-            font-size: 1vw;
-            font-weight: 300;
-        }
-
-        .pcrpicturediv {
-            margin-right: 22%;
-            margin-top: 21%;
-        }
-
-        .pcrpicture {
-            background-size: 80%;
-            background-repeat: no-repeat;
-
-            height: 20vw;
-            
-
-            margin-right: 10%;
-            padding: 0;
-
-            border: 0px solid white;
-            margin-right: 10%;
-
-        }
-
-        .pcrbtn {
-            margin-top: 7%;
-        }
-
-        .artcontainer {
-            background-color: white;
-            margin-bottom: 6%;
-        }
-
-        .artrow {
-            color: #333333;
-        }
-
-        .artdetails {
-            font-weight: 300;
-        }
-
-
-        .enquiryrow {
-            height: 30vw;
-            background-color: red;
-
-        }
-
-        /*https://css-tricks.com/apply-a-filter-to-a-background-image/*/
-
-        .module {
-            width: 100%;
-            position: relative;
-        }
-
-        .module::before {
-            content: "";
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            position: absolute;
-            background-image: url(https://img.freepik.com/premium-photo/asian-senior-patient-having-consultation-with-doctor_1339-79722.jpg?w=2000);
-            background-size: cover;
-            background-repeat: no-repeat;
-
-            background-position-x: 0%;
-            background-position-y: 20%;
-            filter: brightness(40%);
-        }
-
-        .module-inside {
-            position: relative;
-        }
-
-        .enquirytitle {
-            margin-top: 5%;
-            font-size: 5vw;
-            font-family: 'Playfair Display', serif;
-            font-family: 'Noto Sans', sans-serif;
-            font-weight: 150;
-            color: white;
-        }
-
-        .enquirydetails {
-            margin-top: 0.5%;
-            color: white;
-            font-size: 1.2vw;
-        }
-
-        .enquirybtn {
-            margin-top: 3%;
-            padding: 0.7%;
-            padding-left: 1%;
-            padding-right: 1%;
-
-
-        }
-
-
-
-
-
-
 
 
 
@@ -639,14 +319,95 @@
         /*End of footer css*/
 
 
-        
+
+
+        .country-container {
+            width: 100%;
+            margin: 0;
+            padding: 0;
+            margin: 5% 0%;
+        }
+
+        .country-row {
+            padding: 5% 0%;
+            z-index: 1;
+            border-bottom: 1px #333333 solid;
+        }
+
+
+        .btn-country-hollow,
+        .btn-country-filled {
+            color: white;
+            background-color: #41B188;
+            border-color: #41B188;
+            margin: 0% 2%;
+        }
+
+        .btn-country-filled:hover {
+            background-color: #FEBB60;
+            color: white;
+            border-color: #FEBB60;
+        }
+
+        .btn-country-filled:active {
+            background-color: #FEBB60;
+            color: white;
+            border-color: #FEBB60;
+        }
+
+        .btn-country-hollow:active {
+            background-color: #FEBB60;
+            color: white;
+            border-color: #FEBB60;
+        }
+
+        .btn-country-hollow {
+            background-color: white;
+            color: #41B188;
+            border-color: #41B188;
+        }
+
+        .btn-country-hollow:hover {
+            background-color: white;
+            color: #41B188;
+            border-color: #41B188;
+        }
+
+
+
+
+        .country-flag{
+            width: 5vw;
+            height:5vw;
+            margin: 5%;
+            
+        }
+
+        .country-title{
+            font-size: 4vw;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .country-details{
+           margin: 6% 0%;
+        }
+        .country-list{
+            margin: 0;
+            padding: 0;
+            font-weight: 300;
+            font-size: 1vw;
+            list-style: none;
+
+        }
+        .btn-col{
+            padding:3% 0%;
+        }
     </style>
-
-
 </head>
 
 <body>
-
     <!--Navbar start-->
     <div id="fixedheader" class="row header">
         <div class="col-3 navbox"><a href="home.html" class="logo">Aurora</a><a href="home.html"
@@ -673,224 +434,134 @@
     </div>
     <!--Navbar ends here-->
 
-
-
     <!--Hero section-->
 
     <div class="heromodule">
         <div class="hero-module-inside">
             <div class="row hero text-center ">
-                <div class="herotitle">We're here for you</div>
-                <div class="herotext">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam eget diam nec ligula gravida hendrerit.
-                    Vestibulum a justo mauris. Nam placerat posuere augue sit amet gravida. Sed quis metus in velit posuere
-                    viverra. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam eget diam nec ligula gravida
-                    hendrerit.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam eget diam nec ligula gravida
-                    hendrerit. Vestibulum a justo mauris. Nam placerat posuere augue sit amet gravida.
+                <div class="herotitle text-center">Country Restrictions
+                    <div class="herotext">
+                        Get the latest updates on country restrictions and their quarantine policies
+                    </div>
                 </div>
-                <a href="#"><button href="#" class="bookbtn herobtn">Book Now</button></a>
-        
+
+
             </div>
         </div>
     </div>
-    <!--Why Us Section-->
-    <div class="container-fluid whyuscontainer">
-        <div class="row text-center">
-            <div class="col-4"></div>
-            <div class="col-4 whyustitle">Why Us?</div>
-            <div class="col-4"></div>
-        </div>
-        <div class="row iconrow text-center">
-            <div class="col-4">
-                <i class="fa-regular fa-clock fa-8x"></i>
+
+    <!--Countries List-->
+    <div class="container-fluid text-center country-container ">
+        <div class="row country-row">
+            <div class="col-2"></div>
+            <div class="col-3 ">
+                <div class="country-title "><span class="fi fi-cn country-flag"></span>China</div>
             </div>
-            <div class="col-4">
-
-                <i class="fa-solid fa-vial fa-8x"></i>
-            </div>
-            <div class="col-4">
-                <i class="fa-solid fa-user-shield fa-8x"></i>
-            </div>
-        </div>
-        <div class="row text-center icontextrow">
-            <div class="col-4">Fast</div>
-            <div class="col-4 ">Accurate</div>
-            <div class="col-4">Safe</div>
-        </div>
-    </div>
-
-    <!--Country selection Title-->
-    <div class="container-fluid countrycontainer">
-        <div class="row text-center countrytitle">
-            <div class="col-md-2"></div>
-            <div class="col-md-8 ">Where Are You Going?</div>
-            <div class="col-md-2"></div>
-        </div>
-
-
-        <!--Dropdown menu-->
-        <div class="row dropdownrow">
-            <div class="col-3"></div>
-            <div class="col-6">
-                <div class="dropdown-center ">
-                    <button class="btn btn-secondary dropdown-toggle countrydropdown rounded-0 text-center"
-                        type="button" data-bs-toggle="dropdown" aria-expanded="false" id="countrydopdownbtn">
-                        <span class="" id="countrydopdownbtnspan"></span>
-                        <span id="countrydopdownbtntext">Select a Country</span>
-
-                    </button>
-                    <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" id="dropdownbtnChina"><span class="fi fi-cn"></span> China</a></li>
-                        <li><a class="dropdown-item" id="dropdownbtnFrance"><span class="fi fi-fr"></span> France</a>
-                        </li>
-                        <li><a class="dropdown-item" id="dropdownbtnGermany"><span class="fi fi-de"></span> Germany</a>
-                        </li>
-                        <li><a class="dropdown-item" id="dropdownbtnItaly"><span class="fi fi-it"></span> Italy</a></li>
-                        <li><a class="dropdown-item" id="dropdownbtnKorea"><span class="fi fi-kr"></span> Korea</a></li>
-                        <li><a class="dropdown-item" id="dropdownbtnMexico"><span class="fi fi-mx"></span> Mexico</a>
-                        </li>
-                        <li><a class="dropdown-item" id="dropdownbtnSingapore"><span class="fi fi-sg"></span>
-                                Singapore</a></li>
-                        <li><a class="dropdown-item" id="dropdownbtnSpain"><span class="fi fi-es"></span> Spain</a></li>
-                        <li><a class="dropdown-item" id="dropdownbtnTaiwan"><span class="fi fi-tw"></span> Taiwan</a>
-                        </li>
-                        <li><a class="dropdown-item" id="dropdownbtnThailand"><span class="fi fi-th"></span>
-                                Thailand</a></li>
-                        <li><a class="dropdown-item" id="dropdownbtnTurkey"><span class="fi fi-tr"></span> Turkey</a>
-                        </li>
-                        <li><a class="dropdown-item" id="dropdownbtnUnitedKingdom"><span class="fi fi-gb"></span> United
-                                Kingdom</a></li>
-                        <li><a class="dropdown-item" id="dropdownbtnUnitedStates"><span class="fi fi-us"></span> United
-                                States</a></li>
+            <div class="col-3">
+                
+                <div class="country-details">
+                    <ul class = "country-list">
+                        <li>PCR Test Required</li>
+                        <li>48 Hour Qurantine</li>
+                        <li>Mask Required</li>
                     </ul>
                 </div>
             </div>
-            <div class="col-3"></div>
-        </div>
 
-        <!--Box for recommended Plan-->
-        <div class="container recommplancontainer">
-            <div class="row recommplantitle text-center">
-                <div class="col-3"></div>
-                <div class="col-6">
-                    Recommended Plan
-                </div>
-                <div class="col-3"></div>
+            <div class="col-2 btn-col">
+                <a href="#" class="btn btn-outline-secondary btn-country-hollow">More Details</a>
+                <a href="#" class="btn btn-primary btn-country-filled">Buy Plan</a>
             </div>
-            <!--Will change according to what they click using js-->
-            <div class="row text-center planname">
-                <span id="planName">Plan A</span>
-            </div>
-            <div class="row plandetailslistrow">
-                <div class="col-4"></div>
-                <div class="col-4 text-center plandetailslist">
-                    <div id="detailsline1">PCR Test</div>
-                    <div id="detailsline2">Results within 24 hours</div>
-                    <div id="detailsline3">Express Delivery</div>
-                </div>
-                <div class="col-4"></div>
-
-            </div>
-
-            <!--Plan details-->
-            <div class="row planmoredetailsrow text-center">
-                <div class="col "><a href="countries.html" target="_blank" class="planmoredetails">Country
-                        Restrictions</a>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="0.9vw" height="0.9vw" fill="currentColor"
-                        class="bi bi-arrow-up-right" viewBox="0 0 16 16" style="color:#333333;">
-                        <path fill-rule="evenodd"
-                            d="M14 2.5a.5.5 0 0 0-.5-.5h-6a.5.5 0 0 0 0 1h4.793L2.146 13.146a.5.5 0 0 0 .708.708L13 3.707V8.5a.5.5 0 0 0 1 0v-6z" />
-                    </svg>
-                </div>
-                <div class="col "><a href="#" class="planmoredetails">Plan details</a>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="0.9vw" height="0.9vw" fill="currentColor"
-                        class="bi bi-arrow-up-right" viewBox="0 0 16 16" style="color:#333333;">
-                        <path fill-rule="evenodd"
-                            d="M14 2.5a.5.5 0 0 0-.5-.5h-6a.5.5 0 0 0 0 1h4.793L2.146 13.146a.5.5 0 0 0 .708.708L13 3.707V8.5a.5.5 0 0 0 1 0v-6z" />
-                    </svg>
-                </div>
-
-            </div>
-
-            <!--Buy plan button-->
-            <div class="row">
-                <div class="col-5"></div>
-                <div class="col-2"><a href="#"><button href="#" class="bookbtn detailsbtn">Buy Plan</button></a></div>
-                <div class="col-5"></div>
-
-            </div>
+            <div class="col-2"></div>
         </div>
 
 
-
-    </div>
-
-    <!--PCR Test Section-->
-    <div class="container-fluid pcrcontainer">
-        <div class="row pcrrow">
-            <div class="col-4  text-center">
-                <div class="pcrtitle">PCR Test</div>
-                <div class="pcrdetails">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis eros nisi,
-                    faucibus eu purus ac, imperdiet rutrum purus. Phasellus pulvinar rhoncus vestibulum. Duis porttitor
-                    eros ut nibh pulvinar egestas. Vivamus nulla leo, suscipit interdum dapibus aliquam, scelerisque
-                    vitae metus. Nullam accumsan mauris fringilla auctor pellentesque. Donec non tempor libero.
-                    Pellentesque eleifend leo varius orci tempor varius. Nulla vehicula dolor at est tristique cursus.
-                    Praesent eget urna sit amet elit feugiat tincidunt. Aliquam id justo risus. Morbi imperdiet
-                    condimentum luctus. Nullam dignissim erat eget tempor bibendum.
-                </div>
-                <a href="#"><button href="#" class="bookbtn pcrbtn">Buy Plan</button></a>
+        <div class="row country-row">
+            <div class="col-2"></div>
+            <div class="col-3 ">
+                
+                <div class="country-title "><span class="fi fi-fr country-flag"></span>France</div>
             </div>
+            <div class="col-3">
+                
+                <div class="country-details">
+                    <ul class = "country-list">
+                        <li>PCR Test Required</li>
+                        <li>48 Hour Qurantine</li>
+                        <li>Mask Required</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="col-2 btn-col">
+                <a href="#" class="btn btn-outline-secondary btn-country-hollow">More Details</a>
+                <a href="#" class="btn btn-primary btn-country-filled">Buy Plan</a>
+            </div>
+            <div class="col-2"></div>
+        </div>
+
+        <div class="row country-row">
             <div class="col-1"></div>
-            <div class="col-5 text-center">
-                <div class="pcrpicturediv"><img class="pcrpicture"
-                        src="https://www.rafflesmedicalgroup.com/wp-content/uploads/2021/03/covid-test-header.jpg"
-                        alt=""></div>
-
+            <div class="col-4 ">
+                
+                <div class="country-title "><span class="fi fi-de country-flag"></span>Germany</div>
             </div>
-        </div>
-    </div>
-
-    <!--ART Test Section-->
-    <div class="container-fluid pcrcontainer artcontainer">
-        <div class="row pcrrow artrow">
-            <div class="col-4  text-center">
-                <div class="pcrtitle">ART Test</div>
-                <div class="pcrdetails artdetails">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis eros
-                    nisi, faucibus eu purus ac, imperdiet rutrum purus. Phasellus pulvinar rhoncus vestibulum. Duis
-                    porttitor eros ut nibh pulvinar egestas. Vivamus nulla leo, suscipit interdum dapibus aliquam,
-                    scelerisque vitae metus. Nullam accumsan mauris fringilla auctor pellentesque. Donec non tempor
-                    libero. Pellentesque eleifend leo varius orci tempor varius. Nulla vehicula dolor at est tristique
-                    cursus. Praesent eget urna sit amet elit feugiat tincidunt. Aliquam id justo risus. Morbi imperdiet
-                    condimentum luctus. Nullam dignissim erat eget tempor bibendum.
+            <div class="col-3">
+                
+                <div class="country-details">
+                    <ul class = "country-list">
+                        <li>PCR Test Required</li>
+                        <li>48 Hour Qurantine</li>
+                        <li>Mask Required</li>
+                    </ul>
                 </div>
-                <a href="#"><button href="#" class="bookbtn pcrbtn">Buy Plan</button></a>
             </div>
+
+            <div class="col-2 btn-col">
+                <a href="#" class="btn btn-outline-secondary btn-country-hollow">More Details</a>
+                <a href="#" class="btn btn-primary btn-country-filled">Buy Plan</a>
+            </div>
+            <div class="col-2"></div>
+        </div>
+
+        <div class="row country-row">
             <div class="col-1"></div>
-            <div class="col-5 text-center">
-                <div class="pcrpicturediv"><img class="pcrpicture"
-                        src="https://www.rafflesmedicalgroup.com/wp-content/uploads/2021/03/covid-test-header.jpg"
-                        alt=""></div>
-
+            <div class="col-4 ">
+                
+                <div class="country-title "><span class="fi fi-it country-flag"></span>Italy</div>
             </div>
-        </div>
-    </div>
-
-    <!--Enquiry-->
-
-    <div class="container-fluid enquirycontainer">
-        <div class="row enquiryrow module text-center">
-            <div class="module-inside">
-                <div class="enquirytitle">
-                    Got Questions?
+            <div class="col-3">
+                
+                <div class="country-details">
+                    <ul class = "country-list">
+                        <li>PCR Test Required</li>
+                        <li>48 Hour Qurantine</li>
+                        <li>Mask Required</li>
+                    </ul>
                 </div>
-                <div class="enquirydetails">
-                    Get in touch with us by sending an enquiry and our team will be glad to help.
-                </div>
-                <a href="#"><button href="#" class="bookbtn enquirybtn">Make an Enquiry</button></a>
             </div>
 
+            <div class="col-2 btn-col">
+                <a href="#" class="btn btn-outline-secondary btn-country-hollow">More Details</a>
+                <a href="#" class="btn btn-primary btn-country-filled">Buy Plan</a>
+            </div>
+            <div class="col-2"></div>
         </div>
+
+
+        
+
+
+
+
+
     </div>
+
+
+
+
+
+
 
 
     <!--Footer-->
@@ -1004,7 +675,11 @@
 
 
 
-    <script src="js\home.js"></script>
+
+
+
+
+    <script src="js\countries.js"></script>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
