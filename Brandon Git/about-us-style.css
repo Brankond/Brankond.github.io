@@ -172,18 +172,8 @@ section {
     color: #112F24
 }
 
-.motivation-section {
+.motivation-section, .our-customers {
     height: 700px;
-    background-image: url('./about-us-hero-banner-image.jpeg');
-    background-size: cover;
-    background-repeat: no-repeat;
-}
-
-.our-customers {
-    height: 700px;
-    background-image: url('./about-us-hero-banner-image.jpeg');
-    background-size: cover;
-    background-repeat: no-repeat;
 }
 
 .our-team, .achievements {

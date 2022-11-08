@@ -50,11 +50,12 @@ section {
 .hero-banner-background {
     background-image: url('./ContactUsBannerImage.jpg');
     background-repeat: no-repeat;
+    background-position: center;
     background-size: cover;
 }
 
 .quick-links, .contact-form {
-    padding: 10rem 10%;
+    padding: 10rem 5%;
     background-color: white;
 }
 
@@ -113,6 +114,16 @@ section {
 
 .contact-form p {
     font-weight: 400 !important;
+}
+
+.contact-form .button {
+    color: #112F24;
+    border-color: #112F24;
+}
+
+.contact-form .button:hover {
+    color: white;
+    background-color: #112F24;
 }
 
 .contact-info {
