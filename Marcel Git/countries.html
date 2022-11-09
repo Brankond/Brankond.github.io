@@ -84,7 +84,7 @@
             transition-duration: 0.4s;
 
             box-shadow: 0px 0px grey;
-            
+
         }
 
 
@@ -95,7 +95,6 @@
             color: #41B188;
             cursor: pointer;
             font-size: 1.3em
-
         }
 
 
@@ -223,7 +222,7 @@
             margin: 0;
             height: 45vw;
             color: white;
-            
+
         }
 
         .herotitle {
@@ -243,6 +242,70 @@
             font-size: 1.3vw;
 
         }
+
+        /* Start of Enquiry*/
+
+        .enquirycontainer{
+            padding:0;
+        }
+        .enquiryrow {
+            width: 100%;
+            height: 30vw;
+            background-color: red;
+
+        }
+
+        /*https://css-tricks.com/apply-a-filter-to-a-background-image/*/
+
+        .module {
+            width: 100%;
+            position: relative;
+        }
+
+        .module::before {
+            content: "";
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            background-image: url(https://ak.picdn.net/shutterstock/videos/1011929924/thumb/1.jpg?ip=x480);
+            background-size: cover;
+            background-repeat: no-repeat;
+
+            background-position-x: 0%;
+            background-position-y: 20%;
+            filter: brightness(40%);
+        }
+
+        .module-inside {
+            position: relative;
+        }
+
+        .enquirytitle {
+            margin-top: 5%;
+            font-size: 5vw;
+            font-family: 'Playfair Display', serif;
+            font-family: 'Noto Sans', sans-serif;
+            font-weight: 150;
+            color: white;
+        }
+
+        .enquirydetails {
+            margin-top: 0.5%;
+            color: white;
+            font-size: 1.2vw;
+        }
+
+        .enquirybtn {
+            margin-top: 3%;
+            padding: 0.7%;
+            padding-left: 1%;
+            padding-right: 1%;
+
+
+        }
+        /*End of Enquuiry*/
 
 
 
@@ -329,7 +392,7 @@
         .country-row {
             padding: 5% 0%;
             z-index: 1;
-            border-bottom: 1px #333333 solid;
+            border-bottom: 0px #333333 solid;
         }
 
 
@@ -339,6 +402,7 @@
             background-color: #41B188;
             border-color: #41B188;
             margin: 0% 2%;
+            border-radius: 0;
         }
 
         .btn-country-filled:hover {
@@ -374,24 +438,25 @@
 
 
 
-        .country-flag{
+        .country-flag {
             width: 5vw;
-            height:5vw;
+            height: 5vw;
             margin: 5%;
-            
+
         }
 
-        .country-title{
+        .country-title {
             font-size: 4vw;
             display: flex;
             justify-content: center;
             align-items: center;
         }
 
-        .country-details{
-           margin: 6% 0%;
+        .country-details {
+            margin: 6% 0%;
         }
-        .country-list{
+
+        .country-list {
             margin: 0;
             padding: 0;
             font-weight: 300;
@@ -399,8 +464,14 @@
             list-style: none;
 
         }
-        .btn-col{
-            padding:3% 0%;
+
+        .country-divider {
+            width: 100rem;
+
+        }
+
+        .btn-col {
+            padding: 3% 0%;
         }
     </style>
 </head>
@@ -455,10 +526,11 @@
             <div class="col-3 ">
                 <div class="country-title "><span class="fi fi-cn country-flag"></span>China</div>
             </div>
-            <div class="col-3">
-                
+            <div class="col-2">
+
                 <div class="country-details">
-                    <ul class = "country-list">
+                    Restrictions
+                    <ul class="country-list">
                         <li>PCR Test Required</li>
                         <li>48 Hour Qurantine</li>
                         <li>Mask Required</li>
@@ -467,23 +539,24 @@
             </div>
 
             <div class="col-2 btn-col">
-                <a href="#" class="btn btn-outline-secondary btn-country-hollow">More Details</a>
                 <a href="#" class="btn btn-primary btn-country-filled">Buy Plan</a>
             </div>
             <div class="col-2"></div>
         </div>
+
+        <hr class="country-divider mx-auto">
 
 
         <div class="row country-row">
             <div class="col-2"></div>
             <div class="col-3 ">
-                
-                <div class="country-title "><span class="fi fi-fr country-flag"></span>France</div>
+
+                <div class="country-title "><span class="fi fi-in country-flag"></span>India</div>
             </div>
             <div class="col-3">
-                
+               
                 <div class="country-details">
-                    <ul class = "country-list">
+                    <ul class="country-list">
                         <li>PCR Test Required</li>
                         <li>48 Hour Qurantine</li>
                         <li>Mask Required</li>
@@ -497,17 +570,19 @@
             </div>
             <div class="col-2"></div>
         </div>
+
+        <hr class="country-divider mx-auto">
 
         <div class="row country-row">
             <div class="col-1"></div>
             <div class="col-4 ">
-                
-                <div class="country-title "><span class="fi fi-de country-flag"></span>Germany</div>
+
+                <div class="country-title "><span class="fi fi-ph country-flag"></span>Philippines</div>
             </div>
             <div class="col-3">
-                
+
                 <div class="country-details">
-                    <ul class = "country-list">
+                    <ul class="country-list">
                         <li>PCR Test Required</li>
                         <li>48 Hour Qurantine</li>
                         <li>Mask Required</li>
@@ -521,17 +596,19 @@
             </div>
             <div class="col-2"></div>
         </div>
+
+        <hr class="country-divider mx-auto">
 
         <div class="row country-row">
             <div class="col-1"></div>
             <div class="col-4 ">
-                
-                <div class="country-title "><span class="fi fi-it country-flag"></span>Italy</div>
+
+                <div class="country-title "><span class="fi fi-mm country-flag"></span>Myanmar</div>
             </div>
             <div class="col-3">
-                
+
                 <div class="country-details">
-                    <ul class = "country-list">
+                    <ul class="country-list">
                         <li>PCR Test Required</li>
                         <li>48 Hour Qurantine</li>
                         <li>Mask Required</li>
@@ -545,14 +622,37 @@
             </div>
             <div class="col-2"></div>
         </div>
-
-
         
 
+        <a href="#" class="btn btn-outline-secondary btn-country-hollow">View all Countries</a>
 
 
 
 
+
+
+
+
+    </div>
+    <!--Updated-->
+
+    <div class="container-fluid enquirycontainer">
+        <div class="row enquiryrow module text-center">
+            <div class="module-inside">
+                <div class="enquirytitle">
+                    Thinking of Travelling?
+                </div>
+                <div class="enquirydetails">
+                    Sign up for email alerts as countries begin to open
+                </div>
+                <div class="">
+                    <input type="text" placeholder="Enter your email address">
+                    <a href="#"><button href="#" class="bookbtn enquirybtn">Keep me updated</button></a>
+                </div>
+
+            </div>
+
+        </div>
     </div>
 
 
