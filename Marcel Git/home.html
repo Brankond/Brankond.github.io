@@ -75,8 +75,8 @@
         }
 
 
-         /*Start of Navbar*/
-         #fixedheader {
+        /*Start of Navbar*/
+        #fixedheader {
             position: fixed;
         }
 
@@ -250,7 +250,6 @@
             object-fit: cover;
         }
 
-        .herobtn {}
 
         .whyuscontainer {
             background-color: #41B188;
@@ -298,12 +297,6 @@
             margin-top: 3%;
             white-space: nowrap;
 
-
-        }
-
-        .dropdownrow {
-            margin: 0;
-            margin-top: 3%;
 
         }
 
@@ -565,14 +558,6 @@
 
         }
 
-
-
-
-
-
-
-
-
         /* Start of Footer CSS*/
         .footer-container {
             background-color: #41B188;
@@ -732,45 +717,65 @@
             <div class="col-md-2"></div>
         </div>
 
+        <div class="row w-50 mx-auto align-items-center justify-content-betwee py-3">
+            <div class="col-12">
+                <!--Dropdown menu-->
+                <div class="row dropdownrow">
+                    <div class="col-12">
+                        <div class="dropdown-center ">
+                            <button class="btn btn-secondary dropdown-toggle countrydropdown rounded-0 text-center"
+                                type="button" data-bs-toggle="dropdown" aria-expanded="false" id="countrydopdownbtn">
+                                <span class="" id="countrydopdownbtnspan"></span>
+                                <span id="countrydopdownbtntext">Select a Country</span>
 
-        <!--Dropdown menu-->
-        <div class="row dropdownrow">
-            <div class="col-3"></div>
-            <div class="col-6">
-                <div class="dropdown-center ">
-                    <button class="btn btn-secondary dropdown-toggle countrydropdown rounded-0 text-center"
-                        type="button" data-bs-toggle="dropdown" aria-expanded="false" id="countrydopdownbtn">
-                        <span class="" id="countrydopdownbtnspan"></span>
-                        <span id="countrydopdownbtntext">Select a Country</span>
-
-                    </button>
-                    <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" id="dropdownbtnChina"><span class="fi fi-cn"></span> China</a></li>
-                        <li><a class="dropdown-item" id="dropdownbtnFrance"><span class="fi fi-fr"></span> France</a>
-                        </li>
-                        <li><a class="dropdown-item" id="dropdownbtnGermany"><span class="fi fi-de"></span> Germany</a>
-                        </li>
-                        <li><a class="dropdown-item" id="dropdownbtnItaly"><span class="fi fi-it"></span> Italy</a></li>
-                        <li><a class="dropdown-item" id="dropdownbtnKorea"><span class="fi fi-kr"></span> Korea</a></li>
-                        <li><a class="dropdown-item" id="dropdownbtnMexico"><span class="fi fi-mx"></span> Mexico</a>
-                        </li>
-                        <li><a class="dropdown-item" id="dropdownbtnSingapore"><span class="fi fi-sg"></span>
-                                Singapore</a></li>
-                        <li><a class="dropdown-item" id="dropdownbtnSpain"><span class="fi fi-es"></span> Spain</a></li>
-                        <li><a class="dropdown-item" id="dropdownbtnTaiwan"><span class="fi fi-tw"></span> Taiwan</a>
-                        </li>
-                        <li><a class="dropdown-item" id="dropdownbtnThailand"><span class="fi fi-th"></span>
-                                Thailand</a></li>
-                        <li><a class="dropdown-item" id="dropdownbtnTurkey"><span class="fi fi-tr"></span> Turkey</a>
-                        </li>
-                        <li><a class="dropdown-item" id="dropdownbtnUnitedKingdom"><span class="fi fi-gb"></span> United
-                                Kingdom</a></li>
-                        <li><a class="dropdown-item" id="dropdownbtnUnitedStates"><span class="fi fi-us"></span> United
-                                States</a></li>
-                    </ul>
+                            </button>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" id="dropdownbtnChina"><span class="fi fi-cn"></span> China</a></li>
+                                <li><a class="dropdown-item" id="dropdownbtnFrance"><span class="fi fi-fr"></span> France</a>
+                                </li>
+                                <li><a class="dropdown-item" id="dropdownbtnGermany"><span class="fi fi-de"></span> Germany</a>
+                                </li>
+                                <li><a class="dropdown-item" id="dropdownbtnItaly"><span class="fi fi-it"></span> Italy</a></li>
+                                <li><a class="dropdown-item" id="dropdownbtnKorea"><span class="fi fi-kr"></span> Korea</a></li>
+                                <li><a class="dropdown-item" id="dropdownbtnMexico"><span class="fi fi-mx"></span> Mexico</a>
+                                </li>
+                                <li><a class="dropdown-item" id="dropdownbtnSingapore"><span class="fi fi-sg"></span>
+                                        Singapore</a></li>
+                                <li><a class="dropdown-item" id="dropdownbtnSpain"><span class="fi fi-es"></span> Spain</a></li>
+                                <li><a class="dropdown-item" id="dropdownbtnTaiwan"><span class="fi fi-tw"></span> Taiwan</a>
+                                </li>
+                                <li><a class="dropdown-item" id="dropdownbtnThailand"><span class="fi fi-th"></span>
+                                        Thailand</a></li>
+                                <li><a class="dropdown-item" id="dropdownbtnTurkey"><span class="fi fi-tr"></span> Turkey</a>
+                                </li>
+                                <li><a class="dropdown-item" id="dropdownbtnUnitedKingdom"><span class="fi fi-gb"></span> United
+                                        Kingdom</a></li>
+                                <li><a class="dropdown-item" id="dropdownbtnUnitedStates"><span class="fi fi-us"></span> United
+                                        States</a></li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="col-3"></div>
+            <div class="col-12">
+                <!-- Number of persons -->
+                <div class="row p-3 mx-auto align-items-center w-">
+                    <div class="col-6 p-3">
+                        <span> Number of People: </span>
+                    </div>
+                    <div class="col-2">
+                        <button style="background-color: #112F24; color: white; border: none" class="px-3 py-1 mx-auto d-block" id="decrement-people-count-btn">
+                            -
+                        </button>
+                    </div>
+                    <div class="col-2 text-center" id="people-count">1</div>
+                    <div class="col-2">
+                        <button style="background-color: #112F24; color: white; border: none" class="px-3 py-1 mx-auto d-block" id="increment-people-count-btn">
+                            +
+                        </button>
+                    </div>
+                </div>
+            </div>
         </div>
 
         <!--Box for recommended Plan-->
@@ -819,9 +824,6 @@
 
             </div>
         </div>
-
-
-
     </div>
 
     <!--PCR Test Section-->
@@ -996,7 +998,6 @@
 
 
     </div>
-
     <!--End of footer-->
 
 
@@ -1016,6 +1017,28 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.min.js"
         integrity="sha384-IDwe1+LCz02ROU9k972gdyvl+AESN10+x7tBKgc9I5HFtuNz0wWnPclzo6p9vxnk"
         crossorigin="anonymous"></script>
+
+    <script>
+        let increment_btn = document.querySelector('#increment-people-count-btn')
+        let decrement_btn = document.querySelector('#decrement-people-count-btn')
+        let people_count_display_el = document.querySelector('#people-count');
+        let count = parseInt(people_count_display_el.innerHTML);
+
+        const increment_num = (el) => {
+            if (count >= 5) return;
+            count ++;
+            el.innerHTML = count;
+        }
+
+        const decrement_num = (el) => {
+            if (count <= 1) return;
+            count --;
+            el.innerHTML = count;
+        }
+
+        increment_btn.addEventListener('click', (e) => {increment_num(people_count_display_el)});
+        decrement_btn.addEventListener('click', (e) => {decrement_num(people_count_display_el)});
+    </script>
 </body>
 
 </html>
