@@ -485,9 +485,18 @@ textarea {
                 <select class="form-select" style="font-family: 'Noto Sans', sans-serif; font-weight: 300;" id="covid-test" required
                     onchange="changeResult()">
                     <option selected value="emptycovid" disabled>Choose your Covid Test</option>
-                    <option value="PCR Test" action:>PCR Test</option>
-                    <option value="Supervised ART">Supervised ART</option>
-                    <option value="3">Three</option>
+                    <option disabled>-Individual Tests-</option>
+                    <option value="PCR Test (Standard)">PCR Test (Standard)</option>
+                    <option value="PCR Test (Express)">PCR Test (Express)</option>
+                    <option value="Supervised ART">Supervised ART (Pick any location)</option>
+                    <option value="Serology / IGM Test">Serology / IGM Test</option>
+                    <option value="Mobile Pre Departure Test (Standard)">Mobile Pre Departure Test (Standard)</option>
+                    <option value="Mobile Pre Departure Test (Express)">Mobile Pre Departure Test (Express)</option>
+                    <option disabled>-Bundles-</option>
+                    <option value="China Bundle">China Bundle</option>
+                    <option value="India Bundle">India Bundle</option>
+                    <option value="Phillipines Bundle">Phillipines Bundle</option>
+
                 </select>
                 <p> Preferred Location</p>
                 <select class="form-select" style="font-family: 'Noto Sans', sans-serif; font-weight: 300;" id="location-list"
@@ -501,9 +510,11 @@ textarea {
                 <select class="form-select" id="dropdown-list" style="font-family: 'Noto Sans', sans-serif; font-weight: 300;"
                     onchange="changeResult()">
                     <option selected value="emptydate" disabled style="font-weight: 300;">Choose your preferred date</option>
-                    <option value="1 November 2022" action:>1 November : 2 vacancies remaining</option>
-                    <option value="2 November 2022">2 November</option>
-                    <option value="3 November 2022">3 November</option>
+                    <option value="26 November 2022" action:>26 November : 2 vacancies remaining</option>
+                    <option value="27 November 2022">27 November : 34 vacancies remaining</option>
+                    <option value="28 November 2022">28 November : 16 vacancies remaining</option>
+                    <option value="29 November 2022">29 November : 16 vacancies remaining</option>
+                    <option value="30 November 2022">30 November : 16 vacancies remaining</option>
                 </select>
                 <div class="form-group">
                     <p>Remarks</p>

@@ -453,6 +453,19 @@
         div h4, div h5 {
             font-weight: 300;
         }
+        .hero-banner {
+    min-height: 60vh;
+    background-image: url('image/bg.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-blend-mode: darken;
+    background-color: rgba(0, 0, 0, 0.47);
+    padding: 5%;
+}
+h1 {
+    font-family: 'Playfair Display', serif;
+}
     </style>
 </head>
 
@@ -482,10 +495,14 @@
     <div class="col"></div>
 </div>
 <!--Navbar ends here-->
-<div class="row hero text-center ">
-    <h1 class="herotitle">Mobile Departure</h1>
-    <h1 class="herotitle">Swab Test</h1>
-</div>
+<section class="hero-banner container-fluid d-flex justify-content-center align-items-center">
+    <div class="text-center">
+        <h1 style="text-transform: uppercase; font-size: 5rem; line-height: 5rem;">
+            Mobile Departure <br> Swab Test
+        </h1>
+
+    </div>
+</section>
 
     </div>
     <div class="box1">

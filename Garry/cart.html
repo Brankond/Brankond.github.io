@@ -664,12 +664,42 @@
             document.getElementById("covidtest").innerHTML = "Test Chosen: " + covidChoice;
             document.getElementById("covidtestOrder").innerHTML = covidChoice;
             switch(covidChoice) {
-                case "PCR Test":
-                    document.getElementById("covidPrice").innerHTML = "€ 150";
-                    document.getElementById("covidPrice2").innerHTML = "€ 150";
+                case "PCR Test (Standard)":
+                    document.getElementById("covidPrice").innerHTML = "S$ 69";
+                    document.getElementById("covidPrice2").innerHTML = "S$ 69";
                     break;
-                case "Antigen Test":
-                    document.getElementById("covidPrice").innerHTML = "€ 100";
+                case "PCR Test (Express)":
+                    document.getElementById("covidPrice").innerHTML = "S$ 250";
+                    document.getElementById("covidPrice2").innerHTML = "S$ 250";
+                    break;
+                case "Supervised ART":
+                    document.getElementById("covidPrice").innerHTML = "S$ 20";
+                    document.getElementById("covidPrice2").innerHTML = "S$ 20";
+                    break;
+                case "Serology / IGM Test":
+                    document.getElementById("covidPrice").innerHTML = "S$ 40";
+                    document.getElementById("covidPrice2").innerHTML = "S$ 40";
+                    break;
+                case "Mobile Pre Departure Test (Standard)":
+                    document.getElementById("covidPrice").innerHTML = "S$ 140";
+                    document.getElementById("covidPrice2").innerHTML = "S$ 140";
+                    break;
+                case "Mobile Pre Departure Test (Express)":
+                    document.getElementById("covidPrice").innerHTML = "S$ 230";
+                    document.getElementById("covidPrice2").innerHTML = "S$ 230";
+                    break;
+                case "China Bundle":
+                    document.getElementById("covidPrice").innerHTML = "S$ 80";
+                    document.getElementById("covidPrice2").innerHTML = "S$ 80";
+                    break;
+                case "India Bundle":
+                    document.getElementById("covidPrice").innerHTML = "S$ 40";
+                    document.getElementById("covidPrice2").innerHTML = "S$ 40";
+                    break;
+
+                case "Phillipines Bundle":
+                    document.getElementById("covidPrice").innerHTML = "S$ 50";
+                    document.getElementById("covidPrice2").innerHTML = "S$ 50";
                     break;
             }
 

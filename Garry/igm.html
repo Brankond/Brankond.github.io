@@ -253,10 +253,9 @@
 
             width: 100%;
             margin: 0;
-            height: 30vw;
+            height: 60vh;
             color: #41B188;
-
-            padding-bottom: 20%;
+            padding: 5%;
         }
 
         .herotitle {
@@ -412,6 +411,7 @@
 
         h1 {
             color: white;
+            font-family: 'Playfair Display', serif;
         }
 
         h3 {
@@ -460,6 +460,18 @@
             font-family: 'Playfair Display';
 
         }
+        .hero-banner {
+    min-height: 60vh;
+    background-image: url('image/bg.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-blend-mode: darken;
+    background-color: rgba(0, 0, 0, 0.47);
+    padding: 5%;
+}
+
+
     </style>
 </head>
 
@@ -489,11 +501,14 @@
     <div class="col"></div>
 </div>
 <!--Navbar ends here-->
-    <div class="row hero text-center ">
-        <h1 class="herotitle">Serology / IGM</h1>
-        <h1 class="herotitle">COVID-19 Test</h1>
+<section class="hero-banner container-fluid d-flex justify-content-center align-items-center">
+    <div class="text-center">
+        <h1 style="text-transform: uppercase; font-size: 5rem; line-height: 5rem; font-weight: bold;">
+            Serology / IGM Test
+        </h1>
 
     </div>
+</section>
 
     </div>
     <div class="box1">
