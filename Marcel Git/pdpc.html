@@ -1,18 +1,755 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js"
+        integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT"
+        crossorigin="anonymous"></script>
     <title>Aurora Medical PDPC</title>
+    <link rel="icon"
+        href="https://i.natgeofe.com/n/63527567-9a8b-4b08-819d-a6142fb2b350/aurora-kirkjufell-iceland_4x3.jpg"
+        type="image/x-icon">
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+        rel="stylesheet">
+
+    <!--Flags import https://github.com/lipis/flag-icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lipis/flag-icons@6.6.6/css/flag-icons.min.css" />
+
 
     <style>
-        
+        ::selection {
+            color: white;
+            background: #FEBB60;
+        }
+
+
+        a {
+            text-decoration: none;
+            color: black;
+
+        }
+
+        .row {
+            width: 100%;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Noto Sans', sans-serif;
+            font-weight: 200;
+            background-color: white;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+            cursor: default;
+            /*height: 200vw;*/
+        }
+
+        /*Start of Navbar*/
+        #fixedheader {
+            position: fixed;
+        }
+
+        .header {
+            margin: 0;
+            z-index: 100;
+            width: 100%;
+            padding: 0.5%;
+
+            background-color: white;
+
+            transition-duration: 0.4s;
+
+            box-shadow: 0px 0px grey;
+
+        }
+
+
+        .navbtn {
+            font-family: 'Noto Sans', sans-serif;
+            font-weight: 300;
+            text-decoration: none;
+            color: #41B188;
+            cursor: pointer;
+            font-size: 1rem
+        }
+
+
+        .navbox {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+
+        }
+
+        .navbtn:hover {
+            color: #41B188;
+
+        }
+
+        .logo {
+            font-family: 'Playfair Display', serif;
+            font-weight: 400;
+            text-decoration: none;
+            color: #41B188;
+            font-size: 2rem;
+            transition: all 0.3s linear;
+            white-space: nowrap;
+
+        }
+
+        .logo:hover {
+            color: #41B188;
+            /*animation: logoanimation 5s linear infinite;*/
+
+        }
+
+        .logopt2 {
+            color: #333333;
+        }
+
+        .logopt2:hover {
+            color: #333333;
+        }
+
+
+
+        .hover-underline-animation {
+            display: inline-block;
+            position: relative;
+            color: #333333;
+            font-weight: 300;
+        }
+
+        .hover-underline-animation:after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            transform: scaleX(0);
+            height: 2px;
+            bottom: 0;
+            left: 0;
+            background-color: #41B188;
+            transform-origin: bottom right;
+            transition: transform 0.25s ease-out;
+        }
+
+        .hover-underline-animation:hover:after {
+            transform: scaleX(1);
+            transform-origin: bottom left;
+        }
+
+        .bookbtn {
+            font-family: 'Noto Sans', sans-serif;
+            font-weight: 400;
+            border: none;
+            border-radius: 2px;
+            padding: 0.3vw 0.7vw;
+
+            white-space: nowrap;
+            font-size: 1rem;
+            transition: 0.25s ease-in-out;
+
+            color: white;
+            background-color: #41B188;
+
+            border: 0px #41B188 solid;
+        }
+
+        .bookbtn:hover {
+
+            color: white;
+            background-color: #FEBB60;
+            border: 0px #FEBB60 solid;
+
+        }
+
+        /*Navbar css ends here*/
+
+
+
+        .hero-banner {
+            min-height: 60vh;
+            /*background-image: url(https://media.istockphoto.com/id/1023119736/photo/national-flags.jpg?s=612x612&w=0&k=20&c=d_h3bhP7W9BRv1_YXEwJCGPScus6OWuLDg_n4Jn4kBo=);*/
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-blend-mode: darken;
+            background-color: #41B188;
+
+            padding: 5%;
+        }
+
+        .hero-banner h1,
+        .hero-banner p,
+        .our-team h1,
+        .our-team p {
+            color: white;
+        }
+
+        /* Start of Enquiry*/
+
+        .enquirycontainer {
+            padding: 0;
+        }
+
+        .enquiryrow {
+            width: 100%;
+            height: 30vw;
+            background-color: red;
+
+        }
+
+        /*https://css-tricks.com/apply-a-filter-to-a-background-image/*/
+
+        .module {
+            width: 100%;
+            position: relative;
+        }
+
+        .module::before {
+            content: "";
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            background-image: url(https://ak.picdn.net/shutterstock/videos/1011929924/thumb/1.jpg?ip=x480);
+            background-size: cover;
+            background-repeat: no-repeat;
+
+            background-position-x: 0%;
+            background-position-y: 20%;
+            filter: brightness(40%);
+        }
+
+        .module-inside {
+            position: relative;
+        }
+
+        .enquirytitle {
+            margin-top: 5%;
+            font-size: 5vw;
+            font-family: 'Playfair Display', serif;
+            font-family: 'Noto Sans', sans-serif;
+            font-weight: 150;
+            color: white;
+        }
+
+        .enquirydetails {
+            margin-top: 0.5%;
+            color: white;
+            font-size: 1.2vw;
+        }
+
+        .enquirybtn {
+            margin-top: 3%;
+            padding: 0.7%;
+            padding-left: 1%;
+            padding-right: 1%;
+
+
+        }
+
+        /*End of Enquuiry*/
+
+
+
+        /* Start of Footer CSS*/
+        .footer-container {
+            background-color: #41B188;
+            color: white;
+            font-size: 1.1vw;
+            margin: 0;
+
+
+        }
+
+        .quicklinkscol {
+            margin-top: 3%;
+        }
+
+        .quicklinkstitle {
+            font-weight: 400;
+            padding-bottom: 2%;
+            color: white;
+        }
+
+        .quicklinks {
+
+            color: white;
+            transition: 0.2s ease-in-out
+        }
+
+        .quicklinks:hover {
+
+            color: #FEBB60;
+        }
+
+        .quicklinksdiv {
+            padding: 1%;
+        }
+
+        .midcol {
+            margin-top: 3%;
+        }
+
+        .midlinks {
+            font-weight: 400;
+            padding: 3%;
+        }
+
+        .contactcol {
+            margin-top: 3%;
+        }
+
+        .contactdiv {
+            padding-top: 1%;
+            padding-bottom: 1%;
+        }
+
+        .footerlogorow {
+            padding-top: 2%;
+            padding-bottom: 3%;
+        }
+
+        .footer-logo {
+            color: white;
+            margin: 4%;
+            transition: 0.2s ease-in-out;
+        }
+
+        .footer-logo:hover {
+            color: #FEBB60;
+        }
+
+        /*End of footer css*/
+
+        .pdpc-container {
+            padding: 0% 10%;
+            margin: 5% 0%;
+        }
+
+        .title {
+            /*font-family: 'Playfair Display', serif;*/
+            font-weight: 500;
+            font-size: 1.6rem;
+            padding:2% 0%;
+
+        }
+
+        p {
+            font-size: 1.1rem;
+            font-weight: 300;
+            text-align: left;
+        }
+
+        .list-item{
+            font-size: 1.1rem;
+            font-weight: 300;
+            text-align: left;
+        }
+
+        .contact{
+            text-align: center;
+        }
     </style>
-
-
 </head>
+
 <body>
+    <!--Navbar start-->
+    <div id="fixedheader" class="row header">
+        <div class="col-3 navbox"><a href="home.html" class="logo">Aurora</a><a href="home.html"
+                class="logo logopt2">Medical</a></div>
+        <div class="col-3"></div>
+        <div class="col navbox "><a href="#" class="navbtn hover-underline-animation">Products</a></div>
+        <div class="col navbox"><a href="Ricardo\FAQ.html" class="navbtn hover-underline-animation">FAQ</a></div>
+        <div class="col navbox"><a href="#" class="navbtn hover-underline-animation">Contact Us</a></div>
+        <div class="col navbox"><a href="#" class="navbtn hover-underline-animation">News</a></div>
+        <div class="col navbox"><a href="#"><button href="#" class="bookbtn">Book Now</button></a></div>
+
+    </div>
+
+    <!--This is a duplicate header to create the spacing between the top of the screen and the next element, leave it as part of the header-->
+    <div class="row header">
+        <div class="col-3 navbox"><a href="home.html" class="logo">Aurora Medical</a></div>
+        <div class="col-2"></div>
+        <div class="col navbox "><a href="#" class="navbtn hover-underline-animation">Products</a></div>
+        <div class="col navbox"><a href="#" class="navbtn hover-underline-animation">FAQ</a></div>
+        <div class="col navbox"><a href="#" class="navbtn hover-underline-animation">Contact Us</a></div>
+        <div class="col navbox"><a href="#" class="navbtn hover-underline-animation">News</a></div>
+        <div class="col navbox"><a href="#"><button href="#" class="bookbtn">Book Now</button></a></div>
+        <div class="col"></div>
+    </div>
+    <!--Navbar ends here-->
+
+    <!-- Hero Banner -->
+    <section class="hero-banner container-fluid d-flex justify-content-center align-items-center">
+        <div class="text-center">
+            <h1
+                style="text-transform: uppercase; font-size: 4rem; line-height: 3.5rem; font-family: 'Playfair Display', serif;">
+                Data Protection Notice
+            </h1>
+        </div>
+    </section>
+
+
+    <!--Data Protection Notice-->
+    <div class="container-fluid text-center pdpc-container">
+        <div class="row">
+            <p>This Data Protection Notice (“Notice”) sets out the basis which Aurora Medical (“we”, “us”, or “our”) may
+                collect, use, disclose or otherwise process personal data of our customers in accordance with the
+                Personal Data Protection Act (“PDPA”). This Notice applies to personal data in our possession or under
+                our control, including personal data in the possession of organisations which we have engaged to
+                collect, use, disclose or process personal data for our purposes. </p>
+        </div>
+        <div class="row mx-auto">
+
+        </div>
+
+        <div class="row">
+            <div class="title">PERSONAL DATA</div>
+            <p>
+                1. As used in this Notice:
+
+                “customer” means an individual who (a) has contacted us through any means to find out more about any
+                goods
+                or services we provide, or (b) may, or has, entered into a contract with us for the supply of any goods
+                or
+                services by us; and
+
+                “personal data” means data, whether true or not, about a customer who can be identified: (a) from that
+                data; or (b) from that data and other information to which we have or are likely to have access.
+
+            </p>
+
+
+            <p>
+                2. Depending on the nature of your interaction with us, some examples of personal data which we may
+                collect from you include name, residential address, email address, telephone number, nationality,
+                gender, date of birth, marital status, photograph, employment information, financial information and
+                medical history.
+            </p>
+
+            <p>
+                3. Other terms used in this Notice shall have the meanings given to them in the PDPA (where the context
+                so permits).
+            </p>
+        </div>
+
+        <div class="row">
+            <div class="title">COLLECTION, USE AND DISCLOSURE OF PERSONAL DATA</div>
+            <p>
+                4. We generally do not collect your personal data unless (a) it is provided to us voluntarily by you
+                directly or via a third party who has been duly authorised by you to disclose your personal data to us
+                (your “authorised representative”) after (i) you (or your authorised representative) have been notified
+                of the purposes for which the data is collected, and (ii) you (or your authorised representative) have
+                provided written consent to the collection and usage of your personal data for those purposes, or (b)
+                collection and use of personal data without consent is permitted or required by the PDPA or other laws.
+                We shall seek your consent before collecting any additional personal data and before using your personal
+                data for a purpose which has not been notified to you (except where permitted or authorised by law).
+            </p>
+
+            <p>
+                5. We may collect and use your personal data for any or all of the following purposes:
+            </p>
+
+            <div class="col-1"></div>
+            <div class="col-10">
+                <div class=" list-item">
+                    (a) performing obligations in the course of or in connection with our provision of the goods and/or
+                    services requested by you;
+                </div>
     
+                <div class="list-item">
+                    (b)	verifying your identity;
+                </div>
+    
+                <div class="list-item">
+                    (c)	responding to, handling, and processing queries, requests, applications, complaints, and feedback from you;
+                </div>
+    
+                <div class="list-item">
+                    (d)	managing your relationship with us;
+                </div>
+    
+                <div class="list-item">
+                    (e)	processing payment or credit transactions;
+                </div>
+    
+                <div class=" list-item">
+                    (f)	complying with any applicable laws, regulations, codes of practice, guidelines, or rules, or to assist in law enforcement and investigations conducted by any governmental and/or regulatory authority;
+                </div>
+    
+                <div class=" list-item">
+                    (g)	any other purposes for which you have provided the information;
+                </div>
+    
+                <div class=" list-item">
+                    (h)	transmitting to any unaffiliated third parties including our third party service providers and agents, and relevant governmental and/or regulatory authorities, whether in Singapore or abroad, for the aforementioned purposes; and
+                </div>
+    
+                <div class=" list-item">
+                    <p>(i)	any other incidental business purposes related to or in connection with the above.</p>
+                </div>
+            </div>
+
+            <p>
+                6.	We may disclose your personal data:
+            </p>
+
+            <div class="col-1"></div>
+            <div class="col-10">
+                <div class=" list-item">
+                    (a)	where such disclosure is required for performing obligations in the course of or in connection with our provision of the goods and services requested by you; or
+                </div>
+    
+                <div class="list-item">
+                    <p>(b)	to third party service providers, agents and other organisations we have engaged to perform any of the functions with reference to the above mentioned purposes.</p>
+                </div>
+            </div>
+
+            <p>7.	The purposes listed in the above clauses may continue to apply even in situations where your relationship with us (for example, pursuant to a contract) has been terminated or altered in any way, for a reasonable period thereafter (including, where applicable, a period to enable us to enforce our rights under a contract with you).</p>
+
+        </div>
+
+        <div class="row">
+            <div class="title">WITHDRAWING YOUR CONSENT </div>
+            <p>
+                8.	The consent that you provide for the collection, use and disclosure of your personal data will remain valid until such time it is being withdrawn by you in writing. You may withdraw consent and request us to stop collecting, using and/or disclosing your personal data for any or all of the purposes listed above by submitting your request in writing or via email to our Data Protection Officer at the contact details provided below.
+            </p>
+    
+            <p>9.	Upon receipt of your written request to withdraw your consent, we may require reasonable time (depending on the complexity of the request and its impact on our relationship with you) for your request to be processed and for us to notify you of the consequences of us acceding to the same, including any legal consequences which may affect your rights and liabilities to us. In general, we shall seek to process your request within ten (10) business days of receiving it. </p>
+    
+            <p>10.	Whilst we respect your decision to withdraw your consent, please note that depending on the nature and scope of your request, we may not be in a position to continue providing our goods or services to you and we shall, in such circumstances, notify you before completing the processing of your request. Should you decide to cancel your withdrawal of consent, please inform us in writing in the manner described in clause 8 above. </p>
+    
+            <p>11.	Please note that withdrawing consent does not affect our right to continue to collect, use and disclose personal data where such collection, use and disclose without consent is permitted or required under applicable laws.</p>
+        </div>
+
+
+        <div class="row">
+            <div class="title">ACCESS TO AND CORRECTION OF PERSONAL DATA </div>
+            <p>12.	If you wish to make (a) an access request for access to a copy of the personal data which we hold about you or information about the ways in which we use or disclose your personal data, or (b) a correction request to correct or update any of your personal data which we hold about you, you may submit your request in writing or via email to our Data Protection Officer at the contact details provided below. </p>
+
+            <p>13.	Please note that a reasonable fee may be charged for an access request. If so, we will inform you of the fee before processing your request. </p>
+    
+            <p>14.	We will respond to your request as soon as reasonably possible. In general, our response will be within ten (10) business days. Should we not be able to respond to your request within thirty (30) days after receiving your request, we will inform you in writing within thirty (30) days of the time by which we will be able to respond to your request. If we are unable to provide you with any personal data or to make a correction requested by you, we shall generally inform you of the reasons why we are unable to do so (except where we are not required to do so under the PDPA).</p>
+
+        </div>
+
+        <div class="row">
+            <div class="title">PROTECTION OF PERSONAL DATA</div>
+            <p>15.	To safeguard your personal data from unauthorised access, collection, use, disclosure, copying, modification, disposal or similar risks, we have introduced appropriate administrative, physical and technical measures such as minimised collection of personal data, authentication and access controls (such as good password practices, need-to-basis for data disclosure, etc.), encryption of data, data anonymisation, up-to-date antivirus protection, regular patching of operating system and other software, securely erase storage media in devices before disposal, web security measures against risks, usage of one time password(otp)/2 factor authentication (2fa)/multi-factor authentication (mfa) to secure access, and security review and testing performed regularly. </p>
+            <p>16.	You should be aware, however, that no method of transmission over the Internet or method of electronic storage is completely secure. While security cannot be guaranteed, we strive to protect the security of your information and are constantly reviewing and enhancing our information security measures.</p>
+
+        </div>
+
+        <div class="row">
+            <div class="title">ACCURACY OF PERSONAL DATA</div>
+            <p>17.	We generally rely on personal data provided by you (or your authorised representative). In order to ensure that your personal data is current, complete and accurate, please update us if there are changes to your personal data by informing our Data Protection Officer in writing or via email at the contact details provided below.</p>
+
+        </div>
+
+        <div class="row">
+            <div class="title">RETENTION OF PERSONAL DATA </div>
+            <p>18.	We may retain your personal data for as long as it is necessary to fulfil the purpose for which it was collected, or as required or permitted by applicable laws.</p>
+            <p>19.	We will cease to retain your personal data, or remove the means by which the data can be associated with you, as soon as it is reasonable to assume that such retention no longer serves the purpose for which the personal data was collected, and is no longer necessary for legal or business purposes.</p>
+        </div>
+
+        <div class="row">
+            <div class="title">TRANSFERS OF PERSONAL DATA OUTSIDE OF SINGAPORE</div>
+            <p>
+                20.	We generally do not transfer your personal data to countries outside of Singapore. However, if we do so, we will obtain your consent for the transfer to be made and we will take steps to ensure that your personal data continues to receive a standard of protection that is at least comparable to that provided under the PDPA.
+            </p>
+        </div>
+
+        <div class="row">
+            <div class="title">DATA PROTECTION OFFICER</div>
+            <p>21.	You may contact our Data Protection Officer if you have any enquiries or feedback on our personal data protection policies and procedures, or if you wish to make any request, in the following manner: </p>
+            <p class = "contact">Name of DPO   : Marcel Yap
+                <br>
+                Contact No.      : 97774671
+                <br>
+                Email Address  : marcelyap@auroramedical.com
+            </p>
+        </div>
+        
+
+        <div class="row">
+            <div class="title">EFFECT OF NOTICE AND CHANGES TO NOTICE</div>
+            <p>22.	This Notice applies in conjunction with any other notices, contractual clauses and consent clauses that apply in relation to the collection, use and disclosure of your personal data by us.</p>
+            <p>23.	We may revise this Notice from time to time without any prior notice. You may determine if any such revision has taken place by referring to the date on which this Notice was last updated. Your continued use of our services constitutes your acknowledgement and acceptance of such changes. </p>
+        </div>
+
+
+        <p class="contact" >
+            <br>
+            <br>
+            <br>
+            Effective date	: 	27/10/2022
+            <br>
+            Last updated	: 	27/10/2022
+        </p>
+
+
+
+
+
+
+    </div>
+
+
+
+    <!--Footer-->
+    <div class="container-fluid footer-container">
+        <div class="row">
+            <div class="col-4 quicklinkscol text-center">
+
+                <div class="quicklinksdiv quicklinkstitle"></div>
+                <div class="quicklinksdiv"><a href="#" class="quicklinks">About Us</a></div>
+                <div class="quicklinksdiv"><a href="#" class="quicklinks">FAQ</a></div>
+                <div class="quicklinksdiv"><a href="#" class="quicklinks">News</a></div>
+
+            </div>
+            <div class="col-4 text-center midcol">
+                <div class="quicklinksdiv"><a href="#" class="quicklinks midlinks">Find a Clinic</a></div>
+                <div class="quicklinksdiv"><a href="#" class="quicklinks midlinks">Tests for Travel</a></div>
+                <div class="quicklinksdiv"><a href="#" class="quicklinks midlinks">Book an Appointment</a></div>
+                <div class="quicklinksdiv"><a href="#" class="quicklinks midlinks">Make An Enquiry</a></div>
+                <div class=""> <br></div>
+            </div>
+
+            <!--Contact Us Col-->
+            <div class="col-4 text-center contactcol">
+                <div class="quicklinksdiv quicklinkstitle"></div>
+
+                <div class="contactdiv">+65 6873 7432</div>
+                <div class="contactdiv">contact@aurora.com</div>
+                <div class="contactdiv">21 Nanyang Link Singapore 637371</div>
+            </div>
+
+
+
+
+        </div>
+
+        <!--Soical media-->
+        <div class="row footerlogorow">
+            <div class="col-4"></div>
+            <div class="col-4 text-center">
+                <!--LinkedIn-->
+                <a href="https://www.linkedin.com/in/aurora-medical/" target="_blank" class=""><svg
+                        xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor"
+                        class="bi bi-linkedin footer-logo" viewBox="0 0 16 16">
+                        <path
+                            d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z" />
+                    </svg></a>
+
+                <!--Youtube-->
+                <a href="https://www.youtube.com/channel/UCXy9-1P-8XC-Ag-PZaXsZtw" target="_blank" class="">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor"
+                        class="bi bi-youtube footer-logo" viewBox="0 0 16 16">
+                        <path
+                            d="M8.051 1.999h.089c.822.003 4.987.033 6.11.335a2.01 2.01 0 0 1 1.415 1.42c.101.38.172.883.22 1.402l.01.104.022.26.008.104c.065.914.073 1.77.074 1.957v.075c-.001.194-.01 1.108-.082 2.06l-.008.105-.009.104c-.05.572-.124 1.14-.235 1.558a2.007 2.007 0 0 1-1.415 1.42c-1.16.312-5.569.334-6.18.335h-.142c-.309 0-1.587-.006-2.927-.052l-.17-.006-.087-.004-.171-.007-.171-.007c-1.11-.049-2.167-.128-2.654-.26a2.007 2.007 0 0 1-1.415-1.419c-.111-.417-.185-.986-.235-1.558L.09 9.82l-.008-.104A31.4 31.4 0 0 1 0 7.68v-.123c.002-.215.01-.958.064-1.778l.007-.103.003-.052.008-.104.022-.26.01-.104c.048-.519.119-1.023.22-1.402a2.007 2.007 0 0 1 1.415-1.42c.487-.13 1.544-.21 2.654-.26l.17-.007.172-.006.086-.003.171-.007A99.788 99.788 0 0 1 7.858 2h.193zM6.4 5.209v4.818l4.157-2.408L6.4 5.209z" />
+                    </svg>
+                </a>
+
+                <!--Facebook-->
+                <a href="https://www.facebook.com" target="_blank" class="">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor"
+                        class="bi bi-facebook footer-logo" viewBox="0 0 16 16">
+                        <path
+                            d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z" />
+                    </svg>
+                </a>
+
+                <!--Instagram-->
+                <a href="https://www.instagram.com" target="_blank" class="">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor"
+                        class="bi bi-instagram footer-logo " viewBox="0 0 16 16">
+                        <path
+                            d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z" />
+                    </svg>
+                </a>
+
+                <!--Tik Tok-->
+                <a href="https://www.tiktok.com/en/" target="_blank" class="">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor"
+                        class="bi bi-tiktok footer-logo " viewBox="0 0 16 16">
+                        <path
+                            d="M9 0h1.98c.144.715.54 1.617 1.235 2.512C12.895 3.389 13.797 4 15 4v2c-1.753 0-3.07-.814-4-1.829V11a5 5 0 1 1-5-5v2a3 3 0 1 0 3 3V0Z" />
+                    </svg>
+                </a>
+
+                <!--Twitter-->
+                <a href="https://twitter.com" target="_blank" class="">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor"
+                        class="bi bi-twitter footer-logo" viewBox="0 0 16 16">
+                        <path
+                            d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z" />
+                    </svg>
+                </a>
+
+            </div>
+            <div class="col-4"></div>
+        </div>
+
+        <!--Copyright-->
+        <div class="text-center">
+            <small>Copyrights &copy; Marcel, Garry, Brandon, Ricardo 2022. All Rights Reserved</small>
+
+        </div>
+
+
+    </div>
+
+    <!--End of footer-->
+
+
+
+
+
+
+
+
+
+
+
+    <script src="js\countries.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+        integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.min.js"
+        integrity="sha384-IDwe1+LCz02ROU9k972gdyvl+AESN10+x7tBKgc9I5HFtuNz0wWnPclzo6p9vxnk"
+        crossorigin="anonymous"></script>
 </body>
+
 </html>
