@@ -23,10 +23,11 @@ p {
     width: 100%;
     padding: 0.5%;
 
-    color: white;
-    background-color: #41B188;
+    background-color: white;
 
     transition-duration: 0.4s;
+
+    box-shadow: 0px 0px grey;
 }
 
 
@@ -34,11 +35,12 @@ p {
     font-family: 'Noto Sans', sans-serif;
     font-weight: 300;
     text-decoration: none;
-    color: white;
+    color: #41B188;
     cursor: pointer;
     font-size: 1.2vw;
 
 }
+
 
 .navbox {
     display: flex;
@@ -49,7 +51,7 @@ p {
 }
 
 .navbtn:hover {
-    color: #FEBB60;
+    color: #41B188;
 
 }
 
@@ -57,7 +59,7 @@ p {
     font-family: 'Playfair Display', serif;
     font-weight: 400;
     text-decoration: none;
-    color: white;
+    color: #41B188;
     font-size: 2.7vw;
     transition: all 0.3s linear;
     white-space: nowrap;
@@ -65,37 +67,26 @@ p {
 }
 
 .logo:hover {
-    animation: logoanimation 5s linear infinite;
+    color: #41B188;
+    /*animation: logoanimation 5s linear infinite;*/
 
 }
 
-@keyframes logoanimation {
-    0% {
-        color: white;
-    }
-
-    25% {
-        color: purple;
-    }
-
-    50% {
-        color: blue;
-    }
-
-    75% {
-        color: cornflowerblue;
-    }
-
-    100% {
-        color: white;
-    }
-
+.logopt2 {
+    color: #333333;
 }
+
+.logopt2:hover {
+    color: #333333;
+}
+
+
 
 .hover-underline-animation {
     display: inline-block;
     position: relative;
-    color: white;
+    color: #333333;
+    font-weight: 300;
 }
 
 .hover-underline-animation:after {
@@ -106,7 +97,7 @@ p {
     height: 2px;
     bottom: 0;
     left: 0;
-    background-color: #FEBB60;
+    background-color: #41B188;
     transform-origin: bottom right;
     transition: transform 0.25s ease-out;
 }
@@ -120,7 +111,7 @@ p {
     font-family: 'Noto Sans', sans-serif;
     font-weight: 400;
     border: none;
-    border-radius: 10px;
+    border-radius: 2px;
     padding: 0.3vw 0.7vw;
 
     white-space: nowrap;
@@ -128,12 +119,16 @@ p {
     transition: 0.25s ease-in-out;
 
     color: white;
-    background-color: #FEBB60;
+    background-color: #41B188;
+
+    border: 0px #41B188 solid;
 }
 
 .bookbtn:hover {
-    color: #FEBB60;
-    background-color: white;
+    color: white;
+    background-color: #FEBB60;
+    border: 0px #FEBB60 solid;
+
 }
 
 section {
@@ -158,10 +153,15 @@ section {
 }
 
 .hero-banner {
-    height: 100vh;
+    min-height: 60vh;
     background-image: url('./about-us-hero-banner-image.jpeg');
     background-size: cover;
     background-repeat: no-repeat;
+    background-position: center;
+    background-blend-mode: darken;
+    background-color: rgba(0, 0, 0, 0.47);
+
+    padding: 5%;
 }
 
 .hero-banner h1, .hero-banner p, .our-team h1, .our-team p {
@@ -191,3 +191,18 @@ section {
 .achievements {
     background-color: #febc60db;
 }
+
+/* responsiveness */
+@media (max-width: 992px) {
+    .lg-display {
+        display: none;
+    }
+}
+
+@media (min-width: 992px) {
+    .lg-hidden {
+        display: none;
+    }
+}
+
+
