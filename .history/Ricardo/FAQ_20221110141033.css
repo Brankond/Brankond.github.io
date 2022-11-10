@@ -9,7 +9,7 @@ p {
 }
 
 a {
-    text-decoration: none !important;
+    text-decoration: none;
 }
 
 ::selection {
@@ -289,7 +289,7 @@ body {
 }
 
 .faq_box {
-    padding: 10px 180px 100px 180px;
+    padding: 10px 180px 10px 180px;
     justify-content: center;
 }
 
@@ -444,10 +444,11 @@ body {
     font-size: 1.1vw;
     margin: 0;
 
+
 }
 
 .quicklinkscol {
-    margin-top: 3% !important;
+    margin-top: 3%;
 }
 
 .quicklinkstitle {
@@ -472,7 +473,7 @@ body {
 }
 
 .midcol {
-    margin-top: 3% !important;
+    margin-top: 3%;
 }
 
 .midlinks {
@@ -481,7 +482,7 @@ body {
 }
 
 .contactcol {
-    margin-top: 3% !important;
+    margin-top: 3%;
 }
 
 .contactdiv {
