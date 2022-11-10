@@ -168,8 +168,7 @@ body {
 
 .hero {
     height: 500px;
-    width: auto;
-    /* background-image: url(./covid_test.jpeg); */
+    background-image: url(./covid_test.jpeg);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -213,7 +212,7 @@ body {
 }
 
 .text_container {
-    padding: 50px 100px 10px 100px !important;
+    padding: 50px 150px 20px 150px !important;
 }
 
 .text_container h1 {
@@ -263,7 +262,8 @@ body {
 
 .news_box_group .title {
     font-family: 'Roboto Serif', serif !important;
-    color: red;
+    color: black;
+    font-weight: 700;
     font-size: 1.6vw;
 }
 
@@ -286,33 +286,6 @@ body {
     padding-left: 10px;
     padding-right: 10px;
 
-}
-
-.faq_box {
-    padding: 10px 180px 100px 180px;
-    justify-content: center;
-}
-
-.faq_box .group_1 {
-    padding-bottom: 30px;
-}
-
-
-.faq_title {
-    padding: 10px 180px 10px 180px;
-    text-align: center;
-}
-
-.faq_title .text_area {
-    font-family: 'Playfair Display', serif;
-    color: green;
-    font-size: 2vw;
-
-}
-
-.place_holder {
-    padding-top: 20px;
-    padding-bottom: 20px;
 }
 
 /*Start of Navbar*/
@@ -505,3 +478,8 @@ body {
 }
 
 /*End of footer css*/
+
+.place_holder {
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
