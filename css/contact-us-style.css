@@ -1,4 +1,4 @@
-/* style for about us page */
+/* style for contact us page */
 body {
     overflow-x: hidden;
 }
@@ -8,11 +8,17 @@ h1 {
     font-family: 'Playfair Display', serif !important; 
 }
 
+h2 {
+    font-family: 'Noto Sans', sans-serif !important;
+    font-weight: 700 !important;
+}
+
 p {
     font-family: 'Noto Sans', sans-serif !important;
     font-weight: 300 !important;
 }
 
+/*Start of Navbar*/
 #fixedheader {
     position: fixed;
 }
@@ -22,11 +28,8 @@ p {
     z-index: 100;
     width: 100%;
     padding: 0.5%;
-
     background-color: white;
-
     transition-duration: 0.4s;
-
     box-shadow: 0px 0px grey;
 }
 
@@ -37,22 +40,11 @@ p {
     text-decoration: none;
     color: #41B188;
     cursor: pointer;
-    font-size: 1.2vw;
-
-}
-
-
-.navbox {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-
+    font-size: 1rem
 }
 
 .navbtn:hover {
     color: #41B188;
-
 }
 
 .logo {
@@ -60,16 +52,14 @@ p {
     font-weight: 400;
     text-decoration: none;
     color: #41B188;
-    font-size: 2.7vw;
+    font-size: 2rem;
     transition: all 0.3s linear;
     white-space: nowrap;
-
 }
 
 .logo:hover {
     color: #41B188;
     /*animation: logoanimation 5s linear infinite;*/
-
 }
 
 .logopt2 {
@@ -79,8 +69,6 @@ p {
 .logopt2:hover {
     color: #333333;
 }
-
-
 
 .hover-underline-animation {
     display: inline-block;
@@ -111,11 +99,8 @@ p {
     font-family: 'Noto Sans', sans-serif;
     font-weight: 400;
     border: none;
-    border-radius: 2px;
-    padding: 0.3vw 0.7vw;
-
     white-space: nowrap;
-    font-size: 1.2vw;
+    font-size: 1rem;
     transition: 0.25s ease-in-out;
 
     color: white;
@@ -128,7 +113,6 @@ p {
     color: white;
     background-color: #FEBB60;
     border: 0px #FEBB60 solid;
-
 }
 
 section {
@@ -154,55 +138,104 @@ section {
 
 .hero-banner {
     min-height: 60vh;
-    background-image: url('./about-us-hero-banner-image.jpeg');
-    background-size: cover;
+    background-image: url('../assets/images/contact-us-banner-image.jpg');
     background-repeat: no-repeat;
     background-position: center;
+    background-size: cover;
     background-blend-mode: darken;
-    background-color: rgba(0, 0, 0, 0.47);
+    background-color: rgba(0, 0, 0, 0.223);
 
     padding: 5%;
 }
 
-.hero-banner h1, .hero-banner p, .our-team h1, .our-team p {
+.hero-banner h1, .hero-banner p, .our-customers h1, .our-team h1, .our-team p {
     color: white;
 }
 
-.our-customers p, .our-customers h1, .motivation-section h1, .motivation-section p, .achievements p, .achievements h1, .achievements h2 {
-    color: #112F24
+.quick-links, .contact-form {
+    padding: 10rem 5%;
+    background-color: white;
 }
 
-.motivation-section, .our-customers {
-    height: 700px;
+.quick-links p, .quick-links h1, .quick-links h2, .contact-form h1, .contact-form p {
+    color: #112F24;
 }
 
-.our-team, .achievements {
-    padding: 10rem 0;
+.quick-links img {
+    width: 4rem;
+    height: 4rem;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
-.our-team {
-    background-color: #41b188;
+.card {
+    background-color: #41b188 !important;
+    cursor: pointer;
+    transition: all 0.2s;
 }
 
-.our-team p {
+.card:hover {
+    transform: scale(110%);
+}
+
+.card h2, .card p {
+    color: white !important;
+}
+
+.contact-form input[type="text"], .contact-form textarea {
+    font-family: 'Noto Sans', sans-serif;
     font-weight: 300;
+    color: #112F24;
+} 
+
+.contact-form input[type="text"] {
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid #112F24;
+    width: 80%;
+    transition: all 0.3s;
+}   
+
+.contact-form input[type="text"]:hover {
+    transform: scale(110%) translateX(5%);
 }
 
-.achievements {
-    background-color: #febc60db;
+.contact-form input[type="text"]::placeholder {
+    color: #112F24;
+} 
+
+.contact-form textarea {
+    border: none;
 }
 
-/* responsiveness */
-@media (max-width: 992px) {
-    .lg-display {
-        display: none;
-    }
+.contact-form p {
+    font-weight: 400 !important;
 }
 
-@media (min-width: 992px) {
-    .lg-hidden {
-        display: none;
-    }
+.contact-form .button {
+    color: #112F24;
+    border-color: #112F24;
+}
+
+.contact-form .button:hover {
+    color: white;
+    background-color: #112F24;
+}
+
+.contact-info {
+    min-height: fit-content;
+}
+
+/* Google Icons */
+.material-symbols-outlined {
+    vertical-align: middle;
+    font-variation-settings:
+    'FILL' 1,
+    'wght' 400,
+    'GRAD' 0,
+    'opsz' 20
 }
 
 
