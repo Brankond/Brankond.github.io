@@ -46,21 +46,9 @@
             font-family: 'Playfair Display', sans-serif;
         }
 
-        ::selection {
-            color: white;
-            background: #FEBB60;
-        }
-
         a {
             text-decoration: none;
             color: #333333;
-
-        }
-
-        .row {
-            width: 100%;
-            margin: 0;
-            padding: 0;
         }
 
         .dropdown-menu {
@@ -90,7 +78,6 @@
 
         .navbtn:hover {
             color: #41B188;
-
         }
 
         .hover-underline-animation {
@@ -267,7 +254,7 @@
         }
 
         .dropdown-toggle::after {
-            right: 0%;
+            right: 0;
         }
 
         .dropdown-menu {
@@ -281,20 +268,24 @@
 
         .recommplancontainer {
             padding: 0;
-            width: 48vw;
             height: auto;
-            margin-top: 3%;
             border: 1px solid #333333;
         }
 
+        .recommplancontainer .button {
+            color: #112F24;
+            border-bottom-color: #112F24;
+        }
+
+        .recommplancontainer .button:hover {
+            background-color: #41B188;
+            border-bottom-color: #41B188;
+            color: white;
+        }
+
         .recommplantitle {
-
-            font-size: 2.4vw;
-            font-weight: 200;
-            white-space: nowrap;
-            margin-top: 3%;
-
-
+            font-size: 2rem;
+            font-weight: 400;
         }
 
         .planname {
@@ -335,23 +326,11 @@
 
         }
 
-        .plandetailslist {
-            font-weight: 300;
-            font-size: 1.3vw;
-            transition: 0.3s ease-in-out;
-        }
-
-        .planmoredetailsrow {
-            margin-top: 5%;
-            margin-bottom: 5%;
-
-        }
-
         .planmoredetails {
             text-decoration-line: underline;
             text-decoration-thickness: 1px;
             transition: 0.3s ease-in-out;
-            font-size: 1.2vw;
+            font-size: 1.2rem;
         }
 
         .planmoredetails:hover {
@@ -364,191 +343,43 @@
         }
 
         .pcrcontainer {
-            margin: 0;
-            padding: 0;
+            padding: 5rem 5%;
             background-color: white;
-            height: 45vw;
         }
 
-        .pcrrow {
-            margin: 0;
-            padding: 0;
-            color: #333333;
-            padding-top: 2%;
-            margin-left: 10%;
-
+        .pcrcontainer .button {
+            color: #112F24;
+            border-bottom-color: #112F24;
         }
 
-        .pcrtitle {
-            font-size: 7vw;
-            margin-top: 10%;
-            font-weight: 150;
-
-        }
-
-        .pcrdetails {
-            margin-top: 2%;
-            text-align: left;
-            padding-left: 5%;
-            font-size: 1vw;
-            font-weight: 300;
-        }
-
-        .pcrpicturediv {
-            margin-right: 22%;
-            margin-top: 21%;
-        }
-
-        .pcrpicture {
-            background-size: 80%;
-            background-repeat: no-repeat;
-
-            height: 20vw;
-            
-
-            margin-right: 10%;
-            padding: 0;
-
-            border: 0px solid white;
-            margin-right: 10%;
-
-        }
-
-        .pcrbtn {
-            margin-top: 7%;
-        }
-
-        .test-divider{
-            width: 100rem;
-        }
-
-        .artcontainer {
-            background-color: white;
-            margin-bottom: 6%;
-        }
-
-        .artrow {
-            color: #333333;
-        }
-
-        .artdetails {
-            font-weight: 300;
-        }
-
-
-        .enquiryrow {
-            height: 30vw;
-            background-color: red;
-
-        }
-
-        /*https://css-tricks.com/apply-a-filter-to-a-background-image/*/
-
-        .module {
-            width: 100%;
-            position: relative;
-        }
-
-        .module::before {
-            content: "";
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            position: absolute;
-            background-image: url(https://img.freepik.com/premium-photo/asian-senior-patient-having-consultation-with-doctor_1339-79722.jpg?w=2000);
-            background-size: cover;
-            background-repeat: no-repeat;
-
-            background-position-x: 0%;
-            background-position-y: 20%;
-            filter: brightness(40%);
-        }
-
-        .module-inside {
-            position: relative;
-        }
-
-        .enquirytitle {
-            margin-top: 5%;
-            font-size: 5vw;
-            font-family: 'Playfair Display', serif;
-            font-family: 'Noto Sans', sans-serif;
-            font-weight: 150;
+        .pcrcontainer .button:hover {
+            background-color: #112F24;
             color: white;
-        }
-
-        .enquirydetails {
-            margin-top: 0.5%;
-            color: white;
-            font-size: 1.2vw;
-        }
-
-        .enquirybtn {
-            margin-top: 3%;
-            padding: 0.7%;
-            padding-left: 1%;
-            padding-right: 1%;
-
-
         }
 
         /* Start of Footer CSS*/
         .footer-container {
             background-color: #41B188;
             color: white;
-            font-size: 1.1vw;
-            margin: 0;
-
-
-        }
-
-        .quicklinkscol {
-            margin-top: 3%;
-        }
-
-        .quicklinkstitle {
-            font-weight: 400;
-            padding-bottom: 2%;
-            color: white;
+            font-size: 1rem;
+            padding: 5rem 5%;
         }
 
         .quicklinks {
-
             color: white;
             transition: 0.2s ease-in-out
         }
 
         .quicklinks:hover {
-
             color: #FEBB60;
         }
 
         .quicklinksdiv {
-            padding: 1%;
-        }
-
-        .midcol {
-            margin-top: 3%;
-        }
-
-        .midlinks {
-            font-weight: 400;
-            padding: 3%;
-        }
-
-        .contactcol {
-            margin-top: 3%;
+            padding: 0.5rem;
         }
 
         .contactdiv {
-            padding-top: 1%;
-            padding-bottom: 1%;
-        }
-
-        .footerlogorow {
-            padding-top: 2%;
-            padding-bottom: 3%;
+            padding: 0.5rem;
         }
 
         .footer-logo {
@@ -561,12 +392,26 @@
             color: #FEBB60;
         }
         /*End of footer css*/
+
+        /* responsiveness */
+        @media (max-width: 992px) {
+            .lg-display {
+                display: none;
+            }
+        }
+
+        @media (min-width: 992px) {
+            .lg-hidden {
+                display: none;
+            }
+        }
+
     </style>
 </head>
 
 <body>
     <!-- navbar -->
-    <nav class="container-fluid d-flex justify-content-between align-items-center p-3 flex-wrap position-fixed" style="background-color: white">
+    <nav class="container-fluid d-flex justify-content-between align-items-center p-3 flex-wrap position-fixed" style="z-index: 10000; background-color: white" id="navbar">
         <div>
             <a href="index.html">
                 <h1 style="font-size: 2rem; font-weight: 400; color: #41B188">
@@ -576,21 +421,16 @@
         </div>
 
         <div class="d-flex align-items-center" style="gap: 1rem;">
-            <div class="p-2"><a href="#" class="navbtn hover-underline-animation">Our Services</a></div>
-            <div class="p-2"><a href="#" class="navbtn hover-underline-animation">FAQ</a></div>
-            <div class="p-2"><a href="#" class="navbtn hover-underline-animation">Contact Us</a></div>
-            <div class="p-2"><a href="#" class="navbtn hover-underline-animation">News</a></div>
+            <div class="p-2"><a href="./pages/products.html" class="navbtn hover-underline-animation">Our Services</a></div>
+            <div class="p-2"><a href="./pages/FAQ.html" class="navbtn hover-underline-animation">FAQ</a></div>
+            <div class="p-2"><a href="./pages/contact-us.html" class="navbtn hover-underline-animation">Contact Us</a></div>
+            <div class="p-2"><a href="./pages/blog.html" class="navbtn hover-underline-animation">News</a></div>
             <div class="p-2"><a href="./pages/booknow.html"><button class="bookbtn p-2">Book Now</button></a></div>
         </div>
     </nav>
 
     <!-- space holder -->
-    <nav class="container-fluid d-flex justify-content-between align-items-center p-3 flex-wrap">
-        <div style="color: white">
-            <h1 style="font-size: 2rem; font-weight: 400;">
-                Aurora
-            </h1>
-        </div>
+    <nav class="container-fluid" id="space-holder">
     </nav>
 
     <!--Hero section-->
@@ -649,10 +489,77 @@
     </div>
 
     <!--Country selection Title-->
-    <div class="container-fluid countrycontainer">
-        <h1 style="font-size: 4rem;" class="text-center">
-            Where are you travelling to?
+    <div class="container-fluid countrycontainer" id="package-recommendation">
+        <h1 style="font-size: 3rem;" class="text-center">
+            Get curated plan for your destination
         </h1>
+        <!--Box for recommended Plan-->
+        <div class="container recommplancontainer w-75 my-5" style="color: #112F24;">
+            <h2 class="text-center display-6 mt-5">
+                Recommended Plan
+            </h2>
+
+            <div class="w-50 row mx-auto align-items-center mt-5 gy-4">
+                <div class="col-lg-4 col-md-12">
+                    <div class="w-100 text-center d-flex flex-column justify-content-center" style="aspect-ratio: 1 / 1; background-color: #41B188; border-radius: 50%;">
+                        <i class="fa-solid fa-syringe fa-4x" style="color: white"></i>
+                    </div>
+                    <p class="text-center mt-3">Serology Test</p>
+                </div>
+                <div class="col-lg-4 col-md-12 display-6 text-center"> + </div>
+                <div class="col-lg-4 col-md-12">
+                    <div class="w-100 text-center d-flex flex-column justify-content-center" style="aspect-ratio: 1 / 1; background-color: #41B188; border-radius: 50%;">
+                        <i class="fa-solid fa-vial fa-4x" style="color: white"></i>
+                    </div>
+                    <p class="text-center mt-3">PCR Test</p>
+                </div>
+            </div>
+
+            <div class="mt-5 text-center">
+                <div id="detailsline2">Results within 24 hours</div>
+                <div id="detailsline3">Express Delivery</div>
+            </div>
+
+            <!--Plan details-->
+            <div class="row planmoredetailsrow text-center mt-5">
+                <div class="col"><a href="countries.html" target="_blank" class="planmoredetails">See the restrictions of your chosen country</a>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="0.9rem" height="0.9rem" fill="currentColor"
+                        class="bi bi-arrow-up-right" viewBox="0 0 16 16" style="color:#333333;">
+                        <path fill-rule="evenodd"
+                            d="M14 2.5a.5.5 0 0 0-.5-.5h-6a.5.5 0 0 0 0 1h4.793L2.146 13.146a.5.5 0 0 0 .708.708L13 3.707V8.5a.5.5 0 0 0 1 0v-6z" />
+                    </svg>
+                </div>
+            </div>
+            
+            <div class="row w-50 mx-auto mt-5" id="multiple-persons-price-display" style="display: none;">
+                <div class="col-lg-6 col-md-12">
+                    <p class="text-center display-6" style="text-decoration:line-through; font-weight: 200;" id="ori-price">
+                        S$138
+                    </p>
+                </div>
+                <div class="col-lg-6 col-md-12">
+                    <p class="text-center display-6" style="color:#41B188;" id="discounted-price">
+                        S$128
+                    </p>
+                </div>
+            </div>
+
+            <div class="w-50 mx-auto mt-5" id="single-person-price-display">
+                <p class="text-center display-6" style="color:#41B188;">
+                    S$69
+                </p>
+            </div>
+
+            <!--Buy plan button-->
+            <div class="text-center">
+                <a href="./pages/booknow.html">
+                    <button class="button my-5" id="slide-to-form-btn">
+                        Book Now
+                    </button>
+                </a>
+            </div>
+        </div>
+
         <div class="w-75 p-4 mx-auto my-5" style="background-color:#41B188; color: white;">
             <div class="row align-items-center">
                 <div class="col-lg-5 col-md-12 py-2">
@@ -718,162 +625,129 @@
                 </div>
             </div>
         </div>
-
-        <!--Box for recommended Plan-->
-        <div class="container recommplancontainer">
-            <div class="row recommplantitle text-center">
-                <div class="col-3"></div>
-                <div class="col-6">
-                    Recommended Plan
-                </div>
-                <div class="col-3"></div>
-            </div>
-            <!--Will change according to what they click using js-->
-            <div class="row text-center planname">
-                <span id="planName">Plan A</span>
-            </div>
-            <div class="row plandetailslistrow">
-                <div class="col-4"></div>
-                <div class="col-4 text-center plandetailslist">
-                    <div id="detailsline1">PCR Test</div>
-                    <div id="detailsline2">Results within 24 hours</div>
-                    <div id="detailsline3">Express Delivery</div>
-                </div>
-                <div class="col-4"></div>
-
-            </div>
-
-            <!--Plan details-->
-            <div class="row planmoredetailsrow text-center">
-                <div class="col "><a href="countries.html" target="_blank" class="planmoredetails">Country
-                        Restrictions</a>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="0.9vw" height="0.9vw" fill="currentColor"
-                        class="bi bi-arrow-up-right" viewBox="0 0 16 16" style="color:#333333;">
-                        <path fill-rule="evenodd"
-                            d="M14 2.5a.5.5 0 0 0-.5-.5h-6a.5.5 0 0 0 0 1h4.793L2.146 13.146a.5.5 0 0 0 .708.708L13 3.707V8.5a.5.5 0 0 0 1 0v-6z" />
-                    </svg>
-                </div>
-                
-
-            </div>
-
-            <!--Buy plan button-->
-            <div class="row">
-                <div class="col-5"></div>
-                <div class="col-2"><a href="#"><button href="#" class="bookbtn detailsbtn">Buy Plan</button></a></div>
-                <div class="col-5"></div>
-
-            </div>
-        </div>
     </div>
+
+    <hr class="mx-auto" style="width: 90%">
 
     <!--PCR Test Section-->
-    <div class="container-fluid pcrcontainer">
-        <div class="row pcrrow">
-            <div class="col-4  text-center">
-                <div class="pcrtitle">PCR Test</div>
-                <div class="pcrdetails">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis eros nisi,
-                    faucibus eu purus ac, imperdiet rutrum purus. Phasellus pulvinar rhoncus vestibulum. Duis porttitor
-                    eros ut nibh pulvinar egestas. Vivamus nulla leo, suscipit interdum dapibus aliquam, scelerisque
-                    vitae metus. Nullam accumsan mauris fringilla auctor pellentesque. Donec non tempor libero.
-                    Pellentesque eleifend leo varius orci tempor varius. Nulla vehicula dolor at est tristique cursus.
-                    Praesent eget urna sit amet elit feugiat tincidunt. Aliquam id justo risus. Morbi imperdiet
-                    condimentum luctus. Nullam dignissim erat eget tempor bibendum.
+    <div class="container-fluid pcrcontainer" style="color:#112F24">
+        <div class="row">
+            <div class="col-lg-6 col-md-12 text-start">
+                <h1 style="font-size: 4rem">
+                    PCR Test
+                </h1>
+                <h2 style="font-size: 1.5rem;" class="mt-5">
+                    Result Within 6 Hours
+                </h2>
+                <p>
+                    Get your PCR test done in a clinic near you, or comfortably at home. Group and family bookings available. All results would be emailed to you within 6 hours after the test.
+                </p>
+                <h2 style="font-size: 1.5rem;">
+                    Best Price Island-Wide
+                </h2>
+                <p>
+                    We Guarantee our price to be the best island-wide. If you find any clinic that provides services with a better price, we beat it with 50% off.
+                </p>
+                <h2 style="font-size: 1.5rem;">
+                    100% Comply with Newest Policies
+                </h2>
+                <p>
+                    We guarantee our services comply with the newest regulations of your destination authorities. Book from us to ensure you travel with correct documents required.
+                </p>
+                <div class="text-start">
+                    <a href="./pages/booknow.html">
+                        <button class="button mt-4" id="slide-to-form-btn">
+                            Buy Plan
+                        </button>
+                    </a>
                 </div>
-                <a href="#"><button href="#" class="bookbtn pcrbtn">Buy Plan</button></a>
             </div>
-            <div class="col-1"></div>
-            <div class="col-5 text-center">
-                <div class="pcrpicturediv"><img class="pcrpicture"
+            <div class="col-lg-6 col-md-12 text-center p-3">
+                <img class="w-100 h-100 lg-display"
                         src="https://www.rafflesmedicalgroup.com/wp-content/uploads/2021/03/covid-test-header.jpg"
-                        alt=""></div>
-
+                        alt="">
             </div>
         </div>
     </div>
 
-    <hr class="test-divider mx-auto">
+    <hr class="mx-auto" style="width: 90%;">
 
     <!--ART Test Section-->
-    <div class="container-fluid pcrcontainer artcontainer">
-        <div class="row pcrrow artrow">
-            <div class="col-4  text-center">
-                <div class="pcrtitle">ART Test</div>
-                <div class="pcrdetails artdetails">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis eros
-                    nisi, faucibus eu purus ac, imperdiet rutrum purus. Phasellus pulvinar rhoncus vestibulum. Duis
-                    porttitor eros ut nibh pulvinar egestas. Vivamus nulla leo, suscipit interdum dapibus aliquam,
-                    scelerisque vitae metus. Nullam accumsan mauris fringilla auctor pellentesque. Donec non tempor
-                    libero. Pellentesque eleifend leo varius orci tempor varius. Nulla vehicula dolor at est tristique
-                    cursus. Praesent eget urna sit amet elit feugiat tincidunt. Aliquam id justo risus. Morbi imperdiet
-                    condimentum luctus. Nullam dignissim erat eget tempor bibendum.
+    <div class="container-fluid pcrcontainer mb-5" style="color:#112F24">
+        <div class="row">
+            <div class="col-lg-6 col-md-12 text-start">
+                <h1 style="font-size: 4rem">
+                    ART Test
+                </h1>
+                <h2 style="font-size: 1.5rem;" class="mt-5">
+                    Result Within 4 Hours
+                </h2>
+                <p>
+                    Supervised Antigen Rapid Test (ART Test) by an approved provider. Receive certified results via email or SMS.
+                </p>
+                <h2 style="font-size: 1.5rem;">
+                    Online Supervised ART 
+                </h2>
+                <p>
+                    Get tested anywhere you are, via an online supervised ART on the Doctor Anywhere mobile app. Certified results via email or SMS. Results would be available within 2 Hours
+                </p>
+                <div class="text-start">
+                    <a href="./pages/booknow.html">
+                        <button class="button mt-4" id="slide-to-form-btn">
+                            Buy Plan
+                        </button>
+                    </a>
                 </div>
-                <a href="#"><button href="#" class="bookbtn pcrbtn">Buy Plan</button></a>
             </div>
-            <div class="col-1"></div>
-            <div class="col-5 text-center">
-                <div class="pcrpicturediv"><img class="pcrpicture"
+            <div class="col-lg-6 col-md-12 text-center p-3">
+                <img class="w-100 h-100 lg-display"
                         src="https://www.rafflesmedicalgroup.com/wp-content/uploads/2021/03/covid-test-header.jpg"
-                        alt=""></div>
-
+                        alt="">
             </div>
         </div>
     </div>
-
+    
     <!--Enquiry-->
-
-    <div class="container-fluid enquirycontainer">
-        <div class="row enquiryrow module text-center">
-            <div class="module-inside">
-                <div class="enquirytitle">
-                    Got Questions?
-                </div>
-                <div class="enquirydetails">
-                    Get in touch with us by sending an enquiry and our team will be glad to help.
-                </div>
-                <a href="#"><button href="#" class="bookbtn enquirybtn">Make an Enquiry</button></a>
-            </div>
-
-        </div>
+    <div class="container-fluid text-center" style="padding: 5rem 5%; background-image: url(https://img.freepik.com/premium-photo/asian-senior-patient-having-consultation-with-doctor_1339-79722.jpg?w=2000); background-position: center; background-color: rgba(0, 0, 0, 0.544); background-repeat: no-repeat; background-size: cover; background-blend-mode: darken; color: white;">
+        <h1 style="font-size: 4rem;">
+            Got Questions?
+        </h1>
+        <p>
+            Get in touch with us by sending an enquiry and our team will be glad to help.
+        </p>
+        <a href="./pages/contact-us.html">
+            <button class="button mt-5" id="slide-to-form-btn">
+                Contact Us
+            </button>
+        </a>
     </div>
-
 
     <!--Footer-->
     <div class="container-fluid footer-container">
         <div class="row">
-            <div class="col-4 quicklinkscol text-center">
-
-                <div class="quicklinksdiv quicklinkstitle"></div>
-                <div class="quicklinksdiv"><a href="#" class="quicklinks">About Us</a></div>
-                <div class="quicklinksdiv"><a href="#" class="quicklinks">FAQ</a></div>
-                <div class="quicklinksdiv"><a href="#" class="quicklinks">News</a></div>
-
-            </div>
-            <div class="col-4 text-center midcol">
-                <div class="quicklinksdiv"><a href="#" class="quicklinks midlinks">Find a Clinic</a></div>
-                <div class="quicklinksdiv"><a href="#" class="quicklinks midlinks">Tests for Travel</a></div>
-                <div class="quicklinksdiv"><a href="#" class="quicklinks midlinks">Book an Appointment</a></div>
-                <div class="quicklinksdiv"><a href="#" class="quicklinks midlinks">Make An Enquiry</a></div>
-                <div class=""> <br></div>
+            <div class="col-4 text-center px-2">
+                <div class="quicklinksdiv"><a href="./pages/about-us.html" class="quicklinks">About Us</a></div>
+                <div class="quicklinksdiv"><a href="./pages/FAQ.html" class="quicklinks">FAQ</a></div>
+                <div class="quicklinksdiv"><a href="./pages/blog.html" class="quicklinks">News</a></div>
             </div>
 
-            <!--Contact Us Col-->
-            <div class="col-4 text-center contactcol">
-                <div class="quicklinksdiv quicklinkstitle"></div>
+            <div class="col-4 text-center px-2">
+                <div class="quicklinksdiv"><a href="./pages/contact-us.html#contact-info" class="quicklinks midlinks">Find a Clinic</a></div>
+                <div class="quicklinksdiv"><a href="index.html#package-recommendation" class="quicklinks midlinks">Tests for Travel</a></div>
+                <div class="quicklinksdiv"><a href="./pages/booknow.html" class="quicklinks midlinks">Book an Appointment</a></div>
+                <div class="quicklinksdiv"><a href="./pages/contact-us.html" class="quicklinks midlinks">Make An Enquiry</a></div>
+            </div>
 
+            <div class="col-4 text-center px-2">
                 <div class="contactdiv">+65 6873 7432</div>
                 <div class="contactdiv">contact@aurora.com</div>
                 <div class="contactdiv">21 Nanyang Link Singapore 637371</div>
             </div>
-
-
-
-
         </div>
 
         <!--Soical media-->
-        <div class="row footerlogorow">
-            <div class="col-4"></div>
-            <div class="col-4 text-center">
+        <div class="row">
+            <div class="col-12 text-center">
                 <!--LinkedIn-->
                 <a href="https://www.linkedin.com/in/aurora-medical/" target="_blank" class=""><svg
                         xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor"
@@ -928,24 +802,14 @@
                 </a>
 
             </div>
-            <div class="col-4"></div>
         </div>
 
         <!--Copyright-->
         <div class="text-center">
             <small>Copyrights &copy; Marcel, Garry, Brandon, Ricardo 2022. All Rights Reserved</small>
-
         </div>
-
-
     </div>
     <!--End of footer-->
-
-
-
-
-
-
 
     <script src="js\home.js"></script>
 
@@ -960,22 +824,54 @@
         crossorigin="anonymous"></script>
 
     <script>
-        let increment_btn = document.querySelector('#increment-people-count-btn')
-        let decrement_btn = document.querySelector('#decrement-people-count-btn')
+        // update space holder height
+        let navbar = document.querySelector('#navbar');
+        let space_holder = document.querySelector('#space-holder');
+        ['load', 'resize'].forEach((event) => {
+            window.addEventListener(event, (e) => {
+                console.log(space_holder.style.height)
+                space_holder.style.height = `${navbar.offsetHeight}px`;
+            })
+        })
+
+        // update package prices
+        let increment_btn = document.querySelector('#increment-people-count-btn');
+        let decrement_btn = document.querySelector('#decrement-people-count-btn');
         let people_count_display_el = document.querySelector('#people-count');
+        let ori_price_display_el = document.querySelector('#ori-price');
+        let discounted_price_display_el = document.querySelector('#discounted-price');
+        let single_person_price_display = document.querySelector('#single-person-price-display');
+        let multiple_persons_price_display = document.querySelector('#multiple-persons-price-display');
+
+        // states
         let count = parseInt(people_count_display_el.innerHTML);
+        let single_price = 69;
 
         const increment_num = (el) => {
-            if (count >= 5) return;
             count ++;
+            if (count > 5) {
+                return; 
+            } else if (count > 1) {
+                single_person_price_display.style.display = "none";
+                multiple_persons_price_display.style.display = "flex";
+            }
             el.innerHTML = count;
-        }
+            ori_price_display_el.innerHTML = 'S$' + parseInt(count * single_price);
+            discounted_price_display_el.innerHTML = 'S$' + parseInt(count * single_price * 0.8);
+        };
 
         const decrement_num = (el) => {
-            if (count <= 1) return;
             count --;
+            if (count < 1) {
+                return;
+            } else if (count < 2) {
+                single_person_price_display.style.display = "block";
+                multiple_persons_price_display.style.display = "none";
+            }
             el.innerHTML = count;
-        }
+            ori_price_display_el.innerHTML = 'S$' + parseInt(count * single_price);
+            discounted_price_display_el.innerHTML = 'S$' + parseInt(count * single_price * 0.8);
+        };
 
         increment_btn.addEventListener('click', (e) => {increment_num(people_count_display_el)});
         decrement_btn.addEventListener('click', (e) => {decrement_num(people_count_display_el)});
