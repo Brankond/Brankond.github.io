@@ -1,20 +1,6 @@
-/* style for about us page */
-body {
-    overflow-x: hidden;
-}
-
 h1 {
     font-weight: bold;
     font-family: 'Playfair Display', serif !important; 
-}
-
-p {
-    font-family: 'Noto Sans', sans-serif !important;
-    font-weight: 300 !important;
-}
-
-a {
-    text-decoration: none;
 }
 
 /*Start of Navbar*/
@@ -74,67 +60,6 @@ a {
 }
 /*Navbar css ends here*/
 
-section {
-    min-height: 700px;
-}
-
-.button {
-    font-family: 'Noto Sans', sans-serif;
-    font-size: 1rem;
-    font-weight: bold;
-    color: white;
-    background-color: transparent;
-    border: none;
-    border-bottom: 2px solid white;
-    padding: 1rem;
-    transition: all 0.3s;
-}
-
-.button:hover {
-    color: #112F24;
-    background-color: white;
-}
-
-.hero-banner {
-    min-height: 60vh;
-    background-image: url('../assets/images/about-us-hero-banner-image.jpeg');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-blend-mode: darken;
-    background-color: rgba(0, 0, 0, 0.47);
-
-    padding: 5%;
-}
-
-.hero-banner h1, .hero-banner p, .our-team h1, .our-team p {
-    color: white;
-}
-
-.our-customers p, .our-customers h1, .motivation-section h1, .motivation-section p, .achievements p, .achievements h1, .achievements h2 {
-    color: #112F24
-}
-
-.motivation-section, .our-customers {
-    height: 700px;
-}
-
-.our-team, .achievements {
-    padding: 10rem 0;
-}
-
-.our-team {
-    background-color: #41b188;
-}
-
-.our-team p {
-    font-weight: 300;
-}
-
-.achievements {
-    background-color: #febc60db;
-}
-
 /* Start of Footer CSS*/
 .footer-container {
     background-color: #41B188;
@@ -170,19 +95,3 @@ section {
     color: #FEBB60;
 }
 /*End of footer css*/
-
-
-/* responsiveness */
-@media (max-width: 992px) {
-    .lg-display {
-        display: none;
-    }
-}
-
-@media (min-width: 992px) {
-    .lg-hidden {
-        display: none;
-    }
-}
-
-

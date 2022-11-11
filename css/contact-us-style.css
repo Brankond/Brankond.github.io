@@ -18,22 +18,11 @@ p {
     font-weight: 300 !important;
 }
 
+a {
+    text-decoration: none;
+}
+
 /*Start of Navbar*/
-#fixedheader {
-    position: fixed;
-}
-
-.header {
-    margin: 0;
-    z-index: 100;
-    width: 100%;
-    padding: 0.5%;
-    background-color: white;
-    transition-duration: 0.4s;
-    box-shadow: 0px 0px grey;
-}
-
-
 .navbtn {
     font-family: 'Noto Sans', sans-serif;
     font-weight: 300;
@@ -45,29 +34,6 @@ p {
 
 .navbtn:hover {
     color: #41B188;
-}
-
-.logo {
-    font-family: 'Playfair Display', serif;
-    font-weight: 400;
-    text-decoration: none;
-    color: #41B188;
-    font-size: 2rem;
-    transition: all 0.3s linear;
-    white-space: nowrap;
-}
-
-.logo:hover {
-    color: #41B188;
-    /*animation: logoanimation 5s linear infinite;*/
-}
-
-.logopt2 {
-    color: #333333;
-}
-
-.logopt2:hover {
-    color: #333333;
 }
 
 .hover-underline-animation {
@@ -102,11 +68,8 @@ p {
     white-space: nowrap;
     font-size: 1rem;
     transition: 0.25s ease-in-out;
-
     color: white;
     background-color: #41B188;
-
-    border: 0px #41B188 solid;
 }
 
 .bookbtn:hover {
@@ -114,6 +77,43 @@ p {
     background-color: #FEBB60;
     border: 0px #FEBB60 solid;
 }
+/*Navbar css ends here*/
+
+/* Start of Footer CSS*/
+.footer-container {
+    background-color: #41B188;
+    color: white;
+    font-size: 1rem;
+    padding: 5rem 5%;
+}
+
+.quicklinks {
+    color: white;
+    transition: 0.2s ease-in-out
+}
+
+.quicklinks:hover {
+    color: #FEBB60;
+}
+
+.quicklinksdiv {
+    padding: 0.5rem;
+}
+
+.contactdiv {
+    padding: 0.5rem;
+}
+
+.footer-logo {
+    color: white;
+    margin: 4%;
+    transition: 0.2s ease-in-out;
+}
+
+.footer-logo:hover {
+    color: #FEBB60;
+}
+/*End of footer css*/
 
 section {
     min-height: 700px;

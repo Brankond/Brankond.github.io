@@ -37,6 +37,7 @@
     <!--Flags import https://github.com/lipis/flag-icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lipis/flag-icons@6.6.6/css/flag-icons.min.css" />
 
+    <link rel="stylesheet" href="../css/footer-and-navbar-style.css">
 
     <style>
         ::selection {
@@ -67,130 +68,6 @@
             cursor: default;
             /*height: 200vw;*/
         }
-
-        /*Start of Navbar*/
-        #fixedheader {
-            position: fixed;
-        }
-
-        .header {
-            margin: 0;
-            z-index: 100;
-            width: 100%;
-            padding: 0.5%;
-
-            background-color: white;
-
-            transition-duration: 0.4s;
-
-            box-shadow: 0px 0px grey;
-
-        }
-
-
-        .navbtn {
-            font-family: 'Noto Sans', sans-serif;
-            font-weight: 300;
-            text-decoration: none;
-            color: #41B188;
-            cursor: pointer;
-            font-size: 1rem
-        }
-
-
-        .navbox {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-
-
-        }
-
-        .navbtn:hover {
-            color: #41B188;
-
-        }
-
-        .logo {
-            font-family: 'Playfair Display', serif;
-            font-weight: 400;
-            text-decoration: none;
-            color: #41B188;
-            font-size: 2rem;
-            transition: all 0.3s linear;
-            white-space: nowrap;
-
-        }
-
-        .logo:hover {
-            color: #41B188;
-            /*animation: logoanimation 5s linear infinite;*/
-
-        }
-
-        .logopt2 {
-            color: #333333;
-        }
-
-        .logopt2:hover {
-            color: #333333;
-        }
-
-
-
-        .hover-underline-animation {
-            display: inline-block;
-            position: relative;
-            color: #333333;
-            font-weight: 300;
-        }
-
-        .hover-underline-animation:after {
-            content: '';
-            position: absolute;
-            width: 100%;
-            transform: scaleX(0);
-            height: 2px;
-            bottom: 0;
-            left: 0;
-            background-color: #41B188;
-            transform-origin: bottom right;
-            transition: transform 0.25s ease-out;
-        }
-
-        .hover-underline-animation:hover:after {
-            transform: scaleX(1);
-            transform-origin: bottom left;
-        }
-
-        .bookbtn {
-            font-family: 'Noto Sans', sans-serif;
-            font-weight: 400;
-            border: none;
-            border-radius: 2px;
-            padding: 0.3vw 0.7vw;
-
-            white-space: nowrap;
-            font-size: 1rem;
-            transition: 0.25s ease-in-out;
-
-            color: white;
-            background-color: #41B188;
-
-            border: 0px #41B188 solid;
-        }
-
-        .bookbtn:hover {
-
-            color: white;
-            background-color: #FEBB60;
-            border: 0px #FEBB60 solid;
-
-        }
-
-        /*Navbar css ends here*/
-
-
 
         .hero-banner {
             min-height: 60vh;
@@ -277,78 +154,6 @@
 
         /*End of Enquuiry*/
 
-
-
-        /* Start of Footer CSS*/
-        .footer-container {
-            background-color: #41B188;
-            color: white;
-            font-size: 1.1vw;
-            margin: 0;
-
-
-        }
-
-        .quicklinkscol {
-            margin-top: 3%;
-        }
-
-        .quicklinkstitle {
-            font-weight: 400;
-            padding-bottom: 2%;
-            color: white;
-        }
-
-        .quicklinks {
-
-            color: white;
-            transition: 0.2s ease-in-out
-        }
-
-        .quicklinks:hover {
-
-            color: #FEBB60;
-        }
-
-        .quicklinksdiv {
-            padding: 1%;
-        }
-
-        .midcol {
-            margin-top: 3%;
-        }
-
-        .midlinks {
-            font-weight: 400;
-            padding: 3%;
-        }
-
-        .contactcol {
-            margin-top: 3%;
-        }
-
-        .contactdiv {
-            padding-top: 1%;
-            padding-bottom: 1%;
-        }
-
-        .footerlogorow {
-            padding-top: 2%;
-            padding-bottom: 3%;
-        }
-
-        .footer-logo {
-            color: white;
-            margin: 4%;
-            transition: 0.2s ease-in-out;
-        }
-
-        .footer-logo:hover {
-            color: #FEBB60;
-        }
-
-        /*End of footer css*/
-
         .pdpc-container {
             padding: 0% 10%;
             margin: 5% 0%;
@@ -381,31 +186,28 @@
 </head>
 
 <body>
-    <!--Navbar start-->
-    <div id="fixedheader" class="row header">
-        <div class="col-3 navbox"><a href="home.html" class="logo">Aurora</a><a href="home.html"
-                class="logo logopt2">Medical</a></div>
-        <div class="col-3"></div>
-        <div class="col navbox "><a href="#" class="navbtn hover-underline-animation">Products</a></div>
-        <div class="col navbox"><a href="Ricardo\FAQ.html" class="navbtn hover-underline-animation">FAQ</a></div>
-        <div class="col navbox"><a href="#" class="navbtn hover-underline-animation">Contact Us</a></div>
-        <div class="col navbox"><a href="#" class="navbtn hover-underline-animation">News</a></div>
-        <div class="col navbox"><a href="#"><button href="#" class="bookbtn">Book Now</button></a></div>
+    <!-- navbar -->
+    <nav class="container-fluid d-flex justify-content-between align-items-center p-3 flex-wrap position-fixed" style="z-index: 10000; background-color: white" id="navbar">
+        <div>
+            <a href="../index.html">
+                <h1 style="font-size: 2rem; font-weight: 400; color: #41B188">
+                    Aurora <span style="color: #333333">Medical</span>
+                </h1>
+            </a>
+        </div>
 
-    </div>
+        <div class="d-flex align-items-center" style="gap: 1rem;">
+            <div class="p-2"><a href="./products.html" class="navbtn hover-underline-animation">Our Services</a></div>
+            <div class="p-2"><a href="./FAQ.html" class="navbtn hover-underline-animation">FAQ</a></div>
+            <div class="p-2"><a href="./contact-us.html" class="navbtn hover-underline-animation">Contact Us</a></div>
+            <div class="p-2"><a href="./blog.html" class="navbtn hover-underline-animation">News</a></div>
+            <div class="p-2"><a href="./booknow.html"><button class="bookbtn p-2">Book Now</button></a></div>
+        </div>
+    </nav>
 
-    <!--This is a duplicate header to create the spacing between the top of the screen and the next element, leave it as part of the header-->
-    <div class="row header">
-        <div class="col-3 navbox"><a href="home.html" class="logo">Aurora Medical</a></div>
-        <div class="col-2"></div>
-        <div class="col navbox "><a href="#" class="navbtn hover-underline-animation">Products</a></div>
-        <div class="col navbox"><a href="#" class="navbtn hover-underline-animation">FAQ</a></div>
-        <div class="col navbox"><a href="#" class="navbtn hover-underline-animation">Contact Us</a></div>
-        <div class="col navbox"><a href="#" class="navbtn hover-underline-animation">News</a></div>
-        <div class="col navbox"><a href="#"><button href="#" class="bookbtn">Book Now</button></a></div>
-        <div class="col"></div>
-    </div>
-    <!--Navbar ends here-->
+    <!-- space holder -->
+    <nav class="container-fluid" id="space-holder">
+    </nav>
 
     <!-- Hero Banner -->
     <section class="hero-banner container-fluid d-flex justify-content-center align-items-center">
@@ -624,43 +426,32 @@
 
 
 
-    <!--Footer-->
+    <!-- Footer -->
     <div class="container-fluid footer-container">
-        <div class="row">
-            <div class="col-4 quicklinkscol text-center">
-
-                <div class="quicklinksdiv quicklinkstitle"></div>
-                <div class="quicklinksdiv"><a href="#" class="quicklinks">About Us</a></div>
-                <div class="quicklinksdiv"><a href="#" class="quicklinks">FAQ</a></div>
-                <div class="quicklinksdiv"><a href="#" class="quicklinks">News</a></div>
-
-            </div>
-            <div class="col-4 text-center midcol">
-                <div class="quicklinksdiv"><a href="#" class="quicklinks midlinks">Find a Clinic</a></div>
-                <div class="quicklinksdiv"><a href="#" class="quicklinks midlinks">Tests for Travel</a></div>
-                <div class="quicklinksdiv"><a href="#" class="quicklinks midlinks">Book an Appointment</a></div>
-                <div class="quicklinksdiv"><a href="#" class="quicklinks midlinks">Make An Enquiry</a></div>
-                <div class=""> <br></div>
+        <div class="row" style="font-weight: 300;">
+            <div class="col-4 text-center px-2">
+                <div class="quicklinksdiv"><a href="./about-us.html" class="quicklinks">About Us</a></div>
+                <div class="quicklinksdiv"><a href="./FAQ.html" class="quicklinks">FAQ</a></div>
+                <div class="quicklinksdiv"><a href="./blog.html" class="quicklinks">News</a></div>
             </div>
 
-            <!--Contact Us Col-->
-            <div class="col-4 text-center contactcol">
-                <div class="quicklinksdiv quicklinkstitle"></div>
+            <div class="col-4 text-center px-2" style="font-weight: 400;">
+                <div class="quicklinksdiv"><a href="./contact-us.html#contact-info" class="quicklinks midlinks">Find a Clinic</a></div>
+                <div class="quicklinksdiv"><a href="../index.html#package-recommendation" class="quicklinks midlinks">Tests for Travel</a></div>
+                <div class="quicklinksdiv"><a href="./booknow.html" class="quicklinks midlinks">Book an Appointment</a></div>
+                <div class="quicklinksdiv"><a href="./contact-us.html" class="quicklinks midlinks">Make An Enquiry</a></div>
+            </div>
 
+            <div class="col-4 text-center px-2">
                 <div class="contactdiv">+65 6873 7432</div>
                 <div class="contactdiv">contact@aurora.com</div>
                 <div class="contactdiv">21 Nanyang Link Singapore 637371</div>
             </div>
-
-
-
-
         </div>
 
         <!--Soical media-->
-        <div class="row footerlogorow">
-            <div class="col-4"></div>
-            <div class="col-4 text-center">
+        <div class="row">
+            <div class="col-12 text-center">
                 <!--LinkedIn-->
                 <a href="https://www.linkedin.com/in/aurora-medical/" target="_blank" class=""><svg
                         xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor"
@@ -713,20 +504,14 @@
                             d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z" />
                     </svg>
                 </a>
-
             </div>
-            <div class="col-4"></div>
         </div>
 
         <!--Copyright-->
         <div class="text-center">
             <small>Copyrights &copy; Marcel, Garry, Brandon, Ricardo 2022. All Rights Reserved</small>
-
         </div>
-
-
     </div>
-
     <!--End of footer-->
 
 
@@ -750,6 +535,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.min.js"
         integrity="sha384-IDwe1+LCz02ROU9k972gdyvl+AESN10+x7tBKgc9I5HFtuNz0wWnPclzo6p9vxnk"
         crossorigin="anonymous"></script>
+    <script src="../js/update_space_holder_height.js"></script>
 </body>
 
 </html>

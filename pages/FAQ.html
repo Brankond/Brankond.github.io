@@ -5,13 +5,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
-    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
-    <link rel="stylesheet" href="./FAQ.css">
+    <link rel="stylesheet" href="../css/FAQ.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
     <link rel="stylesheet" href="node_modules/@glidejs/glide/dist/css/glide.core.min.css">
@@ -20,7 +17,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js"
         integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT"
         crossorigin="anonymous"></script>
-    <title>Aurora Medical</title>
+    <title>FAQ</title>
     <link rel="icon"
         href="https://i.natgeofe.com/n/63527567-9a8b-4b08-819d-a6142fb2b350/aurora-kirkjufell-iceland_4x3.jpg"
         type="image/x-icon">
@@ -49,31 +46,28 @@
 </head>
 
 <body>
-    <!--Navbar start-->
-    <div id="fixedheader" class="row header">
-        <div class="col-3 navbox"><a href="home.html" class="logo">Aurora</a><a href="home.html"
-                class="logo logopt2">Medical</a></div>
-        <div class="col-3"></div>
-        <div class="col navbox "><a href="#" class="navbtn hover-underline-animation">Products</a></div>
-        <div class="col navbox"><a href="#" class="navbtn hover-underline-animation">FAQ</a></div>
-        <div class="col navbox"><a href="#" class="navbtn hover-underline-animation">Contact Us</a></div>
-        <div class="col navbox"><a href="#" class="navbtn hover-underline-animation">News</a></div>
-        <div class="col navbox"><a href="#"><button href="#" class="bookbtn">Book Now</button></a></div>
+    <!-- navbar -->
+    <nav class="container-fluid d-flex justify-content-between align-items-center p-3 flex-wrap position-fixed" style="z-index: 10000; background-color: white" id="navbar">
+        <div>
+            <a href="../index.html">
+                <h1 style="font-size: 2rem; font-weight: 400; color: #41B188">
+                    Aurora <span style="color: #333333">Medical</span>
+                </h1>
+            </a>
+        </div>
 
-    </div>
+        <div class="d-flex align-items-center" style="gap: 1rem;">
+            <div class="p-2"><a href="./products.html" class="navbtn hover-underline-animation">Our Services</a></div>
+            <div class="p-2"><a href="./FAQ.html" class="navbtn hover-underline-animation">FAQ</a></div>
+            <div class="p-2"><a href="./contact-us.html" class="navbtn hover-underline-animation">Contact Us</a></div>
+            <div class="p-2"><a href="./blog.html" class="navbtn hover-underline-animation">News</a></div>
+            <div class="p-2"><a href="./booknow.html"><button class="bookbtn p-2">Book Now</button></a></div>
+        </div>
+    </nav>
 
-    <!--This is a duplicate header to create the spacing between the top of the screen and the next element, leave it as part of the header-->
-    <div class="row header">
-        <div class="col-3 navbox"><a href="home.html" class="logo">Aurora Medical</a></div>
-        <div class="col-2"></div>
-        <div class="col navbox "><a href="#" class="navbtn hover-underline-animation">Products</a></div>
-        <div class="col navbox"><a href="#" class="navbtn hover-underline-animation">FAQ</a></div>
-        <div class="col navbox"><a href="#" class="navbtn hover-underline-animation">Contact Us</a></div>
-        <div class="col navbox"><a href="#" class="navbtn hover-underline-animation">News</a></div>
-        <div class="col navbox"><a href="#"><button href="#" class="bookbtn">Book Now</button></a></div>
-        <div class="col"></div>
-    </div>
-    <!--Navbar ends here-->
+    <!-- space holder -->
+    <nav class="container-fluid" id="space-holder">
+    </nav>
 
     <!-- hero -->
     <section class="hero-banner d-flex justify-content-center align-items-center">
@@ -101,22 +95,20 @@
                     <h2 class="accordion-header" id="headingOne">
                         <button class="accordion-button" type="button" data-bs-toggle="collapse"
                             data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                            Accordion Item #1
+                            What are the available timings for home-based pre-departure PCR test?
                         </button>
                     </h2>
                     <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
                         data-bs-parent="#accordionExample_1">
                         <div class="accordion-body">
-                            <strong>This is the first item's accordion body.</strong> It is shown by default, until the
-                            collapse
-                            plugin adds the appropriate classes that we use to style each element. These classes control
-                            the
-                            overall appearance, as well as the showing and hiding via CSS transitions. You can modify
-                            any of
-                            this with custom CSS or overriding our default variables. It's also worth noting that just
-                            about any
-                            HTML can go within the <code>.accordion-body</code>, though the transition does limit
-                            overflow.
+                            Mondays to Fridays (excluding Public Holidays):
+                            8am, 9am, 11am, 12noon, 2pm, 5pm, 6pm.
+                            <br>
+                            For weekdays after 6pm, Saturdays, Sundays, Public Holidays, a surcharge of $150 applies.
+                            <br>
+                            A minimum 20-hour advanced booking is required. 
+                            <br>
+                            This service is only available for addresses in mainland Singapore, and is not available for addresses in Sentosa island.
                         </div>
                     </div>
                 </div>
@@ -124,23 +116,17 @@
                     <h2 class="accordion-header" id="headingTwo">
                         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                             data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                            Accordion Item #2
+                            What documents do I need to prepare?
                         </button>
                     </h2>
                     <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
                         data-bs-parent="#accordionExample_1">
                         <div class="accordion-body">
-                            <strong>This is the second item's accordion body.</strong> It is hidden by default, until
-                            the
-                            collapse plugin adds the appropriate classes that we use to style each element. These
-                            classes
-                            control the overall appearance, as well as the showing and hiding via CSS transitions. You
-                            can
-                            modify any of this with custom CSS or overriding our default variables. It's also worth
-                            noting that
-                            just about any HTML can go within the <code>.accordion-body</code>, though the transition
-                            does limit
-                            overflow.
+                            1. Identity card and passport
+                            <br>
+                            2. Flight documents
+                            <br>
+                            If you have flu-like symptoms, please inform our staff prior.                            
                         </div>
                     </div>
                 </div>
@@ -148,22 +134,13 @@
                     <h2 class="accordion-header" id="headingThree">
                         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                             data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                            Accordion Item #3
+                            What happens if the test results are inconclusive?
                         </button>
                     </h2>
                     <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
                         data-bs-parent="#accordionExample_1">
                         <div class="accordion-body">
-                            <strong>This is the third item's accordion body.</strong> It is hidden by default, until the
-                            collapse plugin adds the appropriate classes that we use to style each element. These
-                            classes
-                            control the overall appearance, as well as the showing and hiding via CSS transitions. You
-                            can
-                            modify any of this with custom CSS or overriding our default variables. It's also worth
-                            noting that
-                            just about any HTML can go within the <code>.accordion-body</code>, though the transition
-                            does limit
-                            overflow.
+                            If your test results are inconclusive, you would need to re-purchase and re-do the test. Aurora Medical is not liable for any additional costs incurred should there be any rejection from the airlines, embassy and authorities.
                         </div>
                     </div>
                 </div>
@@ -180,22 +157,13 @@
                     <h2 class="accordion-header" id="headingFour">
                         <button class="accordion-button" type="button" data-bs-toggle="collapse"
                             data-bs-target="#collapseFour" aria-expanded="true" aria-controls="collapseFour">
-                            Accordion Item #4
+                            Can I request to take a PCR swab test to see if I have contracted COVID-19?
                         </button>
                     </h2>
                     <div id="collapseFour" class="accordion-collapse collapse show" aria-labelledby="headingFour"
                         data-bs-parent="#accordionExample_2">
                         <div class="accordion-body">
-                            <strong>This is the first item's accordion body.</strong> It is shown by default, until the
-                            collapse
-                            plugin adds the appropriate classes that we use to style each element. These classes control
-                            the
-                            overall appearance, as well as the showing and hiding via CSS transitions. You can modify
-                            any of
-                            this with custom CSS or overriding our default variables. It's also worth noting that just
-                            about any
-                            HTML can go within the <code>.accordion-body</code>, though the transition does limit
-                            overflow.
+                            Yes you can request to take a COVID-19 polymerase chain reaction (PCR) swab test voluntarily from 1 December 2020.
                         </div>
                     </div>
                 </div>
@@ -203,23 +171,15 @@
                     <h2 class="accordion-header" id="headingFive">
                         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                             data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
-                            Accordion Item #5
+                            Do I need to call the clinic to book my appointment?
                         </button>
                     </h2>
                     <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive"
                         data-bs-parent="#accordionExample_2">
                         <div class="accordion-body">
-                            <strong>This is the second item's accordion body.</strong> It is hidden by default, until
-                            the
-                            collapse plugin adds the appropriate classes that we use to style each element. These
-                            classes
-                            control the overall appearance, as well as the showing and hiding via CSS transitions. You
-                            can
-                            modify any of this with custom CSS or overriding our default variables. It's also worth
-                            noting that
-                            just about any HTML can go within the <code>.accordion-body</code>, though the transition
-                            does limit
-                            overflow.
+                            No you do not, all appointments will be booked through our website. After successful purchase of the COVID-19 tests and booking of appointment, a confirmation email with details of your appointment will be sent to your email.
+                            <br>
+                            48 hours before your appointment, a reminder will be sent via SMS to you.                            
                         </div>
                     </div>
                 </div>
@@ -227,22 +187,15 @@
                     <h2 class="accordion-header" id="headingSix">
                         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                             data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
-                            Accordion Item #6
+                            What documents must I bring on the day of the swab test?
                         </button>
                     </h2>
                     <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix"
                         data-bs-parent="#accordionExample_2">
                         <div class="accordion-body">
-                            <strong>This is the third item's accordion body.</strong> It is hidden by default, until the
-                            collapse plugin adds the appropriate classes that we use to style each element. These
-                            classes
-                            control the overall appearance, as well as the showing and hiding via CSS transitions. You
-                            can
-                            modify any of this with custom CSS or overriding our default variables. It's also worth
-                            noting that
-                            just about any HTML can go within the <code>.accordion-body</code>, though the transition
-                            does limit
-                            overflow.
+                            Please bring along your identity card or passport.
+                            <br>
+                            If your swab test is for travel purposes, please bring along your passport and have your flight details on hand.                            
                         </div>
                     </div>
                 </div>
@@ -250,22 +203,13 @@
                     <h2 class="accordion-header" id="headingSeven">
                         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                             data-bs-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
-                            Accordion Item #7
+                            Are there any subsidies for COVID-19 tests?
                         </button>
                     </h2>
                     <div id="collapseSeven" class="accordion-collapse collapse" aria-labelledby="headingSeven"
                         data-bs-parent="#accordionExample_2">
                         <div class="accordion-body">
-                            <strong>This is the third item's accordion body.</strong> It is hidden by default, until the
-                            collapse plugin adds the appropriate classes that we use to style each element. These
-                            classes
-                            control the overall appearance, as well as the showing and hiding via CSS transitions. You
-                            can
-                            modify any of this with custom CSS or overriding our default variables. It's also worth
-                            noting that
-                            just about any HTML can go within the <code>.accordion-body</code>, though the transition
-                            does limit
-                            overflow.
+                            There are no subsidies for COVID-19 tests for travellers – leisure or business. For voluntary testing there are also no subsidies.
                         </div>
                     </div>
                 </div>
@@ -273,43 +217,32 @@
         </div>
     </div>
 
-    <!--Footer-->
+    <!-- Footer -->
     <div class="container-fluid footer-container">
-        <div class="row">
-            <div class="col-4 quicklinkscol text-center">
-
-                <div class="quicklinksdiv quicklinkstitle"></div>
-                <div class="quicklinksdiv"><a href="#" class="quicklinks">About Us</a></div>
-                <div class="quicklinksdiv"><a href="#" class="quicklinks">FAQ</a></div>
-                <div class="quicklinksdiv"><a href="#" class="quicklinks">News</a></div>
-
-            </div>
-            <div class="col-4 text-center midcol">
-                <div class="quicklinksdiv"><a href="#" class="quicklinks midlinks">Find a Clinic</a></div>
-                <div class="quicklinksdiv"><a href="#" class="quicklinks midlinks">Tests for Travel</a></div>
-                <div class="quicklinksdiv"><a href="#" class="quicklinks midlinks">Book an Appointment</a></div>
-                <div class="quicklinksdiv"><a href="#" class="quicklinks midlinks">Make An Enquiry</a></div>
-                <div class=""> <br></div>
+        <div class="row" style="font-weight: 300;">
+            <div class="col-4 text-center px-2">
+                <div class="quicklinksdiv"><a href="./about-us.html" class="quicklinks">About Us</a></div>
+                <div class="quicklinksdiv"><a href="./FAQ.html" class="quicklinks">FAQ</a></div>
+                <div class="quicklinksdiv"><a href="./blog.html" class="quicklinks">News</a></div>
             </div>
 
-            <!--Contact Us Col-->
-            <div class="col-4 text-center contactcol">
-                <div class="quicklinksdiv quicklinkstitle"></div>
+            <div class="col-4 text-center px-2" style="font-weight: 400;">
+                <div class="quicklinksdiv"><a href="./contact-us.html#contact-info" class="quicklinks midlinks">Find a Clinic</a></div>
+                <div class="quicklinksdiv"><a href="../index.html#package-recommendation" class="quicklinks midlinks">Tests for Travel</a></div>
+                <div class="quicklinksdiv"><a href="./booknow.html" class="quicklinks midlinks">Book an Appointment</a></div>
+                <div class="quicklinksdiv"><a href="./contact-us.html" class="quicklinks midlinks">Make An Enquiry</a></div>
+            </div>
 
+            <div class="col-4 text-center px-2">
                 <div class="contactdiv">+65 6873 7432</div>
                 <div class="contactdiv">contact@aurora.com</div>
                 <div class="contactdiv">21 Nanyang Link Singapore 637371</div>
             </div>
-
-
-
-
         </div>
 
         <!--Soical media-->
-        <div class="row footerlogorow">
-            <div class="col-4"></div>
-            <div class="col-4 text-center">
+        <div class="row">
+            <div class="col-12 text-center">
                 <!--LinkedIn-->
                 <a href="https://www.linkedin.com/in/aurora-medical/" target="_blank" class=""><svg
                         xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor"
@@ -362,20 +295,15 @@
                             d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z" />
                     </svg>
                 </a>
-
             </div>
-            <div class="col-4"></div>
         </div>
 
         <!--Copyright-->
         <div class="text-center">
             <small>Copyrights &copy; Marcel, Garry, Brandon, Ricardo 2022. All Rights Reserved</small>
-
         </div>
-
-
     </div>
-
     <!--End of footer-->
 
+    <script src="../js/update_space_holder_height.js"></script>
 </body>

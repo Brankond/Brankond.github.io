@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon"
+    href="https://i.natgeofe.com/n/63527567-9a8b-4b08-819d-a6142fb2b350/aurora-kirkjufell-iceland_4x3.jpg"
+    type="image/x-icon">
     <!-- fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -19,28 +22,27 @@
 </head>
 <body>
     <!-- navbar -->
-    <div id="fixedheader" class="row header">
-        <div class="col-3 navbox"><a href="../index.html" class="logo">Aurora</a><a href="../index.html"
-            class="logo logopt2">Medical</a></div>
-        <div class="col-3"></div>
-        <div class="col navbox "><a href="#" class="navbtn hover-underline-animation">Products</a></div>
-        <div class="col navbox"><a href="#" class="navbtn hover-underline-animation">FAQ</a></div>
-        <div class="col navbox"><a href="#" class="navbtn hover-underline-animation">Contact Us</a></div>
-        <div class="col navbox"><a href="#" class="navbtn hover-underline-animation">News</a></div>
-        <div class="col navbox"><a href="#"><button href="#" class="bookbtn">Book Now</button></a></div>
-    </div>
+    <nav class="container-fluid d-flex justify-content-between align-items-center p-3 flex-wrap position-fixed" style="z-index: 10000; background-color: white" id="navbar">
+        <div>
+            <a href="../index.html">
+                <h1 style="font-size: 2rem; font-weight: 400; color: #41B188">
+                    Aurora <span style="color: #333333">Medical</span>
+                </h1>
+            </a>
+        </div>
 
-    <!--This is a duplicate header to create the spacing between the top of the screen and the next element, leave it as part of the header-->
-    <div class="row header">
-        <div class="col-3 navbox"><a href="../index.html" class="logo">Aurora Medical</a></div>
-        <div class="col-2"></div>
-        <div class="col navbox "><a href="#" class="navbtn hover-underline-animation">Products</a></div>
-        <div class="col navbox"><a href="#" class="navbtn hover-underline-animation">FAQ</a></div>
-        <div class="col navbox"><a href="#" class="navbtn hover-underline-animation">Contact Us</a></div>
-        <div class="col navbox"><a href="#" class="navbtn hover-underline-animation">News</a></div>
-        <div class="col navbox"><a href="#"><button href="#" class="bookbtn">Book Now</button></a></div>
-        <div class="col"></div>
-    </div>
+        <div class="d-flex align-items-center" style="gap: 1rem;">
+            <div class="p-2"><a href="./products.html" class="navbtn hover-underline-animation">Our Services</a></div>
+            <div class="p-2"><a href="./FAQ.html" class="navbtn hover-underline-animation">FAQ</a></div>
+            <div class="p-2"><a href="./contact-us.html" class="navbtn hover-underline-animation">Contact Us</a></div>
+            <div class="p-2"><a href="./blog.html" class="navbtn hover-underline-animation">News</a></div>
+            <div class="p-2"><a href="./booknow.html"><button class="bookbtn p-2">Book Now</button></a></div>
+        </div>
+    </nav>
+
+    <!-- space holder -->
+    <nav class="container-fluid" id="space-holder">
+    </nav>
 
     <!-- Hero Banner -->
     <section class="hero-banner container-fluid d-flex justify-content-center align-items-center">
@@ -52,7 +54,7 @@
                 Auro<span style="letter-spacing: 5px;">ra</span> Medical
             </h1>
             <p class="pt-4 text-start">
-                We are a leading medical company that is on the forefront of medical innovation. Rendering pivotal medical services during the most critical moments, we always put our clients first at the core of our healthcare ecosystem. We leverage and combine both innovation and technology to offer the most affordable and progressive medical services to our most honored clients. We have worked with dozens of businesses, coordinating large scale testing for specialized events, and a history of providing medical services to the most prestigious events in the world.
+                We are a leading medical company that puts our customers first, always, and is on the forefront of medical innovation, which allows us to provide the best prices for our customers. We have large branches scattered all across Asia, more specifically in our hub in Singapore, to allow any traveler the most convenient location for their choice of PCR test. Rendering pivotal medical services during the most critical moments, we always put our clients first at the core of our healthcare ecosystem. We leverage and combine both innovation and technology to offer the most affordable and progressive medical services to our most honored clients. We have obtained numerous accolades and awards in the field of Covid-19 tests and can ensure that our Covid-19 tests are the most authentic and verified.
             </p>
             <button class="button mt-5">
                 Contact Us
@@ -76,7 +78,7 @@
                         Motivation
                     </h1>
                     <p class="pt-4">
-                        We always put our clients first, and offer our clients convenient access to affordable, comprehensive and preventive healthcare especially through the most critical times. By empowering our medical clients, we give our clients the autonomy over their body and health to maximize their health and wellbeing.
+                        Our company prides itself on putting our customers first, and our motivation is to serve. We aim to serve and please all our customers with our 3 main tenets of <b>Price</b>, <b>Convenience</b> and <b>Authenticity</b>, of which we pride our prices on being the best in the market, due to our strong innovativeness in the industry. Our aim is to offer the best prices, at the highest levels of convenience to the average traveler in Singapore, so that you can travel, fuss-free at your own pace.
                     </p>
                 </div>
             </div>
@@ -97,7 +99,9 @@
                         Serve
                     </h1>
                     <p class="pt-4">
-                        We serve all our clients with the highest sense of priority and trust, and we aim to provide and render the penultimate best of services to all our clients. By leveraging our innovative use of technology and capitalizing the forefront nature of our company, we are able to bring the most affordable prices to all of our clients while combining that with the best level of after-service.
+                        Our company always aims to serve its customers. By offering the best prices in the market, we have expanded our branches all across Asia, with branches from Myanmar, to China all the way to one in Jewel Airport, Singapore, we offer the best prices for Covid tests for any budding traveler to find the most convenient option to take a test right before they travel. 
+                        <br> <br>
+                        By leveraging our innovative use of technology and capitalizing the forefront nature of our company, we are able to bring the most affordable prices to all of our clients while combining that with the best level of after-service. 
                     </p>
                 </div>
             </div>
@@ -113,8 +117,9 @@
             Our Team
         </h1>
         <hr style="width: 50px; color: white; opacity: 1; border-top: 1.5px solid; margin: 1.5rem 0;" class="mx-auto">
-        <p style="width: 50%; text-align: justify;" class="mx-auto text-center">
-            We provide our service supported by our efficient <b>management</b> and dedicated <b>research</b>
+        <p style="width: 50%; text-align: justify;" class="mx-auto text">
+            We provide our service supported by our efficient <b>management</b> and dedicated <b>research</b>. All known experts in their fields, we leverage our innovativeness to provide the best price.
+
         </p>
         <div class="row w-75 mx-auto" style="margin-top: 2rem">
             <div class="col-lg-4 col-md-12 py-5">
@@ -177,10 +182,8 @@
             Our Achievements
         </h1>
         <hr style="width: 50px; color: #112F24; opacity: 1; border-top: 1.5px solid; margin: 1.5rem 0;" class="mx-auto">
-        <p style="width: 50%; text-align: justify;" class="mx-auto text-center">
-            We are trusted and certified by many reputable organizations
-            <br>
-            We bring service to you powered by our outstanding service and research
+        <p style="width: 50%; text-align: justify;" class="mx-auto text-start">
+            We have accolades in the medical industry due to our strong expertise and experience we displayed through the Covid-19 pandemic, and we are the number 1 trusted provider for the most affordable Covid-19 testing services.
         </p>
         <div class="row w-75 mx-auto gx-5" style="margin-top: 2rem">
             <div class="col-lg-4 col-md-12 py-5">
@@ -243,29 +246,23 @@
         </div>
     </section>
 
-    <!--Footer-->
+    <!-- Footer -->
     <div class="container-fluid footer-container">
-        <div class="row">
-            <div class="col-4 quicklinkscol text-center">
-
-                <div class="quicklinksdiv quicklinkstitle"></div>
-                <div class="quicklinksdiv"><a href="#" class="quicklinks">About Us</a></div>
-                <div class="quicklinksdiv"><a href="#" class="quicklinks">FAQ</a></div>
-                <div class="quicklinksdiv"><a href="#" class="quicklinks">News</a></div>
-
-            </div>
-            <div class="col-4 text-center midcol">
-                <div class="quicklinksdiv"><a href="#" class="quicklinks midlinks">Find a Clinic</a></div>
-                <div class="quicklinksdiv"><a href="#" class="quicklinks midlinks">Tests for Travel</a></div>
-                <div class="quicklinksdiv"><a href="#" class="quicklinks midlinks">Book an Appointment</a></div>
-                <div class="quicklinksdiv"><a href="#" class="quicklinks midlinks">Make An Enquiry</a></div>
-                <div class=""> <br></div>
+        <div class="row" style="font-weight: 300;">
+            <div class="col-4 text-center px-2">
+                <div class="quicklinksdiv"><a href="./about-us.html" class="quicklinks">About Us</a></div>
+                <div class="quicklinksdiv"><a href="./FAQ.html" class="quicklinks">FAQ</a></div>
+                <div class="quicklinksdiv"><a href="./blog.html" class="quicklinks">News</a></div>
             </div>
 
-            <!--Contact Us Col-->
-            <div class="col-4 text-center contactcol">
-                <div class="quicklinksdiv quicklinkstitle"></div>
+            <div class="col-4 text-center px-2" style="font-weight: 400;">
+                <div class="quicklinksdiv"><a href="./contact-us.html#contact-info" class="quicklinks midlinks">Find a Clinic</a></div>
+                <div class="quicklinksdiv"><a href="../index.html#package-recommendation" class="quicklinks midlinks">Tests for Travel</a></div>
+                <div class="quicklinksdiv"><a href="./booknow.html" class="quicklinks midlinks">Book an Appointment</a></div>
+                <div class="quicklinksdiv"><a href="./contact-us.html" class="quicklinks midlinks">Make An Enquiry</a></div>
+            </div>
 
+            <div class="col-4 text-center px-2">
                 <div class="contactdiv">+65 6873 7432</div>
                 <div class="contactdiv">contact@aurora.com</div>
                 <div class="contactdiv">21 Nanyang Link Singapore 637371</div>
@@ -273,9 +270,8 @@
         </div>
 
         <!--Soical media-->
-        <div class="row footerlogorow">
-            <div class="col-4"></div>
-            <div class="col-4 text-center">
+        <div class="row">
+            <div class="col-12 text-center">
                 <!--LinkedIn-->
                 <a href="https://www.linkedin.com/in/aurora-medical/" target="_blank" class=""><svg
                         xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor"
@@ -328,9 +324,7 @@
                             d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z" />
                     </svg>
                 </a>
-
             </div>
-            <div class="col-4"></div>
         </div>
 
         <!--Copyright-->
@@ -342,5 +336,6 @@
 
     <!-- Bootstrap: JavaScript Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+    <script src="../js/update_space_holder_height.js"></script>
 </body>
 </html>
