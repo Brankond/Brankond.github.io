@@ -41,14 +41,14 @@
     <script src="https://kit.fontawesome.com/0ef6f85575.js" crossorigin="anonymous"></script>
 
     <style>
+        /* general css */
+        h1 {
+            font-family: 'Playfair Display', sans-serif;
+        }
+
         ::selection {
             color: white;
             background: #FEBB60;
-        }
-
-        .container-fluid {
-            margin: 0;
-            padding: 0;
         }
 
         a {
@@ -63,6 +63,10 @@
             padding: 0;
         }
 
+        .dropdown-menu {
+            border: none !important;
+        }
+
         body {
             font-family: 'Noto Sans', sans-serif;
             font-weight: 200;
@@ -74,27 +78,7 @@
             color: #333333;
         }
 
-
         /*Start of Navbar*/
-        #fixedheader {
-            position: fixed;
-        }
-
-        .header {
-            margin: 0;
-            z-index: 100;
-            width: 100%;
-            padding: 0.5%;
-
-            background-color: white;
-
-            transition-duration: 0.4s;
-
-            box-shadow: 0px 0px grey;
-            
-        }
-
-
         .navbtn {
             font-family: 'Noto Sans', sans-serif;
             font-weight: 300;
@@ -102,49 +86,12 @@
             color: #41B188;
             cursor: pointer;
             font-size: 1rem
-
-        }
-
-
-        .navbox {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-
-
         }
 
         .navbtn:hover {
             color: #41B188;
 
         }
-
-        .logo {
-            font-family: 'Playfair Display', serif;
-            font-weight: 400;
-            text-decoration: none;
-            color: #41B188;
-            font-size: 2rem;
-            transition: all 0.3s linear;
-            white-space: nowrap;
-
-        }
-
-        .logo:hover {
-            color: #41B188;
-            /*animation: logoanimation 5s linear infinite;*/
-
-        }
-
-        .logopt2 {
-            color: #333333;
-        }
-
-        .logopt2:hover {
-            color: #333333;
-        }
-
-
 
         .hover-underline-animation {
             display: inline-block;
@@ -175,28 +122,62 @@
             font-family: 'Noto Sans', sans-serif;
             font-weight: 400;
             border: none;
-            border-radius: 2px;
-            padding: 0.3vw 0.7vw;
-
             white-space: nowrap;
             font-size: 1rem;
             transition: 0.25s ease-in-out;
-
             color: white;
             background-color: #41B188;
-
-            border: 0px #41B188 solid;
         }
 
         .bookbtn:hover {
-
             color: white;
             background-color: #FEBB60;
             border: 0px #FEBB60 solid;
+        }
+        /*Navbar css ends here*/
 
+        /* hero banner css starts */
+        .hero-banner {
+            min-height: 60vh;
+            background-image: url('https://st3.depositphotos.com/1643295/18071/i/450/depositphotos_180717236-stock-photo-confident-smiling-asian-doctors-looking.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-blend-mode: darken;
+            background-color: rgba(0, 0, 0, 0.285);
+            padding: 5%;
         }
 
-        /*Navbar css ends here*/
+        .herotitle {
+            font-family: 'Playfair Display', serif;
+            font-size: 4rem;
+            font-weight: bold;
+            color: white;
+        }
+
+        .herotext {
+            font-family: 'Noto Sans', sans-serif;
+            font-weight: 300;
+            font-size: 1rem;
+            color: white;
+        }
+
+
+        .button {
+            font-family: 'Noto Sans', sans-serif;
+            font-size: 1rem;
+            font-weight: bold;
+            color: white;
+            background-color: transparent;
+            border: none;
+            border-bottom: 2px solid white;
+            padding: 1rem;
+            transition: all 0.3s;
+        }
+
+        .button:hover {
+            color: #112F24;
+            background-color: white;
+        }
 
         .heromodule {
             width: 100%;
@@ -220,7 +201,6 @@
             position: relative;
         }
 
-
         .hero {
             width: 100%;
             margin: 0;
@@ -228,46 +208,14 @@
             color: white;
         }
 
-        .herotitle {
-            font-family: 'Playfair Display', serif;
-            transform: translateY(30%);
-            font-size: 9vw;
-            padding: 20px;
-            height:9vw;
-        }
-
-        .herotext {
-            font-family: 'Noto Sans', sans-serif;
-            font-weight: 300;
-            width: 40vw;
-            margin: 1% 0 0 30%;
-            padding: 0;
-            font-size: 1vw;
-            height: 1vw;
-        }
-
         img {
             object-fit: cover;
         }
 
-
         .whyuscontainer {
             background-color: #41B188;
             color: white;
-            margin: 0;
-            height: 45vw;
-
-        }
-
-        .whyustitle {
-            font-family: 'Playfair Display', serif;
-            font-family: 'Noto Sans', sans-serif;
-
-            font-weight: 150;
-            font-size: 7vw;
-            transform: translateY(35%);
-            margin: 0;
-            /* border: 1px white solid;*/
+            padding: 5rem 5%;
         }
 
         .iconrow {
@@ -282,11 +230,8 @@
         }
 
         .countrycontainer {
-            height: 45vw;
-            width: 100%;
-            margin: 0;
-            padding: 0;
-            margin-bottom: 10%;
+            padding: 5rem 5%;
+            color: #112F24;
         }
 
         .countrytitle {
@@ -307,40 +252,32 @@
             color: #333333;
             font-weight: 300;
             font-size: 1.5vw;
-
+            border: 1px white solid;
         }
 
         .countrydropdown:hover {
             background-color: #41B188;
             color: white;
+            border: 1px white solid;
         }
-
-        .countrydropdown:focus {
-            background-color: #41B188;
-            color: white;
-        }
-
 
         .dropdown-item:active{
-            background-color: #41B188;
+            background-color: #8b8b8b;
             color:white;
         }
 
         .dropdown-toggle::after {
             right: 0%;
-
         }
 
         .dropdown-menu {
             width: 100%;
-            max-height: 10vw;
+            max-height: 10rem;
             overflow-y: auto;
             cursor: pointer;
-            font-size: 1.2vw;
-            border: 1px #333333 solid;
+            font-size: 1rem;
             border-radius: 0;
         }
-
 
         .recommplancontainer {
             padding: 0;
@@ -397,8 +334,6 @@
             }
 
         }
-
-        .plandetailslistrow {}
 
         .plandetailslist {
             font-weight: 300;
@@ -625,154 +560,160 @@
         .footer-logo:hover {
             color: #FEBB60;
         }
-
         /*End of footer css*/
-
-
-        
     </style>
-
-
 </head>
 
 <body>
+    <!-- navbar -->
+    <nav class="container-fluid d-flex justify-content-between align-items-center p-3 flex-wrap position-fixed" style="background-color: white">
+        <div>
+            <a href="index.html">
+                <h1 style="font-size: 2rem; font-weight: 400; color: #41B188">
+                    Aurora <span style="color: #333333">Medical</span>
+                </h1>
+            </a>
+        </div>
 
-    <!--Navbar start-->
-    <div id="fixedheader" class="row header">
-        <div class="col-3 navbox"><a href="home.html" class="logo">Aurora</a><a href="home.html"
-                class="logo logopt2">Medical</a></div>
-        <div class="col-3"></div>
-        <div class="col navbox "><a href="#" class="navbtn hover-underline-animation">Products</a></div>
-        <div class="col navbox"><a href="#" class="navbtn hover-underline-animation">FAQ</a></div>
-        <div class="col navbox"><a href="#" class="navbtn hover-underline-animation">Contact Us</a></div>
-        <div class="col navbox"><a href="#" class="navbtn hover-underline-animation">News</a></div>
-        <div class="col navbox"><a href="#"><button href="#" class="bookbtn">Book Now</button></a></div>
+        <div class="d-flex align-items-center" style="gap: 1rem;">
+            <div class="p-2"><a href="#" class="navbtn hover-underline-animation">Our Services</a></div>
+            <div class="p-2"><a href="#" class="navbtn hover-underline-animation">FAQ</a></div>
+            <div class="p-2"><a href="#" class="navbtn hover-underline-animation">Contact Us</a></div>
+            <div class="p-2"><a href="#" class="navbtn hover-underline-animation">News</a></div>
+            <div class="p-2"><a href="./pages/booknow.html"><button class="bookbtn p-2">Book Now</button></a></div>
+        </div>
+    </nav>
 
-    </div>
-
-    <!--This is a duplicate header to create the spacing between the top of the screen and the next element, leave it as part of the header-->
-    <div class="row header">
-        <div class="col-3 navbox"><a href="home.html" class="logo">Aurora Medical</a></div>
-        <div class="col-2"></div>
-        <div class="col navbox "><a href="#" class="navbtn hover-underline-animation">Products</a></div>
-        <div class="col navbox"><a href="#" class="navbtn hover-underline-animation">FAQ</a></div>
-        <div class="col navbox"><a href="#" class="navbtn hover-underline-animation">Contact Us</a></div>
-        <div class="col navbox"><a href="#" class="navbtn hover-underline-animation">News</a></div>
-        <div class="col navbox"><a href="#"><button href="#" class="bookbtn">Book Now</button></a></div>
-        <div class="col"></div>
-    </div>
-    <!--Navbar ends here-->
-
-
+    <!-- space holder -->
+    <nav class="container-fluid d-flex justify-content-between align-items-center p-3 flex-wrap">
+        <div style="color: white">
+            <h1 style="font-size: 2rem; font-weight: 400;">
+                Aurora
+            </h1>
+        </div>
+    </nav>
 
     <!--Hero section-->
-
-    <div class="heromodule">
-        <div class="hero-module-inside">
-            <div class="row hero text-center ">
-                <div class="herotitle">We're here for you</div>
-                <div class="herotext">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam eget diam nec ligula gravida hendrerit.
-                    Vestibulum a justo mauris. Nam placerat posuere augue sit amet gravida. Sed quis metus in velit posuere
-                    viverra. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam eget diam nec ligula gravida
-                    hendrerit.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam eget diam nec ligula gravida
-                    hendrerit. Vestibulum a justo mauris. Nam placerat posuere augue sit amet gravida.
-                </div>
-                <a href="#"><button href="#" class="bookbtn herobtn">Book Now</button></a>
-        
-            </div>
+    <section class="hero-banner container-fluid d-flex align-items-center justify-content-center">
+        <div class="text-center">
+            <h1 class="herotitle">
+                Everything you need for travel
+            </h1>
+            <p class="pt-4 herotext text-start">
+                We provide everything you need to travel overseas during COVID-19 pandemic. With continuously checking the latest regulations in every country, we ensure our services comply with the requirements. Also, we guarantee our prices to be the best in Singapore, and even better discounts are available for group bookings.
+            </p>
+            <a href="./pages/booknow.html">
+                <button class="button mt-5" id="slide-to-form-btn">
+                    Book Now
+                </button>
+            </a>
         </div>
-    </div>
+    </section>
+    
     <!--Why Us Section-->
     <div class="container-fluid whyuscontainer">
-        <div class="row text-center">
-            <div class="col-4"></div>
-            <div class="col-4 whyustitle">Why Us?</div>
-            <div class="col-4"></div>
+        <h1 style="font-size: 4rem" class="text-center">
+            Why Us?
+        </h1>
+        <div class="row text-center mt-5 gy-4">
+            <div class="col-lg-4 col-md-12 p-3">
+                <i class="fa-regular fa-clock fa-6x"></i>
+                <h2 class="mt-4">Fast</h2>
+                <p class="mt-2">
+                    Get your result within <b>24 hrs
+                    </p></b> 
+            </div>
+            <div class="col-lg-4 col-md-12 p-3">
+                <i class="fa-solid fa-globe fa-6x"></i>
+                <h2 class="mt-4">Valid</h2>
+                <p class="mt-2">
+                    We assure you the validity of our results
+                    <br> in sync with up-to-date <b>border info</b>
+                </p>
+            </div>
+            <div class="col-lg-4 col-md-12 p-3">
+                <i class="fa-solid fa-arrow-trend-down fa-6x"></i>
+                <h2 class="mt-4">Low-Cost</h2>
+                <p class="mt-2">
+                    We offer you the <b>lowest price</b> aross the island
+                </p>
+            </div>
         </div>
-        <div class="row iconrow text-center">
-            <div class="col-4">
-                <i class="fa-regular fa-clock fa-8x"></i>
-            </div>
-            <div class="col-4">
-
-                <i class="fa-solid fa-vial fa-8x"></i>
-            </div>
-            <div class="col-4">
-                <i class="fa-solid fa-user-shield fa-8x"></i>
-            </div>
-        </div>
-        <div class="row text-center icontextrow">
-            <div class="col-4">Our experienced team of doctors </div>
-            <div class="col-4 ">Accurate</div>
-            <div class="col-4">Safe</div>
+        <div class="text-center">
+            <a href="./pages/about-us.html">
+                <button class="button mt-5" id="slide-to-form-btn">
+                    Learn more about us
+                </button>
+            </a>
         </div>
     </div>
 
     <!--Country selection Title-->
     <div class="container-fluid countrycontainer">
-        <div class="row text-center countrytitle">
-            <div class="col-md-2"></div>
-            <div class="col-md-8 ">Where Are You Going?</div>
-            <div class="col-md-2"></div>
-        </div>
-
-        <div class="row w-50 mx-auto align-items-center justify-content-betwee py-3">
-            <div class="col-12">
-                <!--Dropdown menu-->
-                <div class="row dropdownrow">
-                    <div class="col-12">
-                        <div class="dropdown-center ">
-                            <button class="btn btn-secondary dropdown-toggle countrydropdown rounded-0 text-center"
-                                type="button" data-bs-toggle="dropdown" aria-expanded="false" id="countrydopdownbtn">
-                                <span class="" id="countrydopdownbtnspan"></span>
-                                <span id="countrydopdownbtntext">Select a Country</span>
-
-                            </button>
-                            <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" id="dropdownbtnChina"><span class="fi fi-cn"></span> China</a></li>
-                                <li><a class="dropdown-item" id="dropdownbtnFrance"><span class="fi fi-fr"></span> France</a>
-                                </li>
-                                <li><a class="dropdown-item" id="dropdownbtnGermany"><span class="fi fi-de"></span> Germany</a>
-                                </li>
-                                <li><a class="dropdown-item" id="dropdownbtnItaly"><span class="fi fi-it"></span> Italy</a></li>
-                                <li><a class="dropdown-item" id="dropdownbtnKorea"><span class="fi fi-kr"></span> Korea</a></li>
-                                <li><a class="dropdown-item" id="dropdownbtnMexico"><span class="fi fi-mx"></span> Mexico</a>
-                                </li>
-                                <li><a class="dropdown-item" id="dropdownbtnSingapore"><span class="fi fi-sg"></span>
-                                        Singapore</a></li>
-                                <li><a class="dropdown-item" id="dropdownbtnSpain"><span class="fi fi-es"></span> Spain</a></li>
-                                <li><a class="dropdown-item" id="dropdownbtnTaiwan"><span class="fi fi-tw"></span> Taiwan</a>
-                                </li>
-                                <li><a class="dropdown-item" id="dropdownbtnThailand"><span class="fi fi-th"></span>
-                                        Thailand</a></li>
-                                <li><a class="dropdown-item" id="dropdownbtnTurkey"><span class="fi fi-tr"></span> Turkey</a>
-                                </li>
-                                <li><a class="dropdown-item" id="dropdownbtnUnitedKingdom"><span class="fi fi-gb"></span> United
-                                        Kingdom</a></li>
-                                <li><a class="dropdown-item" id="dropdownbtnUnitedStates"><span class="fi fi-us"></span> United
-                                        States</a></li>
-                            </ul>
+        <h1 style="font-size: 4rem;" class="text-center">
+            Where are you travelling to?
+        </h1>
+        <div class="w-75 p-4 mx-auto my-5" style="background-color:#41B188; color: white;">
+            <div class="row align-items-center">
+                <div class="col-lg-5 col-md-12 py-2">
+                    <b>Select your destination</b> 
+                </div>
+                <div class="col-lg-7 col-md-12 py-2">
+                    <div class="row dropdownrow">
+                        <div class="col-12">
+                            <div class="dropdown-center ">
+                                <button class="btn btn-secondary dropdown-toggle countrydropdown rounded-0 text-center"
+                                    type="button" data-bs-toggle="dropdown" aria-expanded="false" id="countrydopdownbtn">
+                                    <span class="" id="countrydopdownbtnspan"></span>
+                                    <span id="countrydopdownbtntext" style="font-size: 1rem;">Select a Country</span>
+                                </button>
+                                <ul class="dropdown-menu shadow">
+                                    <li><a class="dropdown-item" id="dropdownbtnChina"><span class="fi fi-cn"></span> China</a></li>
+                                    <li><a class="dropdown-item" id="dropdownbtnFrance"><span class="fi fi-fr"></span> France</a>
+                                    </li>
+                                    <li><a class="dropdown-item" id="dropdownbtnGermany"><span class="fi fi-de"></span> Germany</a>
+                                    </li>
+                                    <li><a class="dropdown-item" id="dropdownbtnItaly"><span class="fi fi-it"></span> Italy</a></li>
+                                    <li><a class="dropdown-item" id="dropdownbtnKorea"><span class="fi fi-kr"></span> Korea</a></li>
+                                    <li><a class="dropdown-item" id="dropdownbtnMexico"><span class="fi fi-mx"></span> Mexico</a>
+                                    </li>
+                                    <li><a class="dropdown-item" id="dropdownbtnSingapore"><span class="fi fi-sg"></span>
+                                            Singapore</a></li>
+                                    <li><a class="dropdown-item" id="dropdownbtnSpain"><span class="fi fi-es"></span> Spain</a></li>
+                                    <li><a class="dropdown-item" id="dropdownbtnTaiwan"><span class="fi fi-tw"></span> Taiwan</a>
+                                    </li>
+                                    <li><a class="dropdown-item" id="dropdownbtnThailand"><span class="fi fi-th"></span>
+                                            Thailand</a></li>
+                                    <li><a class="dropdown-item" id="dropdownbtnTurkey"><span class="fi fi-tr"></span> Turkey</a>
+                                    </li>
+                                    <li><a class="dropdown-item" id="dropdownbtnUnitedKingdom"><span class="fi fi-gb"></span> United
+                                            Kingdom</a></li>
+                                    <li><a class="dropdown-item" id="dropdownbtnUnitedStates"><span class="fi fi-us"></span> United
+                                            States</a></li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="col-12">
-                <!-- Number of persons -->
-                <div class="row p-3 mx-auto align-items-center w-">
-                    <div class="col-6 p-3">
-                        <span> Number of People: </span>
-                    </div>
-                    <div class="col-2">
-                        <button style="background-color: #112F24; color: white; border: none" class="px-3 py-1 mx-auto d-block" id="decrement-people-count-btn">
-                            -
-                        </button>
-                    </div>
-                    <div class="col-2 text-center" id="people-count">1</div>
-                    <div class="col-2">
-                        <button style="background-color: #112F24; color: white; border: none" class="px-3 py-1 mx-auto d-block" id="increment-people-count-btn">
-                            +
-                        </button>
+            <hr>
+            <div class="row align-items-center">
+                <div class="col-lg-5 col-md-12 py-2">
+                    <b>Number of people</b> 
+                </div>
+                <div class="col-lg-7 col-md-12 py-2">
+                    <div class="row mx-auto align-items-center">
+                        <div class="col-4">
+                            <button style="background-color: white; color: #112F24; border: none" class="px-3 py-1 d-block" id="decrement-people-count-btn">
+                                -
+                            </button>
+                        </div>
+                        <div class="col-4 text-center" id="people-count" style="font-weight: 400;">1</div>
+                        <div class="col-4 d-flex justify-content-end">
+                            <button style="background-color: white; color: #112F24; border: none" class="px-3 py-1 d-block" id="increment-people-count-btn">
+                                +
+                            </button>
+                        </div>
                     </div>
                 </div>
             </div>
