@@ -186,7 +186,7 @@ body {
 .news_box_group .area_major {
     height: 300px;
     width: 65%;
-    background: url(../assets/images/covid_test.jpeg) no-repeat;
+    background: url(../assets/images/major_blog.jfif) no-repeat;
     background-size: cover;
 }
 
@@ -211,6 +211,27 @@ body {
 }
 
 .news_box_group .area_sub {
+    height: 300px;
+    width: 32%;
+    background: url(../assets/images/vaccine_blog.jpg) no-repeat;
+    background-size: 100% 60%;
+}
+
+.area_sub1 {
+    height: 300px;
+    width: 32%;
+    background: url(../assets/images/covid_test.jpeg) no-repeat;
+    background-size: 100% 60%;
+}
+
+.area_sub2 {
+    height: 300px;
+    width: 32%;
+    background: url(../assets/images/covid_test.jpeg) no-repeat;
+    background-size: 100% 60%;
+}
+
+.area_sub3 {
     height: 300px;
     width: 32%;
     background: url(../assets/images/covid_test.jpeg) no-repeat;

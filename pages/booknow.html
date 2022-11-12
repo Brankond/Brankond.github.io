@@ -317,6 +317,23 @@
 
         }
 
+        .button {
+            font-family: 'Noto Sans', sans-serif;
+            font-size: 1rem;
+            font-weight: bold;
+            color: white;
+            background-color: transparent;
+            border: none;
+            border-bottom: 2px solid white;
+            padding: 1rem;
+            transition: all 0.3s;
+        }
+
+        .button:hover {
+            color: #112F24;
+            background-color: white;
+        }
+
 
         .contact-form .button {
             color: #112F24;
@@ -374,11 +391,18 @@
     <!-- space holder -->
     <nav class="container-fluid" id="space-holder">
     </nav>
-
-    <div class="preface">
+    <div class="container-fluid text-center" style="padding: 5rem 5%; background-image: url(../assets/images/index2.png);; background-position: center; background-color: rgba(0, 0, 0, 0.544); background-repeat: no-repeat; background-size: cover; background-blend-mode: darken; color: white;">
+        <h1 style="font-size: 4rem;">
+            Booking Form
+        </h1>
+        <p>
+            Get ready for your booking with the most affordable and reliable Covid-19 testing service in Singapore.
+        </p>
+    </div>
+    <!-- <div class="preface">
         <h2> Booking</h2>
         <a>Fill up your personal details,preferred timings and selection of test to be taken, and proceed to billing information in the next page</a>
-    </div>
+    </div> -->
     <div class="container text-center">
         <!-- Stack the columns on mobile by making one full-width and the other half-width -->
         <div class="row">
@@ -433,6 +457,20 @@
                   <input type="submit" onClick="submit()" Value="BOOK" class="bookbtn big">
             </div>
         </div>
+    </div>
+
+    <div class="container-fluid text-center" style="padding: 5rem 5%; background-image: url(https://img.freepik.com/premium-photo/asian-senior-patient-having-consultation-with-doctor_1339-79722.jpg?w=2000); background-position: center; background-color: rgba(0, 0, 0, 0.544); background-repeat: no-repeat; background-size: cover; background-blend-mode: darken; color: white;">
+        <h1 style="font-size: 4rem;">
+            Still have doubts?
+        </h1>
+        <p>
+            We are here to help you. Contact us now!
+        </p>
+        <a href="./pages/contact-us.html">
+            <button class="button mt-5" id="slide-to-form-btn">
+                Contact Us
+            </button>
+        </a>
     </div>
 
 
