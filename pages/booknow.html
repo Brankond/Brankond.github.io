@@ -35,14 +35,17 @@
     <style>
         h1 {
             font-weight: bold;
-            font-family: 'Playfair Display', serif !important; 
+            font-family: 'Playfair Display', serif !important;
         }
 
         ::selection {
             color: white;
             background: #FEBB60;
         }
-        a:link { text-decoration: none; }
+
+        a:link {
+            text-decoration: none;
+        }
 
         .row {
             width: 100%;
@@ -111,6 +114,7 @@
             background-color: #FEBB60;
             border: 0px #FEBB60 solid;
         }
+
         /*Navbar css ends here*/
 
         /* Start of Footer CSS*/
@@ -147,6 +151,7 @@
         .footer-logo:hover {
             color: #FEBB60;
         }
+
         /*End of footer css*/
 
 
@@ -159,7 +164,7 @@
 
             width: 100%;
             margin: 0;
-            height: 45vw;
+            height: 95vw;
             color: white;
         }
 
@@ -203,7 +208,7 @@
             padding-right: 3%;
             margin-bottom: 5%;
             border-style: solid;
-            border-color:#41B188;
+            border-color: #41B188;
             font-size: 1rem;
         }
 
@@ -240,6 +245,7 @@
             color: #333333;
             font-family: 'Noto Sans', serif;
         }
+
         .big {
             font-size: 3vw;
             margin-top: 5%;
@@ -248,9 +254,10 @@
             padding-right: 1%;
             font-family: 'Playfair Display', serif;
         }
+
         .preface {
             font-family: 'Playfair Display', serif;
-            color:#333333;
+            color: #333333;
             text-align: center;
             margin-top: 1%;
             margin-left: 5%;
@@ -264,39 +271,52 @@
             color: #333333;
             font-weight: 700
         }
+
         .preface a {
             font-size: 1.5rem;
             color: #333333;
             font-weight: 500;
         }
+
         option {
             font-family: 'Noto Sans', serif;
         }
-         input, textarea, select {
+
+        input,
+        textarea,
+        select {
             font-family: 'Noto Sans', sans-serif;
             font-weight: 300;
             color: #333333;
-        } 
+        }
 
-        input[type="text"], input[type="email"], input[type="number"], .form-select {
+        input[type="text"],
+        input[type="email"],
+        input[type="number"],
+        .form-select {
             display: inline-block;
             background-color: transparent;
             border: none;
             border-bottom: 1px solid #333333;
             width: 80%;
             transition: all 0.3s;
-        }   
+        }
 
-        input[type="text"]:hover, input[type="email"]:hover, input[type="number"]:hover, .form-select:hover {
+        input[type="text"]:hover,
+        input[type="email"]:hover,
+        input[type="number"]:hover,
+        .form-select:hover {
             transform: scale(110%) translateX(5%);
         }
 
-        input[type="text"]::placeholder, input[type="email"]::placeholder, input[type="number"]::placeholder {
+        input[type="text"]::placeholder,
+        input[type="email"]::placeholder,
+        input[type="number"]::placeholder {
             color: #333333;
             font-family: 'Noto Sans', sans-serif;
             font-weight: 300;
             color: #333333;
-        } 
+        }
 
         .form-group textarea {
             border: solid;
@@ -305,18 +325,20 @@
             border-width: 0.5px;
             width: 80%;
         }
-        .form-group input[type="text"], .contact-form textarea {
+
+        .form-group input[type="text"],
+        .contact-form textarea {
             font-family: 'Noto Sans', sans-serif;
             font-weight: 300;
             color: #333333;
-        } 
+        }
 
 
-        p{
+        p {
             font-family: 'Playfair Display', Serif;
             font-size: 1.25rem;
             font-weight: 300;
-            
+
         }
 
         .button {
@@ -359,10 +381,10 @@
         .material-symbols-outlined {
             vertical-align: middle;
             font-variation-settings:
-            'FILL' 1,
-            'wght' 400,
-            'GRAD' 0,
-            'opsz' 20
+                'FILL' 1,
+                'wght' 400,
+                'GRAD' 0,
+                'opsz' 20
         }
 
 
@@ -377,20 +399,20 @@
             padding: 1rem;
             transition: all 0.3s;
             margin: 3rem;
-            width:8rem;
+            width: 8rem;
         }
 
         .button2:hover {
             color: white;
             background-color: #41B188;
         }
-
     </style>
 </head>
 
 <body>
     <!-- navbar -->
-    <nav class="container-fluid d-flex justify-content-between align-items-center p-3 flex-wrap position-fixed" style="z-index: 10000; background-color: white" id="navbar">
+    <nav class="container-fluid d-flex justify-content-between align-items-center p-3 flex-wrap position-fixed"
+        style="z-index: 10000; background-color: white" id="navbar">
         <div>
             <a href="../index.html">
                 <h1 style="font-size: 2rem; font-weight: 400; color: #41B188">
@@ -412,14 +434,18 @@
     <nav class="container-fluid" id="space-holder">
     </nav>
 
-    <div class="container-fluid text-center" style="padding: 5rem 5%; background-image: url(../assets/images/index2.png);; background-position: center; background-color: rgba(0, 0, 0, 0.544); background-repeat: no-repeat; background-size: cover; background-blend-mode: darken; color: white;">
-        <h1 style="font-size: 4rem;">
-            Booking Form
-        </h1>
-        <p style="font-family: 'Noto Sans', sans-serif; font-weight: 300; margin-top: 0%;">
-            Get ready for your booking with the most affordable and reliable Covid-19 testing service in Singapore. <br>
-            Enter your personal details and move on to payment details in the next page.</p>
-        
+    <div class="container-fluid text-center my-auto"
+        style="padding: 5rem 5%; background-image: url(../assets/images/index2.png);; background-position: center; background-color: rgba(0, 0, 0, 0.544); background-repeat: no-repeat; background-size: cover; background-blend-mode: darken; color: white; min-height: 60vh; ;">
+        <div class="">
+            <h1 style="font-size: 4rem;">
+                Booking Form
+            </h1>
+            <p style="font-family: 'Noto Sans', sans-serif; font-weight: 300;">
+                Get ready for your booking with the most affordable and reliable Covid-19 testing service in Singapore. <br>
+                Enter your personal details and move on to payment details in the next page.</p>
+        </div>
+
+
     </div>
     <!-- <div class="preface">
         <h2> Booking</h2>
@@ -431,14 +457,16 @@
             <div class="checkout-border contact" style="margin-top: 5%;">
 
                 <p class="my-4">Full Name</p>
-                <input class="form-control" type="text" required placeholder="Enter name of person taking the test" id="enteredName">
+                <input class="form-control" type="text" required placeholder="Enter name of person taking the test"
+                    id="enteredName">
                 <p class="my-4">Contact Number</p>
-                <input class="form-control" type="number" required placeholder="Enter contact number of person or guardian" id="enteredNumber">
+                <input class="form-control" type="number" required
+                    placeholder="Enter contact number of person or guardian" id="enteredNumber">
                 <p class="my-4"> Email Address </p>
                 <input class="form-control" type="email" required placeholder="Enter contact email" id="enteredEmail">
                 <p class="my-4"> Service Name </p>
-                <select class="form-select" style="font-family: 'Noto Sans', sans-serif; font-weight: 300;" id="covid-test" required
-                    onchange="changeResult()">
+                <select class="form-select" style="font-family: 'Noto Sans', sans-serif; font-weight: 300;"
+                    id="covid-test" required onchange="changeResult()">
                     <option selected value="emptycovid" disabled>Choose your Covid Test</option>
                     <option disabled>-Individual Tests-</option>
                     <option value="PCR Test (Standard)">PCR Test (Standard)</option>
@@ -454,17 +482,18 @@
 
                 </select>
                 <p class="my-4"> Clinic </p>
-                <select class="form-select" style="font-family: 'Noto Sans', sans-serif; font-weight: 300;" id="location-list"
-                    onchange="changeResult()">
+                <select class="form-select" style="font-family: 'Noto Sans', sans-serif; font-weight: 300;"
+                    id="location-list" onchange="changeResult()">
                     <option selected value="emptylocation">Choose your preferred location</option>
                     <option value="Mandai Ave Branch 123456">Mandai</option>
                     <option value="Jurong Branch 213565">Jurong</option>
                     <option value="NTU Branch 123564">NTU</option>
                 </select>
                 <p class="my-4"> Date of Test </p>
-                <select class="form-select" id="dropdown-list" style="font-family: 'Noto Sans', sans-serif; font-weight: 300;"
-                    onchange="changeResult()">
-                    <option selected value="emptydate" disabled style="font-weight: 300;">Choose your preferred date</option>
+                <select class="form-select" id="dropdown-list"
+                    style="font-family: 'Noto Sans', sans-serif; font-weight: 300;" onchange="changeResult()">
+                    <option selected value="emptydate" disabled style="font-weight: 300;">Choose your preferred date
+                    </option>
                     <option value="26 November 2022" action:>26 November : 2 vacancies remaining</option>
                     <option value="27 November 2022">27 November : 34 vacancies remaining</option>
                     <option value="28 November 2022">28 November : 16 vacancies remaining</option>
@@ -473,15 +502,17 @@
                 </select>
                 <div class="form-group">
                     <p class="my-4">Remarks</p>
-                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" style="font-family: 'Noto Sans';"></textarea>
-                  </div>
-             
-                  <input type="submit" onClick="submit()" Value="Book" class="button2">
+                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"
+                        style="font-family: 'Noto Sans';"></textarea>
+                </div>
+
+                <input type="submit" onClick="submit()" Value="Book" class="button2">
             </div>
         </div>
     </div>
 
-    <div class="container-fluid text-center" style="padding: 5rem 5%; background-image: url(https://img.freepik.com/premium-photo/asian-senior-patient-having-consultation-with-doctor_1339-79722.jpg?w=2000); background-position: center; background-color: rgba(0, 0, 0, 0.544); background-repeat: no-repeat; background-size: cover; background-blend-mode: darken; color: white;">
+    <div class="container-fluid text-center"
+        style="padding: 5rem 5%; background-image: url(https://img.freepik.com/premium-photo/asian-senior-patient-having-consultation-with-doctor_1339-79722.jpg?w=2000); background-position: center; background-color: rgba(0, 0, 0, 0.544); background-repeat: no-repeat; background-size: cover; background-blend-mode: darken; color: white;">
         <h1 style="font-size: 4rem;">
             Still have doubts?
         </h1>
@@ -508,10 +539,14 @@
             </div>
 
             <div class="col-4 text-center px-2" style="font-weight: 400;">
-                <div class="quicklinksdiv"><a href="./contact-us.html#contact-info" class="quicklinks midlinks">Find a Clinic</a></div>
-                <div class="quicklinksdiv"><a href="../index.html#package-recommendation" class="quicklinks midlinks">Tests for Travel</a></div>
-                <div class="quicklinksdiv"><a href="./booknow.html" class="quicklinks midlinks">Book an Appointment</a></div>
-                <div class="quicklinksdiv"><a href="./contact-us.html" class="quicklinks midlinks">Make An Enquiry</a></div>
+                <div class="quicklinksdiv"><a href="./contact-us.html#contact-info" class="quicklinks midlinks">Find a
+                        Clinic</a></div>
+                <div class="quicklinksdiv"><a href="../index.html#package-recommendation"
+                        class="quicklinks midlinks">Tests for Travel</a></div>
+                <div class="quicklinksdiv"><a href="./booknow.html" class="quicklinks midlinks">Book an Appointment</a>
+                </div>
+                <div class="quicklinksdiv"><a href="./contact-us.html" class="quicklinks midlinks">Make An Enquiry</a>
+                </div>
             </div>
 
             <div class="col-4 text-center px-2">
@@ -589,18 +624,18 @@
 
     <script>
         function submit() {
-            if (document.getElementById("covid-test").value == "emptycovid"){
+            if (document.getElementById("covid-test").value == "emptycovid") {
                 alert("Please input your choice of covid test!");
             }
-            if (document.getElementById("location-list").value == "emptylocation"){
+            if (document.getElementById("location-list").value == "emptylocation") {
                 alert("Please input your preferred location!");
             }
-            if (document.getElementById("dropdown-list").value == "emptydate"){
+            if (document.getElementById("dropdown-list").value == "emptydate") {
                 alert("Please input your preferred date!");
             }
 
             else {
-                window.location.href="cart.html";
+                window.location.href = "cart.html";
             }
         }
         function changeResult() {
@@ -616,8 +651,8 @@
             sessionStorage.setItem('choice', x);
             var locationValue = document.getElementById("location-list").value;
             sessionStorage.setItem('locationKey', locationValue);
-            
-            
+
+
         }
     </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
