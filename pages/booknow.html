@@ -314,10 +314,8 @@
 
         p{
             font-family: 'Playfair Display', Serif;
-            font-size: 1.5rem;
-            padding: 2.5%;
-            font-weight: 700;
-
+            font-size: 1.25rem;
+            font-weight: 300;
         }
 
         .button {
@@ -368,23 +366,22 @@
 
 
         .button2 {
-    font-family: 'Playfair Display', sans-serif;
-    font-size: 1.5rem;
-    font-weight: 700;
-    color: #112F24;
-    background-color: transparent;
-    border: none;
-    border-bottom: 2px solid #112F24;
-    padding: 1rem;
-    transition: all 0.3s;
-    margin: 1rem;
-}
+            font-family: 'Noto Sans', sans-serif;
+            font-size: 1rem;
+            font-weight: 700;
+            color: #112F24;
+            background-color: transparent;
+            border: none;
+            border-bottom: 2px solid #112F24;
+            padding: 1rem;
+            transition: all 0.3s;
+            margin: 1rem;
+        }
 
-.button2:hover {
-    color: white;
-    background-color: #112F24;
-}
-
+        .button2:hover {
+            color: white;
+            background-color: #112F24;
+        }
 
     </style>
 </head>
@@ -412,6 +409,7 @@
     <!-- space holder -->
     <nav class="container-fluid" id="space-holder">
     </nav>
+
     <div class="container-fluid text-center" style="padding: 5rem 5%; background-image: url(../assets/images/index2.png);; background-position: center; background-color: rgba(0, 0, 0, 0.544); background-repeat: no-repeat; background-size: cover; background-blend-mode: darken; color: white;">
         <h1 style="font-size: 4rem;">
             Booking Form
@@ -430,13 +428,13 @@
         <div class="row">
             <div class="checkout-border contact" style="margin-top: 5%;">
 
-                <p>Full Name</p>
+                <p class="my-4">Full Name</p>
                 <input class="form-control" type="text" required placeholder="Enter name of person taking the test" id="enteredName">
-                <p>Contact Number</p>
+                <p class="my-4">Contact Number</p>
                 <input class="form-control" type="number" required placeholder="Enter contact number of person or guardian" id="enteredNumber">
-                <p> Email Address </p>
+                <p class="my-4"> Email Address </p>
                 <input class="form-control" type="email" required placeholder="Enter contact email" id="enteredEmail">
-                <p> Service Name </p>
+                <p class="my-4"> Service Name </p>
                 <select class="form-select" style="font-family: 'Noto Sans', sans-serif; font-weight: 300;" id="covid-test" required
                     onchange="changeResult()">
                     <option selected value="emptycovid" disabled>Choose your Covid Test</option>
@@ -453,7 +451,7 @@
                     <option value="Phillipines Bundle">Phillipines Bundle</option>
 
                 </select>
-                <p> Clinic </p>
+                <p class="my-4"> Clinic </p>
                 <select class="form-select" style="font-family: 'Noto Sans', sans-serif; font-weight: 300;" id="location-list"
                     onchange="changeResult()">
                     <option selected value="emptylocation">Choose your preferred location</option>
@@ -461,7 +459,7 @@
                     <option value="Jurong Branch 213565">Jurong</option>
                     <option value="NTU Branch 123564">NTU</option>
                 </select>
-                <p> Date of Test </p>
+                <p class="my-4"> Date of Test </p>
                 <select class="form-select" id="dropdown-list" style="font-family: 'Noto Sans', sans-serif; font-weight: 300;"
                     onchange="changeResult()">
                     <option selected value="emptydate" disabled style="font-weight: 300;">Choose your preferred date</option>
@@ -472,7 +470,7 @@
                     <option value="30 November 2022">30 November : 16 vacancies remaining</option>
                 </select>
                 <div class="form-group">
-                    <p>Remarks</p>
+                    <p class="my-4">Remarks</p>
                     <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" style="font-family: 'Noto Sans';"></textarea>
                   </div>
              

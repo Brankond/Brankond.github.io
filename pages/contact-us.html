@@ -53,7 +53,7 @@
             <h1 style="font-size: 4rem;">
                 We are here to hear from you
             </h1>
-            <p class="pt-4">
+            <p class="pt-4" style="font-size: 1.25rem">
                 Whether you're curious about our packages, services or wish to book a test <br> <b>We are here for any and all of your needs</b>
             </p>
             <button class="button mt-5" id="slide-to-form-btn">
@@ -224,7 +224,9 @@
     <!-- contact info -->
     <section class="contact-info container-fluid" id="contact-info">
         <div class="row">
-            <div class="col-lg-4 col-md-12" id="map" style="height: 40rem"></div>
+            <div class="col-lg-4 col-md-12" id="map" style="height: 40rem; padding: 0;">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d120475.64416777474!2d103.81160184370414!3d1.3355505084898236!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2ssg!4v1668307767730!5m2!1sen!2ssg" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
             <div class="col-lg-4 col-md-6 d-flex flex-column" style="background-color: #112F24; padding: 2rem 3rem; height: 40rem;">
                 <div style="flex: 2;" class="d-flex flex-column justify-content-center">
                     <h1 style="font-size: 3rem; color: white; text-transform: uppercase;">
@@ -233,7 +235,7 @@
                 </div>
                 <div style="flex: 1;" class="d-flex flex-column justify-content-center">
                     <p style="color: white; font-size: 1rem;">
-                        <span class="material-symbols-outlined"> location_on </span> 20 McCallum Street #15-01/05 ASIA CHAMBERS
+                        <span class="material-symbols-outlined"> location_on </span> 21 Nanyang Link Singapore #01-15 637371
                     </p>
                 </div>
             </div>
@@ -350,23 +352,23 @@
     <!-- Google Map -->
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB41DRUbKWJHPxaFjMAwdrzWzbVKartNGg&callback=initMap&v=weekly" defer></script>
     <script>
-        // Initialize and add the map
-        function initMap() {
-        // The location of Uluru
-        const uluru = { lat: -25.344, lng: 131.031 };
-        // The map, centered at Uluru
-        const map = new google.maps.Map(document.getElementById("map"), {
-            zoom: 4,
-            center: uluru,
-        });
-        // The marker, positioned at Uluru
-        const marker = new google.maps.Marker({
-            position: uluru,
-            map: map,
-        });
-        }
+        // // Initialize and add the map
+        // function initMap() {
+        // // The location of Uluru
+        // const sg = { lat: 1.290270, lng: 103.851959 };
+        // // The map, centered at Uluru
+        // const map = new google.maps.Map(document.getElementById("map"), {
+        //     zoom: 4,
+        //     center: sg,
+        // });
+        // // The marker, positioned at Uluru
+        // const marker = new google.maps.Marker({
+        //     position: sg,
+        //     map: map,
+        // });
+        // }
 
-        window.initMap = initMap;
+        // window.initMap = initMap;
 
         // smooth sliding to contact form
         let btn = document.querySelector('#slide-to-form-btn');
