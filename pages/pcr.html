@@ -4,7 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <title>Aurora Medical : PCR Test</title>
-    <meta name="description" content="Aurora Medical offers the Polymerase Chain Reaction (PCR) Test, the most accurate test for COVID-19. ">
+    <meta name="description"
+        content="Aurora Medical offers the Polymerase Chain Reaction (PCR) Test, the most accurate test for COVID-19. ">
     <meta name="keywords" content="Mobile Departure Swab test, PCR Test, Covid-19 Test, Aurora Medical">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -100,10 +101,6 @@
             margin-top: 3%;
         }
 
-        h3 {
-            text-align: left;
-
-        }
 
         .checkout-border {
             background-color: #41B188;
@@ -198,88 +195,93 @@
             margin-top: 5%;
         }
 
-        .plans {
-            border-style: solid;
-            border-radius: 15px;
-            text-align: center;
-            justify-items: center;
-            height: 50vw;
-            padding: 10%;
-        }
+
         a {
             font-family: 'Noto Sans', sans-serif;
             font-size: 1rem;
         }
+
         h1 {
             color: white;
         }
-        h3 {
-            font-size: 4rem;
-            font-family: "Playfair Display", serif;
-        }
-        .accordion-button
-        {
+
+        .accordion-button {
             font-size: 1rem;
             font-family: 'Noto Sans';
-        } 
+        }
+
         li {
             font-size: 1rem;
             font-family: 'Noto Sans';
-        }       
+        }
+
         h2 {
             font-family: 'Playfair Display';
             font-size: 3rem;
         }
-        a:link { text-decoration: none; }
-        .list-group-item {
-            border-color: #41B188;
-            border-style: solid;
-            border-width: 2px;
+
+        a:link {
+            text-decoration: none;
         }
+
         .ms-2 {
             font-family: 'Noto Sans', Sans-serif;
             font-weight: 300;
             font-size: 1rem;
         }
+
         .accordion-item {
             font-family: Noto Sans;
             Font-weight: 300;
         }
+
         .accordion-button {
             font-weight: 500;
             font-family: 'Playfair Display';
 
         }
+
         .footnote {
             font-size: 1.5rem;
             font-weight: 500;
         }
-        div h3, div h4, div h5 {
+
+        div h3,
+        div h4,
+        div h5 {
             color: #333333;
         }
-        div h4, div h5 {
+
+        div h4,
+        div h5 {
             font-weight: 300;
         }
+
         h3 {
             font-size: 1.5rem;
-            font-weight: 700;
+            font-weight: 300;
+            text-align: left;
         }
+
         h4 {
             font-size: 3rem;
         }
+
         .hero-banner {
-    min-height: 60vh;
-    background-image: url('../assets/images/bg.png');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-blend-mode: darken;
-    background-color: rgba(0, 0, 0, 0.47);
-    padding: 5%;
-}
-h1 {
-    font-family: 'Playfair Display', serif;
-}
+            min-height: 60vh;
+            background-image: url('../assets/images/bg.png');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-blend-mode: darken;
+            background-color: rgba(0, 0, 0, 0.47);
+            padding: 5%;
+        }
+
+        h1 {
+            font-family: 'Playfair Display', serif;
+        }
+
         .button {
             font-family: 'Noto Sans', sans-serif;
             font-size: 1rem;
@@ -294,16 +296,113 @@ h1 {
 
         .button:hover {
             color: white;
-            background-color: #112F24;
+            background-color: #41B188;
+            border-bottom: #41B188 solid 2px;
+        }
+
+        .plans {
+            border-style: solid;
+            border-radius: 0;
+            text-align: center;
+            justify-items: center;
+            padding: 10%;
+            height: 30rem;
+        }
+
+        .express-plan{
+            border-color: #FEBB60;
+        }
+
+        .plans-col {
+            height: auto;
+        }
+
+        .plans-title {
+            font-size: 3rem;
+            font-weight: 300;
+            text-align: center;
+            margin-bottom: 10%;
+        }
+
+        .plans-details {
+            color: #333333;
+            font-size: 1.2rem;
+            font-weight: 300;
+            margin-bottom: 10%;
+            height: 6rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .plans-price {
+            font-size: 3rem;
+            color: #333333;
+            font-weight: 300;
+            margin-bottom: 10%;
+        }
+
+        .button {
+            font-family: 'Noto Sans', sans-serif;
+            font-size: 1rem;
+            font-weight: bold;
+            color: #333333;
+            background-color: transparent;
+            border: none;
+            border-bottom: 2px solid #333333;
+            padding: 1rem;
+            transition: all 0.3s;
+            margin-top: 0;
+        }
+
+        .button:hover {
+            color: white;
+            background-color: #41B188;
+            border-bottom: 2px solid #41B188;
+        }
+
+        #express:hover {
+            color: white;
+            background-color: #FEBB60;
+            border-bottom: 2px solid #FEBB60;
+
+        }
+
+        .accordion-button:hover,
+        .accordion-button:focus,
+        .accordion-button:active {
+            background-color: #41B188;
+            color: white;
+            border-radius: 0 !important;
+        }
+
+        .accordion-button:not(.collapsed) {
+            color: #FFF !important;
+            background-color: #41B188 !important;
+            border-radius: 0 !important;
+        }
+
+        /*Arrow change to white*/
+        .accordion-button:not(.collapsed)::after {
+            filter: brightness(0) invert(100)
+        }
+
+        .accordion-button:not(.collapsed)::after:hover {
+            filter: brightness(0) invert(100)
+        }
+
+        .accordion-header {
+            font-family: 'Noto Sans', sans-serif;
         }
     </style>
 </head>
-    </style>
+</style>
 </head>
 
 <body>
     <!-- navbar -->
-    <nav class="container-fluid d-flex justify-content-between align-items-center p-3 flex-wrap position-fixed" style="z-index: 10000; background-color: white" id="navbar">
+    <nav class="container-fluid d-flex justify-content-between align-items-center p-3 flex-wrap position-fixed"
+        style="z-index: 10000; background-color: white" id="navbar">
         <div>
             <a href="../index.html">
                 <h1 style="font-size: 2rem; font-weight: 400; color: #41B188">
@@ -327,7 +426,7 @@ h1 {
 
     <section class="hero-banner container-fluid d-flex justify-content-center align-items-center">
         <div class="text-center">
-            <h1 style="text-transform: uppercase; font-size: 5rem; line-height: 5rem;">
+            <h1 style="font-size: 5rem; line-height: 5rem; font-weight: 500;">
                 PCR Swab Test
             </h1>
 
@@ -339,8 +438,9 @@ h1 {
         <div class="row">
             <div class="col-sm-8">
                 <h2 style="text-align: left">What is a PCR Swab Test?</h2>
-                <hr style="width: 50px; color: #333333; opacity: 1; border-top: 1.5px solid; margin: 1.5rem 0;" class="mx-auto">
-                <a style="text-align: justify;">
+                <hr style="width: 50px; color: #333333; opacity: 1; border-top: 1.5px solid; margin: 1.5rem 0; "
+                    class="mx-auto">
+                <a style="text-align: justify; font-weight: 300;">
                     The nose swab PCR test for COVID-19 is an accurate and reliable test for diagnosing COVID-19. A
                     positive test means you likely have COVID-19. A negative test means you probably did not have
                     COVID-19 at the time of the test. Get tested if you have symptoms of COVID-19 or have been exposed
@@ -358,69 +458,86 @@ h1 {
                     style="object-fit: contain; height: 20vw; width: auto; vertical-align: center;">
             </div>
         </div>
-        <div style=" align-items: center; justify-content: center; display: flex; margin-top: 5%;">
+        <!--div style=" align-items: center; justify-content: center; display: flex; margin-top: 5%;">
             <div class="text-start">
                 <a href="./cart_pcr_prefilled.html">
                     <button class="button mt-4" id="slide-to-form-btn">
-                        Buy Plan
+                        Buy PCR Test
                     </button>
                 </a>
             </div>
-        </div>
+        </div-->
     </div>
     <div class="box2">
         <h1 style="text-transform: uppercase; font-size: 4rem; color: #333333; font-family: 'Playfair Display';"
-        class="text-center">
-        Options
-    </h1>
-    <hr style="width: 50px; color: #333333; opacity: 1; border-top: 1.5px solid; margin: 1.5rem 0;" class="mx-auto">
-        <div class="row">
-            <div class="col">
-                <div class="plans">
-                    <div class="row" style="height: 33%;">
-                        <h3 style="text-align: center; font-size: 4vw">Standard</h3>
-                        <hr>
-                    </div>
-                    <div class="row" style="height: 33%;">
+            class="text-center">
+            Plans
+        </h1>
 
-                        <h5>Applies to all destinations</h5>
-                    </div>
-                    <div class="row" style="height: 33%;">
-                        <hr>
-                        <h4>S$69</h4>
-                        <a href="booknow.html"><button href="booknow.html" class="bookbtn herobtn">Book Now</button></a>
-                    </div>
-                </div>
-            </div>
-            <div class="col">
+        <hr style="width: 50px; color: #333333; opacity: 1; border-top: 1.5px solid; margin: 1.5rem 0; margin-bottom: 6%;"
+            class="mx-auto">
+
+        <!--Standard and Express Boxes-->
+        <div class="row">
+            <div class="col plans-col">
                 <div class="plans">
-                    <div class="row" style="height: 33%;">
-                        <h3 style="text-align: center; font-size: 4vw;">Express</h3>
-                        <hr>
+                    <div class="row">
+                        <h3 class="plans-title">Standard</h3>
+                        <div class="plans-details">Applies to all destinations</div>
                     </div>
-                    <div class="row" style="height: 33%;">
-                        <h5>Results sent to your email in less than 5 hours!</h5>
-                    </div>
-                    <div class="row" style="height: 33%;">
-                        <hr>
-                        <h4>S$250</h4>
-                        <a href="booknow.html"><button href="booknow.html" class="bookbtn herobtn">Book Now</button></a>
+                    <div class="row">
+
+                        <h4 class="plans-price">S$69</h4>
+                        <a href="./cart_pcr_prefilled.html" class="">
+                            <button class="button" style="margin: 0;" href="./cart_pcr_prefilled.html">
+                                Buy Standard
+                            </button>
+                        </a>
                     </div>
                 </div>
             </div>
+
+            <div class="col plans-col">
+                <div class="plans express-plan">
+                    <div class="row">
+                        <h3 class="plans-title">Express</h3>
+                        <div class="plans-details">Applies to all destinations
+                            <br><br>
+                            Results sent to your email in less than 5 hours!
+                        </div>
+                    </div>
+                    <div class="row">
+
+                        <h4 class="plans-price">S$250</h4>
+                        <a href="./cart_pcr_prefilled.html" class="">
+                            <button class="button" style="margin: 0;" href="./cart_pcr_prefilled.html" id="express">
+                                Buy Express
+                            </button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+
         </div>
     </div>
-   <div class="box1">
-    <h1 style="text-transform: uppercase; font-size: 4rem; color: #333333; font-family: 'Playfair Display';"
+    <!--End of 2 boxes-->
+
+
+    <!--Branches-->
+    <div class="box1">
+        <h1 style="text-transform: uppercase; font-size: 4rem; color: #333333; font-family: 'Playfair Display';"
             class="text-center">
             Branches
         </h1>
-        <hr style="width: 50px; color: #333333; opacity: 1; border-top: 1.5px solid; margin: 1.5rem 0;" class="mx-auto">
+        <hr style="width: 50px; color: #333333; opacity: 1; border-top: 1.5px solid; margin: 1.5rem 0; margin-bottom: 6%;"
+            class="mx-auto">
         <div class="accordion accordion-flush" id="accordionFlushExample">
             <div class="accordion-item">
                 <h2 class="accordion-header" id="flush-headingOne">
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                        data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne"
+                       >
                         Mandai
                     </button>
                 </h2>
@@ -436,6 +553,7 @@ h1 {
                     </div>
                 </div>
             </div>
+
             <div class="accordion-item">
                 <h2 class="accordion-header" id="flush-headingTwo">
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
@@ -487,10 +605,14 @@ h1 {
             </div>
 
             <div class="col-4 text-center px-2" style="font-weight: 400;">
-                <div class="quicklinksdiv"><a href="./contact-us.html#contact-info" class="quicklinks midlinks">Find a Clinic</a></div>
-                <div class="quicklinksdiv"><a href="../index.html#package-recommendation" class="quicklinks midlinks">Tests for Travel</a></div>
-                <div class="quicklinksdiv"><a href="./booknow.html" class="quicklinks midlinks">Book an Appointment</a></div>
-                <div class="quicklinksdiv"><a href="./contact-us.html" class="quicklinks midlinks">Make An Enquiry</a></div>
+                <div class="quicklinksdiv"><a href="./contact-us.html#contact-info" class="quicklinks midlinks">Find a
+                        Clinic</a></div>
+                <div class="quicklinksdiv"><a href="../index.html#package-recommendation"
+                        class="quicklinks midlinks">Tests for Travel</a></div>
+                <div class="quicklinksdiv"><a href="./booknow.html" class="quicklinks midlinks">Book an Appointment</a>
+                </div>
+                <div class="quicklinksdiv"><a href="./contact-us.html" class="quicklinks midlinks">Make An Enquiry</a>
+                </div>
             </div>
 
             <div class="col-4 text-center px-2">
