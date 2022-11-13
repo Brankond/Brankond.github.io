@@ -4,8 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <title>Aurora Medical : Serology / IGM Test</title>
-    <meta name="description" content="Aurora Medical offers Serology Tests, which detects the presence of previous antibodies to find out if your vaccines are working or your body is recovering.">
-    <meta name="keywords" content="Serology Test, IGM Test, Mobile Departure Swab test, PCR Test, Covid-19 Test, Aurora Medical">
+    <meta name="description"
+        content="Aurora Medical offers Serology Tests, which detects the presence of previous antibodies to find out if your vaccines are working or your body is recovering.">
+    <meta name="keywords"
+        content="Serology Test, IGM Test, Mobile Departure Swab test, PCR Test, Covid-19 Test, Aurora Medical">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -33,8 +35,9 @@
     <link rel="stylesheet" href="../css/footer-and-navbar-style.css">
     <style>
         body {
-    cursor:default;
-}
+            cursor: default;
+        }
+
         ::selection {
             color: white;
             background: #FEBB60;
@@ -95,6 +98,14 @@
             justify-content: center;
             padding: 2%;
             font-family: 'Playfair Display', serif;
+        }
+
+        a{
+            transition-duration:0.3s ;
+        }
+
+        a:hover{
+            color: #41B188;
         }
 
         h2 {
@@ -212,6 +223,7 @@
 
         .list-group {
             text-align: justify;
+            border-radius: 0;
         }
 
         a {
@@ -222,6 +234,7 @@
         h1 {
             color: white;
             font-family: 'Playfair Display', serif;
+            font-weight: 500;
         }
 
         h3 {
@@ -252,6 +265,7 @@
             border-color: #41B188;
             border-style: solid;
             border-width: 2px;
+            border-radius: 0;
         }
 
         .ms-2 {
@@ -281,28 +295,67 @@
             background-color: rgba(0, 0, 0, 0.47);
             padding: 5%;
         }
-        .button {
-    font-family: 'Noto Sans', sans-serif;
-    font-size: 1rem;
-    font-weight: bold;
-    color: #112F24;
-    background-color: transparent;
-    border: none;
-    border-bottom: 2px solid #112F24;
-    padding: 1rem;
-    transition: all 0.3s;
-}
 
-.button:hover {
-    color: white;
-    background-color: #112F24;
-}
+        .button {
+            font-family: 'Noto Sans', sans-serif;
+            font-size: 1rem;
+            font-weight: bold;
+            color: #333333;
+            background-color: transparent;
+            border: none;
+            border-bottom: 2px solid #333333;
+            padding: 1rem;
+            transition: all 0.3s;
+        }
+
+        .button:hover {
+            color: white;
+            background-color: #41B188;
+            border-bottom: 2px solid #41B188;
+        }
+
+        .accordion,
+        .accordion-item,
+        .accordion-header {
+            border-radius: 0 !important;
+        }
+
+        /*Change the active accordion to be green*/
+        .accordion-button:hover,
+        .accordion-button:focus,
+        .accordion-button:active {
+            background-color: #41B188;
+            color: white;
+            border-radius: 0 !important;
+        }
+
+        .accordion-button:not(.collapsed) {
+            color: #FFF !important;
+            background-color: #41B188 !important;
+            border-radius: 0 !important;
+        }
+
+        /*Arrow change to white*/
+        .accordion-button:not(.collapsed)::after {
+            filter: brightness(0) invert(100)
+        }
+
+        .accordion-button:not(.collapsed)::after:hover {
+            filter: brightness(0) invert(100)
+        }
+
+        .link:hover{
+            color:#41B188;
+            transition-duration: 0.3s;
+        }
+
     </style>
 </head>
 
 <body>
     <!-- navbar -->
-    <nav class="container-fluid d-flex justify-content-between align-items-center p-3 flex-wrap position-fixed" style="z-index: 10000; background-color: white" id="navbar">
+    <nav class="container-fluid d-flex justify-content-between align-items-center p-3 flex-wrap position-fixed"
+        style="z-index: 10000; background-color: white" id="navbar">
         <div>
             <a href="../index.html">
                 <h1 style="font-size: 2rem; font-weight: 400; color: #41B188">
@@ -326,7 +379,7 @@
 
     <section class="hero-banner container-fluid d-flex justify-content-center align-items-center">
         <div class="text-center">
-            <h1 style=" font-size: 5rem; line-height: 5rem; font-weight: bold;">
+            <h1 style=" font-size: 5rem; line-height: 5rem; font-weight: 500;">
                 Serology / IGM Test
             </h1>
 
@@ -340,7 +393,7 @@
                 <h2 style="text-align: left">What is a Serology / IGM Test?</h2>
                 <hr style="width: 50px; color: #333333; opacity: 1; border-top: 1.5px solid; margin: 1.5rem 0;"
                     class="mx-auto">
-                <a style="text-align: left;">
+                <a style="text-align: left; font-weight: 300;">
                     Serology tests detect the presence of antibodies in the blood from the body’s adaptive immune
                     response to an infection, like COVID-19.
 
@@ -348,7 +401,8 @@
                     <h2 style="text-align: left">What is the difference between a Serology Test and PCR Swab Test?</h2>
                     <hr style="width: 50px; color: #333333; opacity: 1; border-top: 1.5px solid; margin: 1.5rem 0;"
                         class="mx-auto">
-                    <a>Individuals can only be diagnosed with COVID-19 infection when they undergo PCR swab testing.
+                    <a style="font-weight: 300;">Individuals can only be diagnosed with COVID-19 infection when they
+                        undergo PCR swab testing.
                         <br><br>
                         However, COVID-19 serology tests are unable to reveal whether a person is actively infected with
                         the virus. Serology tests, which instead identify prior infections, are frequently used for
@@ -362,31 +416,29 @@
             </div>
         </div>
         <div class="text-start">
-            <a href="./booknow.html">
-                <button class="button mt-4" id="slide-to-form-btn">
-                    Buy Plan
-                </button>
-            </a>
+
         </div>
     </div>
     <div class="box2">
-        <h1 style="text-transform: uppercase; font-size: 4rem; color: #333333; font-family: 'Playfair Display', sans-serif;"
-            class="text-center">Commonly Asked Questions</h1>
+        <h1 style="font-size: 4rem; color: #333333; font-family: 'Playfair Display', sans-serif;" class="text-center">
+            Commonly Asked Questions</h1>
         <hr style="width: 50px; color: #333333; opacity: 1; border-top: 1.5px solid; margin: 1.5rem 0;" class="mx-auto">
+
+        <!--COMMONLY ASKED QUESTIONS-->
         <ul class="list-group">
             <li class="list-group-item d-flex justify-content-between align-items-start">
                 <div class="ms-2 me-auto">
                     <div class="fw-bold">Who should take the COVID-19 serology test in Singapore?</div>
-                    As of 2022, If you are travelling to China, you will be required to take an IgM antibody test in
+                    As of 2022, If you are travelling to China, you will be required to take an IGM antibody test in
                     addition to the PCR COVID-19 test. You can check out our bundle for travel to China <a
-                        href="#">here</a>
+                        href="../pages/countries.html" style="color:#333333; text-decoration: underline;" class = "link">here</a>
                 </div>
             </li>
             <li class="list-group-item d-flex justify-content-between align-items-start">
                 <div class="ms-2 me-auto">
                     <div class="fw-bold">Why should you take the COVID-19 serology test in Singapore?</div>
-                    IgM antibody serology test is a blood test that detects the first antibody that our bodies produce
-                    when fighting a new infection. A positive IgM antibody serology test can be used to indicate if a
+                    IGM antibody serology test is a blood test that detects the first antibody that our bodies produce
+                    when fighting a new infection. A positive IGM antibody serology test can be used to indicate if a
                     person has recently been vaccinated or has been infected by COVID-19.
                     <br>
                     <br>
@@ -411,13 +463,38 @@
                     <div class="fw-bold">How can I book an appointment?</div>
                     You may walk into any of our branches, or click on the link below to make a booking.
                     <div style=" align-items: center; justify-content: center; text-align: center;">
-                        <a href="booknow.html"><button href="#" class="bookbtn herobtn" style="margin-top: 5%;">Book
-                                Now</button></a>
+                       
                     </div>
                 </div>
             </li>
         </ul>
+        <div class="row">
+            <div class="col">
+                <a href="./booknow.html">
+                    <button class="button mt-4" id="slide-to-form-btn">
+                        Book Serology / IGM Test
+                    </button>
+                </a>
+            </div>
+        </div>
     </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!--Branches-->
+
     <div class="box1">
         <h1 style="text-transform: uppercase; font-size: 4rem; color: #333333; font-family: 'Playfair Display';"
             class="text-center">
@@ -495,10 +572,14 @@
             </div>
 
             <div class="col-4 text-center px-2" style="font-weight: 400;">
-                <div class="quicklinksdiv"><a href="./contact-us.html#contact-info" class="quicklinks midlinks">Find a Clinic</a></div>
-                <div class="quicklinksdiv"><a href="../index.html#package-recommendation" class="quicklinks midlinks">Tests for Travel</a></div>
-                <div class="quicklinksdiv"><a href="./booknow.html" class="quicklinks midlinks">Book an Appointment</a></div>
-                <div class="quicklinksdiv"><a href="./contact-us.html" class="quicklinks midlinks">Make An Enquiry</a></div>
+                <div class="quicklinksdiv"><a href="./contact-us.html#contact-info" class="quicklinks midlinks">Find a
+                        Clinic</a></div>
+                <div class="quicklinksdiv"><a href="../index.html#package-recommendation"
+                        class="quicklinks midlinks">Tests for Travel</a></div>
+                <div class="quicklinksdiv"><a href="./booknow.html" class="quicklinks midlinks">Book an Appointment</a>
+                </div>
+                <div class="quicklinksdiv"><a href="./contact-us.html" class="quicklinks midlinks">Make An Enquiry</a>
+                </div>
             </div>
 
             <div class="col-4 text-center px-2">
