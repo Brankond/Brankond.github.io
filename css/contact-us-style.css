@@ -3,6 +3,11 @@ body {
     overflow-x: hidden;
 }
 
+::selection {
+    color: white;
+    background: #FEBB60;
+}
+
 h1 {
     font-weight: bold;
     font-family: 'Playfair Display', serif !important; 
