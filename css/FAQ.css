@@ -96,9 +96,19 @@ body {
     background-blend-mode: darken;
     background-color: #00000090;
 }
+.hero .text-area {
+    height: 100%;
+    padding: 0 1rem 3 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #9dc1dd8a;
+    text-align: center;
+}
 
 .hero {
-    height: 500px;
+    height: 100vw;
+    
     width: auto;
     /* background-image: url(./covid_test.jpeg); */
     background-position: center;
@@ -121,15 +131,7 @@ body {
     height: 100%;
 }
 
-.hero .text-area {
-    height: 100%;
-    padding: 0 1rem 3 3rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    background-color: #9dc1dd8a;
-    text-align: center;
-}
+
 
 .hero .btn {
     width: 25%;
