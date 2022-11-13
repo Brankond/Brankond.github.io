@@ -89,7 +89,6 @@ body {
     background-color: #FEBB60;
     border: 0px #FEBB60 solid;
 }
-
 /*Navbar css ends here*/
 
 .hero-banner {
@@ -186,7 +185,7 @@ body {
 
 .news_box_group .area_major {
     height: 300px;
-    width: 66%;
+    width: 65%;
     background: url(../assets/images/major_blog.jfif) no-repeat;
     background-size: cover;
 }
@@ -404,7 +403,6 @@ body {
 .footer-logo:hover {
     color: #FEBB60;
 }
-
 /*End of footer css*/
 
 .place_holder {
