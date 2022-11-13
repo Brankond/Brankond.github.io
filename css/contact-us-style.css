@@ -138,9 +138,11 @@ section {
 
 .hero-banner {
     min-height: 60vh;
+
     background-image: url('../assets/images/contact-us-banner-image.jpg');
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: top;
+    background-position-y: -17vh;
     background-size: cover;
     background-blend-mode: darken;
     background-color: rgba(0, 0, 0, 0.223);
