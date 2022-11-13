@@ -34,9 +34,6 @@
 
     <link rel="stylesheet" href="../css/footer-and-navbar-style.css">
     <style>
-        body {
-    cursor:default;
-}
         ::selection {
             color: white;
             background: #FEBB60;
@@ -46,6 +43,14 @@
             width: 100%;
         }
 
+        a{
+            color:#333333;
+            transition-duration: 0.3s;
+        }
+
+        a:hover{
+            color:#41B188;
+        }
         body {
             background-color: white;
             margin: 0;
@@ -341,6 +346,45 @@
             font-weight: 300;
             text-align: left;
         }
+        .step-title, .step-link{
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            font-weight: 500;
+        }
+
+        .step-link:hover{
+            transition-duration: 0.3s;
+            color: #41B188;
+
+        }
+        .app-name{
+            animation: glow infinite 5s ease-in-out;
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            font-weight: 500;
+        }
+
+        @keyframes glow {
+            0%{
+                color:#333333
+
+            }
+            25%{
+                color:#ED7B84;
+            }
+
+            50%{
+                color:#24A9E2;
+            }
+
+            75%{
+                color:#E883D0;
+            }
+            100%{
+                color:#333333
+                
+            }
+        }
     </style>
 </head>
 
@@ -408,13 +452,7 @@
         <div style="align-items: center; justify-content: center; display: flex; margin-top: 5%;">
             <br>
             <br>
-            <div class="text-start">
-                <a href="./cart_art_prefilled.html">
-                    <button class="button mt-4" id="slide-to-form-btn">
-                        Buy Plan
-                    </button>
-                </a>
-            </div>
+
         </div>
     </div>
 
@@ -456,6 +494,8 @@
             </div>
         </div>
     </div>
+
+    <!--STEPS SECTION-->
     <div class="box1">
         <h1 style="font-size: 4rem; color: #333333; font-family: 'Playfair Display', sans-serif; font-weight: 500;"
             class="text-center">How to book?</h1>
@@ -463,8 +503,9 @@
         <div class="row steps">
             <div class="col-6">
                 <div class="steps3">
-                    <h3>Step 1. Make a booking on our <a href="booknow.html">bookings page</a>!</h3>
-                    <a>Make sure your timeslot is entered correctly. </a>
+                    <div class="step-title">
+                        Step 1. Make a booking on our <a href="booknow.html" class = "step-link" style="text-decoration: underline; ">bookings page!</a>
+                    </div>
                 </div>
             </div>
             <div class="col-6">
@@ -475,8 +516,10 @@
             <div class="col-6">
                 <div class="steps3">
 
-                    <h3>Step 2. Download our <strong>Aurora Medical App</strong></h3>
-                    <a>Download our app from the app store or Google Play Store!</a>
+                    <div class="step-title">Step 2. Download the <a href="#" class=""><span class="app-name">Aurora Medical App</span></a> </div>
+
+                    <h3></strong></h3>
+                    <a>Download our app from the <a href="#" class="" style="text-decoration:underline ;"><span>App Store</span></a> or   <a href="#" class="" style="text-decoration:underline ;"><span>Google Play Store!</span></a></a>
                 </div>
             </div>
             <div class="col-6">
@@ -487,8 +530,8 @@
             <div class="col-6">
                 <div class="steps3">
 
-                    <h3>Step 3. Prepare your ART test kit with the app on the day of the appointment</h3>
-                    <a>Ensure the items are already prepared for you, so as to minimize the delay in conducting the
+                    <h3>Step 3. Prepare your ART test kit and app on the day of the appointment</h3>
+                    <a>Ensure the items are prepared to minimize the delay when conducting the
                         test.</a>
                 </div>
             </div>
@@ -500,7 +543,7 @@
             <div class="col-6">
                 <div class="steps3">
 
-                    <h3>Step 4. Wait for the results to come back in less than 24 hours</h3>
+                    <h3>Step 4. Results in less than 24 hours!</h3>
                 </div>
             </div>
             <div class="col-6">
@@ -508,9 +551,14 @@
             </div>
         </div>
         <div class="row steps2">
-            <h3>Book a supervised ART now at:</h3>
-            <a href="booknow.html"><button href="booknow.html" class="bookbtn herobtn" style="margin-top: 5%;">Book
-                    Now</button></a>
+            <div class="col">
+                <div class="step-title" style="font-family: 'Noto Sans', Sans-serif; font-weight: 300;">Got it? Book your SART now!</div>
+            </div>
+            <a href="./cart_art_prefilled.html">
+                <button class="button mt-4" id="slide-to-form-btn">
+                    Buy Plan
+                </button>
+            </a>
         </div>
     </div>
 
