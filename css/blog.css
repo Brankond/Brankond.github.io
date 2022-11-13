@@ -94,6 +94,7 @@ body {
 
 .hero-banner {
     min-height: 60vh;
+    height: 30vw;
     padding: 5%;
     color: white;
     background-image: url(../assets/images/covid_test.jpeg);
