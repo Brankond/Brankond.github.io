@@ -82,7 +82,7 @@
             font-size: 1rem
         }
 
-        p{
+        p {
             font-size: 1.25rem;
         }
 
@@ -131,6 +131,7 @@
             background-color: #FEBB60;
             border: 0px #FEBB60 solid;
         }
+
         /*Navbar css ends here*/
 
         .hero-banner {
@@ -252,6 +253,7 @@
         .footer-logo:hover {
             color: #FEBB60;
         }
+
         /*End of footer css*/
 
 
@@ -278,6 +280,12 @@
             border-color: #41B188;
             margin: 0% 2%;
             border-radius: 0;
+            transition-duration: 0.3s;
+        }
+
+        .btn-country-hollow:hover {
+            color: white;
+            background-color: #41B188;
         }
 
         .btn-country-filled:hover {
@@ -341,7 +349,8 @@
         }
 
         .country-divider {
-            width: 100rem;
+            width: 80%;
+            margin-top: 5%;
 
         }
 
@@ -349,7 +358,7 @@
             padding: 3% 0%;
         }
 
-        .country-flag2{
+        .country-flag2 {
             margin-right: 1%;
         }
 
@@ -362,20 +371,89 @@
             font-family: 'Playfair Display', sans-serif;
         }
 
-        .country-container2{
-            margin-top:8%;
+        .country-container2 {
+            margin-bottom: 5%;
         }
 
-        .country-details-row{
-            margin-top:3%;
+        .country-details-row {
+            margin-top: 3%;
             text-align: center;
+        }
+
+        .country-details-title {
+            font-size: 2.5rem;
+        }
+
+        .country-list2 {
+            font-size: 1.2rem;
+            list-style: none;
+            font-weight: 300;
+            padding: 0;
+        }
+
+        .button {
+            font-family: 'Noto Sans', sans-serif;
+            font-size: 1rem;
+            font-weight: bold;
+            color: #333333;
+            background-color: transparent;
+            border: none;
+            border-bottom: 2px solid #333333;
+            padding: 1rem;
+            transition: all 0.3s;
+            margin-top: 0;
+        }
+
+        .button:hover {
+            color: white;
+            background-color: #41B188;
+            border-bottom: 2px solid #41B188;
+        }
+
+        #updated-button{
+            color:white;
+            border-bottom: 2px solid white;
+
+        }
+
+        #updated-button:hover{
+            background-color: #41B188;
+            border-bottom: 2px solid #41B188    ;
+        }
+
+        .price {
+            margin-top: 5%;
+            color: #41B188;
+            font-weight: bold;
+            font-size: 1.5rem;
+        }
+
+        .country-details-link:hover {
+            color: #41B188;
+        }
+
+        .country-title-row {
+            margin-top: 5%;
+        }
+
+        .email-row{
+            margin-top:3%;
+        }
+        .email-box{
+            height: 3rem;
+            width:30rem;
+        }
+
+        .updated-button-row{
+            margin-top: 2%;
         }
     </style>
 </head>
 
 <body>
     <!-- navbar -->
-    <nav class="container-fluid d-flex justify-content-between align-items-center p-3 flex-wrap position-fixed" style="z-index: 10000; background-color: white" id="navbar">
+    <nav class="container-fluid d-flex justify-content-between align-items-center p-3 flex-wrap position-fixed"
+        style="z-index: 10000; background-color: white" id="navbar">
         <div>
             <a href="../index.html">
                 <h1 style="font-size: 2rem; font-weight: 400; color: #41B188">
@@ -409,185 +487,251 @@
         </div>
     </section>
 
+
+
+    <!--Country List-->
+
     <div class="container country-container2">
-        <div class="row">
+
+        <!--CHINA-->
+        <div class="row country-title-row">
             <div class="country-title2 "><span class="fi fi-cn country-flag2"></span>China</div>
         </div>
         <div class="row country-details-row">
             <div class="col-2"></div>
-            <div class="col-3">
+            <div class="col-4">
                 <div class="country-details">
-                    Restrictions
-                    <ul class="country-list">
+                    <span class="country-details-title"> Restrictions</span>
+                    <ul class="country-list2">
                         <li>PCR and IGM Required</li>
                         <li>48 Hour Quarantine</li>
                         <li>Mask Required for <strong>ALL</strong> spaces</li>
                     </ul>
                 </div>
             </div>
-            <div class="col-1"></div>
-            <div class="col-3">
+            <div class="col-4">
                 <div class="country-details">
-                    Our Plan for You
-                    <ul class="country-list">
-                        <li>PCR and IGM</li>
-                        <li style="font-size: 1.5rem;">ONLY $90 ea</li>
+                    <span class="country-details-title"> Our Plan for you</span>
+                    <ul class="country-list2">
+                        <li><a href="../pages/pcr.html" class="country-details-link">
+                                PCR Test
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                    class="bi bi-arrow-up-right" viewBox="0 0 16 16" style="color: #333333;">
+                                    <path fill-rule="evenodd"
+                                        d="M14 2.5a.5.5 0 0 0-.5-.5h-6a.5.5 0 0 0 0 1h4.793L2.146 13.146a.5.5 0 0 0 .708.708L13 3.707V8.5a.5.5 0 0 0 1 0v-6z" />
+                                </svg></a></li>
+                        <li><a href="../pages/igm.html" class="country-details-link">
+                                IGM Test
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                    class="bi bi-arrow-up-right" viewBox="0 0 16 16" style="color:#333333;">
+                                    <path fill-rule="evenodd"
+                                        d="M14 2.5a.5.5 0 0 0-.5-.5h-6a.5.5 0 0 0 0 1h4.793L2.146 13.146a.5.5 0 0 0 .708.708L13 3.707V8.5a.5.5 0 0 0 1 0v-6z" />
+                                </svg>
+                            </a></li>
+                        <li class="price">S$90</li>
                     </ul>
+
                 </div>
             </div>
             <div class="col-2"></div>
         </div>
-    </div>
 
+        <div class="row text-center">
+            <div class="col">
+                <a href="./cart_pcr_prefilled.html" class="">
+                    <button class="button" style="margin: 0;" href="./cart_pcr_prefilled.html">
+                        Buy Plan
+                    </button>
+                </a>
 
-    <!--Countries List-->
-    <div class="container-fluid text-center country-container ">
-        <div class="row country-row">
-            <div class="col-4 ">
-                <div class="country-title "><span class="fi fi-cn country-flag"></span>China</div>
             </div>
-            <div class="col-2">
-                <div class="country-details">
-                    Restrictions
-                    <ul class="country-list">
-                        <li>PCR and IGM Required</li>
-                        <li>48 Hour Quarantine</li>
-                        <li>Mask Required for <strong>ALL</strong> spaces</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="col-2">
-                <div class="country-details">
-                    Our Plan for You
-                    <ul class="country-list">
-                        <li>PCR and IGM</li>
-                        <li style="font-size: 1.5rem;">ONLY $90 ea</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="col-2 btn-col">
-                <a href="#" class="btn btn-outline-secondary btn-country-hollow">More Details</a>
-                <a href="./cart_pcr_prefilled.html" class="btn btn-primary btn-country-filled">Buy Plan</a>
-            </div>
-            <div class="col-2"></div>
         </div>
 
         <hr class="country-divider mx-auto">
 
+        <!--END OF CHINA-->
 
-        <div class="row country-row">
-            <div class="col-4 ">
 
-                <div class="country-title "><span class="fi fi-in country-flag"></span>India</div>
-            </div>
-            <div class="col-2">
+
+
+        <!--INDIA-->
+        <div class="row country-title-row">
+            <div class="country-title2 "><span class="fi fi-in country-flag2"></span>India</div>
+        </div>
+        <div class="row country-details-row">
+            <div class="col-2"></div>
+            <div class="col-4">
                 <div class="country-details">
-                    Restrictions
-                    <ul class="country-list">
-                        <li>PCR and SART Required</li>
+                    <span class="country-details-title"> Restrictions</span>
+                    <ul class="country-list2">
+                        <li>PCR and IGM Required</li>
                         <li>No Quarantine Required</li>
-                        <li>Mask Required for indoors</li>
+                        <li>Mask Required for <strong>Indoors</strong></li>
                     </ul>
                 </div>
             </div>
-            <div class="col-2">
+            <div class="col-4">
                 <div class="country-details">
-                    Our Plan for You
-                    <ul class="country-list">
-                        <li>PCR and SART</li>
-                        <li style="font-size: 1.5rem;">ONLY $79 ea</li>
+                    <span class="country-details-title"> Our Plan for you</span>
+                    <ul class="country-list2">
+                        <li><a href="../pages/pcr.html" class="country-details-link">
+                                PCR Test
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                    class="bi bi-arrow-up-right" viewBox="0 0 16 16" style="color: #333333;">
+                                    <path fill-rule="evenodd"
+                                        d="M14 2.5a.5.5 0 0 0-.5-.5h-6a.5.5 0 0 0 0 1h4.793L2.146 13.146a.5.5 0 0 0 .708.708L13 3.707V8.5a.5.5 0 0 0 1 0v-6z" />
+                                </svg></a></li>
+                        <li><a href="../pages/sart.html" class="country-details-link">
+                                SART
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                    class="bi bi-arrow-up-right" viewBox="0 0 16 16" style="color:#333333;">
+                                    <path fill-rule="evenodd"
+                                        d="M14 2.5a.5.5 0 0 0-.5-.5h-6a.5.5 0 0 0 0 1h4.793L2.146 13.146a.5.5 0 0 0 .708.708L13 3.707V8.5a.5.5 0 0 0 1 0v-6z" />
+                                </svg>
+                            </a></li>
+                        <li class="price">S$79</li>
                     </ul>
-                </div>
-            </div>
 
-            <div class="col-2 btn-col">
-                <a href="#" class="btn btn-outline-secondary btn-country-hollow">More Details</a>
-                <a href="./cart_pcr_prefilled.html" class="btn btn-primary btn-country-filled">Buy Plan</a>
+                </div>
             </div>
             <div class="col-2"></div>
         </div>
 
+        <div class="row text-center">
+            <div class="col">
+                <a href="./cart_pcr_prefilled.html" class="">
+                    <button class="button" style="margin: 0;" href="./cart_pcr_prefilled.html">
+                        Buy Plan
+                    </button>
+                </a>
+
+            </div>
+        </div>
+
         <hr class="country-divider mx-auto">
 
-        <div class="row country-row">
-            <div class="col-4 ">
+        <!--END OF INDIA-->
 
-                <div class="country-title "><span class="fi fi-ph country-flag"></span>Philippines</div>
-            </div>
-            <div class="col-2">
+
+        <!--Philippines-->
+        <div class="row country-title-row">
+            <div class="country-title2 "><span class="fi fi-ph country-flag2"></span>Philippines</div>
+        </div>
+        <div class="row country-details-row">
+            <div class="col-2"></div>
+            <div class="col-4">
                 <div class="country-details">
-                    Restrictions
-                    <ul class="country-list">
+                    <span class="country-details-title"> Restrictions</span>
+                    <ul class="country-list2">
                         <li>SART and IGM Required</li>
                         <li>12 Hour Qurantine</li>
                         <li>No Masks Required</li>
                     </ul>
                 </div>
             </div>
-            <div class="col-2">
+            <div class="col-4">
                 <div class="country-details">
-                    Our Plan for You
-                    <ul class="country-list">
-                        <li>Supervised ART and IGM</li>
-                        <li style="font-size: 1.5rem;">ONLY $100 ea</li>
+                    <span class="country-details-title"> Our Plan for you</span>
+                    <ul class="country-list2">
+                        <li><a href="../pages/sart.html" class="country-details-link">
+                                SART
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                    class="bi bi-arrow-up-right" viewBox="0 0 16 16" style="color: #333333;">
+                                    <path fill-rule="evenodd"
+                                        d="M14 2.5a.5.5 0 0 0-.5-.5h-6a.5.5 0 0 0 0 1h4.793L2.146 13.146a.5.5 0 0 0 .708.708L13 3.707V8.5a.5.5 0 0 0 1 0v-6z" />
+                                </svg></a></li>
+                        <li><a href="../pages/igm.html" class="country-details-link">
+                                IGM Test
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                    class="bi bi-arrow-up-right" viewBox="0 0 16 16" style="color:#333333;">
+                                    <path fill-rule="evenodd"
+                                        d="M14 2.5a.5.5 0 0 0-.5-.5h-6a.5.5 0 0 0 0 1h4.793L2.146 13.146a.5.5 0 0 0 .708.708L13 3.707V8.5a.5.5 0 0 0 1 0v-6z" />
+                                </svg>
+                            </a></li>
+                        <li class="price">S$100</li>
                     </ul>
+
                 </div>
             </div>
-
-            <div class="col-2 btn-col">
-                <a href="#" class="btn btn-outline-secondary btn-country-hollow">More Details</a>
-                <a href="./cart_art_prefilled.html" class="btn btn-primary btn-country-filled">Buy Plan</a>
-            </div>
             <div class="col-2"></div>
+        </div>
+
+        <div class="row text-center">
+            <div class="col">
+                <a href="./cart_pcr_prefilled.html" class="">
+                    <button class="button" style="margin: 0;" href="./cart_pcr_prefilled.html">
+                        Buy Plan
+                    </button>
+                </a>
+
+            </div>
         </div>
 
         <hr class="country-divider mx-auto">
 
-        <div class="row country-row">
-            <div class="col-4 ">
+        <!--END OF Philippines-->
 
-                <div class="country-title "><span class="fi fi-mm country-flag"></span>Myanmar</div>
-            </div>
-            <div class="col-2">
-
+        <!--Myanmar-->
+        <div class="row country-title-row">
+            <div class="country-title2 "><span class="fi fi-mm country-flag2"></span>Myanmar</div>
+        </div>
+        <div class="row country-details-row">
+            <div class="col-2"></div>
+            <div class="col-4">
                 <div class="country-details">
-                    Restrictions
-                    <ul class="country-list">
+                    <span class="country-details-title"> Restrictions</span>
+                    <ul class="country-list2">
                         <li>ART and IGM Required</li>
                         <li>24 Hour Qurantine</li>
-                        <li>Mask Required for <strong>ALL</strong> spaces</li>
+                        <li>Mask Required for ALL spaces</li>
                     </ul>
                 </div>
             </div>
-            <div class="col-2">
+            <div class="col-4">
                 <div class="country-details">
-                    Our Plan for You
-                    <ul class="country-list">
-                        <li>Supervised ART and IGM</li>
-                        <li style="font-size: 1.5rem;">ONLY $100</li>
+                    <span class="country-details-title"> Our Plan for you</span>
+                    <ul class="country-list2">
+                        <li><a href="../pages/sart.html" class="country-details-link">
+                                SART
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                    class="bi bi-arrow-up-right" viewBox="0 0 16 16" style="color: #333333;">
+                                    <path fill-rule="evenodd"
+                                        d="M14 2.5a.5.5 0 0 0-.5-.5h-6a.5.5 0 0 0 0 1h4.793L2.146 13.146a.5.5 0 0 0 .708.708L13 3.707V8.5a.5.5 0 0 0 1 0v-6z" />
+                                </svg></a></li>
+                        <li><a href="../pages/igm.html" class="country-details-link">
+                                IGM Test
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                    class="bi bi-arrow-up-right" viewBox="0 0 16 16" style="color:#333333;">
+                                    <path fill-rule="evenodd"
+                                        d="M14 2.5a.5.5 0 0 0-.5-.5h-6a.5.5 0 0 0 0 1h4.793L2.146 13.146a.5.5 0 0 0 .708.708L13 3.707V8.5a.5.5 0 0 0 1 0v-6z" />
+                                </svg>
+                            </a></li>
+                        <li class="price">S$100</li>
                     </ul>
-                </div>
-            </div>
 
-            <div class="col-2 btn-col">
-                <a href="#" class="btn btn-outline-secondary btn-country-hollow">More Details</a>
-                <a href="./cart_art_prefilled.html" class="btn btn-primary btn-country-filled">Buy Plan</a>
+                </div>
             </div>
             <div class="col-2"></div>
         </div>
 
+        <div class="row text-center">
+            <div class="col">
+                <a href="./cart_pcr_prefilled.html" class="">
+                    <button class="button" style="margin: 0;" href="./cart_pcr_prefilled.html">
+                        Buy Plan
+                    </button>
+                </a>
 
-        <a href="#" class="btn btn-outline-secondary btn-country-hollow">View all Countries</a>
+            </div>
+        </div>
 
 
-
-
-
-
-
+        <!--END OF Myanmar-->
 
     </div>
-    <!--Updated-->
+
+
+   
 
     <div class="container-fluid enquirycontainer">
         <div class="row enquiryrow module text-center">
@@ -596,11 +740,18 @@
                     Thinking of Travelling?
                 </div>
                 <div class="enquirydetails">
-                    Sign up for the newest updates on entry requirements of countries. 
+                    Sign up for the newest updates on entry requirements of countries.
                 </div>
-                <div class="">
-                    <input type="text" placeholder="Enter your email address">
-                    <a href="#"><button href="#" class="bookbtn enquirybtn">Keep me updated</button></a>
+                <div class="email-row">
+                    <input type="text" placeholder="Enter your email address" class = "email-box">
+ 
+                </div>
+                <div class="updated-button-row">
+                    <a href="#" class="">
+                        <button class="button" style="margin: 0;" id="updated-button" href="./cart_pcr_prefilled.html">
+                            Keep me Updated
+                        </button>
+                    </a>
                 </div>
 
             </div>
@@ -620,10 +771,14 @@
             </div>
 
             <div class="col-4 text-center px-2" style="font-weight: 400;">
-                <div class="quicklinksdiv"><a href="./contact-us.html#contact-info" class="quicklinks midlinks">Find a Clinic</a></div>
-                <div class="quicklinksdiv"><a href="../index.html#package-recommendation" class="quicklinks midlinks">Tests for Travel</a></div>
-                <div class="quicklinksdiv"><a href="./booknow.html" class="quicklinks midlinks">Book an Appointment</a></div>
-                <div class="quicklinksdiv"><a href="./contact-us.html" class="quicklinks midlinks">Make An Enquiry</a></div>
+                <div class="quicklinksdiv"><a href="./contact-us.html#contact-info" class="quicklinks midlinks">Find a
+                        Clinic</a></div>
+                <div class="quicklinksdiv"><a href="../index.html#package-recommendation"
+                        class="quicklinks midlinks">Tests for Travel</a></div>
+                <div class="quicklinksdiv"><a href="./booknow.html" class="quicklinks midlinks">Book an Appointment</a>
+                </div>
+                <div class="quicklinksdiv"><a href="./contact-us.html" class="quicklinks midlinks">Make An Enquiry</a>
+                </div>
             </div>
 
             <div class="col-4 text-center px-2">
