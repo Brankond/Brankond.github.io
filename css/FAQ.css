@@ -86,7 +86,7 @@ body {
 /*Navbar css ends here*/
 
 .hero-banner {
-    height: 30vw;
+    min-height: 60vh;
     padding: 5%;
     color: white;
     background-image: url(../assets/images/faq_hero.jpg);
