@@ -10,6 +10,11 @@ p {
 
 a {
     text-decoration: none !important;
+    transition: all 0.3s;
+}
+
+.list-group a:hover {
+    color: #41B188 !important;
 }
 
 ::selection {

@@ -38,9 +38,6 @@
             background: #FEBB60;
         }
 
-
-
-
         .row {
             width: 100%;
         }
@@ -64,6 +61,22 @@
             margin: 0;
             height: 45vw;
             color: white;
+        }
+
+        .button {
+            font-family: 'Noto Sans', sans-serif;
+            font-size: 1rem;
+            color: white;
+            background-color: transparent;
+            border: none;
+            padding: 0.75rem;
+            transition: all 0.3s;
+            background-color: #41B188;
+        }
+
+        .button:hover {
+            color: white;
+            background-color: #FEBB60
         }
 
         .herotitle {
@@ -113,7 +126,6 @@
             padding-left: 3%;
             padding-right:3%;
             margin-bottom: 5%;
-
         }
         .checkout-border2 {
             border-style: solid;
@@ -134,23 +146,21 @@
             padding-left: 3%;
             padding-right:5%;
             margin-bottom: 5%;
-            margin-top: 5%;
-
         }
 
         .form-control {
             margin: 2%;
+            margin-left: 0;
         }
 
         .form-select {
             margin: 2%;
+            margin-left: 0;
         }
-
 
         .form-label {
             text-align: left;
             float: left;
-            margin-left: 3%;
             margin-top: 2%;
             font-family: 'Noto Sans', sans-serif;
         }
@@ -163,41 +173,40 @@
         @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@100;200;300;400;500;600;700&display=swap');
         a:link { text-decoration: none; }
 
-.responsive {
-    width: 100%;
-    height: auto;
-}
-.backbtn {
-    font-family: 'Playfair Display', serif;
-            font-weight: 600;
-            border: none;
-            border-radius: 3px;
-            padding: 0.3vw 0.7vw;
-            white-space: nowrap;
-            font-size: 1.2vw;
-            transition: 0.25s ease-in-out;
-
-            color: white;
-            background-color: #41B188;
-            text-align: left;
-            float:right;
-            margin-bottom: 0.2vw;
-            
-            
-}
-.big {
-            font-size: 1.5vw;
-            margin-top: 5%;
-            margin-bottom: 5%;
-            
+        .responsive {
+            width: 100%;
+            height: auto;
         }
-.back {
-    float:left;
-    margin-top: 1vw;
-    margin-left: 1vw;
-}
 
+        .backbtn {
+            font-family: 'Playfair Display', serif;
+                    font-weight: 600;
+                    border: none;
+                    border-radius: 3px;
+                    padding: 0.3vw 0.7vw;
+                    white-space: nowrap;
+                    font-size: 1.2vw;
+                    transition: 0.25s ease-in-out;
 
+                    color: white;
+                    background-color: #41B188;
+                    text-align: left;
+                    float:right;
+                    margin-bottom: 0.2vw;
+                    
+                    
+        }
+        .big {
+                    font-size: 1.5vw;
+                    margin-top: 5%;
+                    margin-bottom: 5%;
+                    
+                }
+        .back {
+            float:left;
+            margin-top: 1vw;
+            margin-left: 1vw;
+        }
     </style>
 </head>
 
@@ -232,18 +241,16 @@
                 <h2>Checkout Information</h2>
             </div>
             <div class="col-md-8">
-                <img  src="../assets/images/arrow.png" onclick="history.back()" style="height: 1vw; cursor: pointer;"class="back"></img>
+                <!-- <img  src="../assets/images/arrow.png" onclick="history.back()" style="height: 1vw; cursor: pointer;"class="back"></img> -->
                 <div class="checkout-border">
-                    <div class="col-md-8">
-                        <br>
-                        <br>
+                    <div class="col-md-8" style="margin-top: 1.5rem;">
                         <h3> Booking Details</h3>
-                        <p id="bookedName" style=" text-align: left; margin-top: 5%;  margin-left: 3%;"></p>
-                        <p id="phoneNumber" style=" text-align: left; margin-top: 5%;  margin-left: 3%;"></p>
-                        <p id="email" style=" text-align: left; margin-top: 5%;  margin-left: 3%;"></p>
-                        <p id="covidtest" style=" text-align: left; margin-top: 5%;  margin-left: 3%;"></p>
-                        <p id="result" style=" text-align: left; margin-top: 5%;  margin-left: 3%;"></p>
-                        <p id="location" style=" text-align: left; margin-top: 5%;  margin-left: 3%;"></p>
+                        <p id="bookedName" style=" text-align: left; margin-top: 5%;"></p>
+                        <p id="phoneNumber" style=" text-align: left; margin-top: 5%;"></p>
+                        <p id="email" style=" text-align: left; margin-top: 5%;"></p>
+                        <p id="covidtest" style=" text-align: left; margin-top: 5%;"></p>
+                        <p id="result" style=" text-align: left; margin-top: 5%;"></p>
+                        <p id="location" style=" text-align: left; margin-top: 5%;"></p>
                     </div>
                     <div>
                         <hr>
@@ -278,15 +285,10 @@
                             aria-label="default input example" style="margin-bottom: 5%;">
                         <div>
                         </div>
-                        
-
-
                     </div>
-                    
-
                 </div>
                 <div class="checkout-border3">
-                    <div class="col-md-8">
+                    <div class="col-md-8" style="margin-top: 1.5rem;">
                     <h3>Payment Information</h3>
                     <label for="exampleFormControlInput1" class="form-label">Name of Cardholder</label>
                     <input class="form-control" type="text"
@@ -295,35 +297,31 @@
                     <input class="form-control" type="text" 
                     aria-label="default input example">
                     <label for="exampleFormControlInput1" class="form-label">CVV</label>
-                    <input class="form-control" type="number" maxlength="10" 
+                    <input class="form-control" type="text" maxlength="10" 
                     aria-label="default input example" style="flex-grow:0; flex-basis: 5px; margin-bottom: 5%;">
                 </div>
                 </div>
             </div>
             <div class="col-6 col-md-4">
                 <div class="checkout-border2">
-                    <h2>Order Summary</h2>
+                    <h2 style="margin: 0">Order Summary</h2>
                     <hr>
-                    <img src="../assets/images/pcr.jpg" alt="pcr" class="responsive">
+                    <!-- <img src="../assets/images/pcr.jpg" alt="pcr" class="responsive"> -->
                     <h4 id="covidtestOrder"></h4>
+                    <a>Product Name: Normal PCR</a>
+                    <br>
                     <a>Qty: 1</a>
                     <br>
-                    <a>SUBTOTAL:</a>
+                    <a>SUBTOTAL: S$69</a>
                     <a id="covidPrice"></a>
                     <hr>
-                    <h4>ORDER TOTAL:</h4>
+                    <h4 style="font-size: 1.25rem;">ORDER TOTAL: S$69</h4>
                     <h4 id="covidPrice2"></h4>
-                    <div class="row">
-                        <div id="sart2" class="col-5">
-                            <input type="submit" Value="Send" data-bs-toggle="modal" data-bs-target="#exampleModal" class="bookbtn big">
-                        </div>
-                    </div>
-
-                </div>
-
-               
+                    <button class="button mt-4" type="submit" Value="Send" data-bs-toggle="modal" data-bs-target="#exampleModal" class="bookbtn big">
+                        Send
+                    </button>
+                </div>               
             </div>
-            
         </div>
        </div> 
 
@@ -420,18 +418,17 @@
     <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
             aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered">
-                <div class="modal-content">
-                    <div class="modal-header" style="background-color:#427E79 ; color: white; width: 100%;">
+                <div class="modal-content" style="border-radius: 0; font-style: 'Noto Sans', sans-serif;">
+                    <div class="modal-header" style="background-color:#41B188 ; color: white; width: 100%; border-radius: 0;">
                         <h5 class="modal-title" id="exampleModalLabel">Thank you!</h5>
-
                     </div>
-                    <div class="modal-body" style="margin-top: 5%; text-align: center; font-size: 20px; ">
+                    <div class="modal-body text-start" style="margin-top: 5%; text-align: center; font-size: 20px; ">
                         Your order has been submitted.
                         Check your email for confirmation and booking details.
                     </div>
                     <div class="modal-footer" style="border: none;">
                         <button type="button" class="btn btn-secondary" id="modalclosebtn" data-bs-dismiss="modal"
-                            onclick="windowchange()">Close</button>
+                            onclick="windowchange()" style="border-radius: 0;">Close</button>
                     </div>
                 </div>
             </div>

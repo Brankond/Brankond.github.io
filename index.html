@@ -132,7 +132,7 @@
 
         /* hero banner css starts */
         .hero-banner {
-            min-height: 60vh;
+            min-height: 80vh;
             background-image: url('./assets/images/index3.png');
             background-repeat: no-repeat;
             background-size: cover;
@@ -152,8 +152,8 @@
             font-family: 'Noto Sans', sans-serif;
             font-size: 1.25rem;
             color: white;
-            margin-left: 20%;
-            margin-right: 20%;
+            margin-left: 10%;
+            margin-right: 10%;
         }
 
 
@@ -199,7 +199,7 @@
         .hero {
             width: 100%;
             margin: 0;
-            height: 45vw;
+            height: 70vh;
             color: white;
         }
 
@@ -460,7 +460,7 @@
                 Everything you need for travel
             </h1>
             <p class="pt-4 herotext text-center">
-                We provide everything you need to travel overseas during COVID-19 pandemic. With continuously checking the latest regulations in every country, we ensure our services comply with the requirements. Also, we guarantee our prices to be the best in Singapore, and even better discounts are available for group bookings.
+                We check the regulations in every country and offer the best prices in Singapore to provide everything you need to travel overseas during the pandemic.
             </p>
             <a href="./pages/booknow.html">
                 <button class="button mt-5" id="slide-to-form-btn">
@@ -851,6 +851,15 @@
 
     <script src="./js/update_space_holder_height.js"></script>
     <script>
+        let nav = document.querySelector('#navbar');
+        let hero = document.querySelector('.hero-banner')
+        const events = ['load', 'resize'];
+        events.forEach((event) => {
+            window.addEventListener(event, (e) => {
+                hero.style.height = "calc( 100vh - " + nav.offsetHeight + "px )";
+            })
+        })
+
         // update package prices
         let increment_btn = document.querySelector('#increment-people-count-btn');
         let decrement_btn = document.querySelector('#decrement-people-count-btn');
