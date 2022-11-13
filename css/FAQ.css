@@ -83,10 +83,11 @@ body {
     background-color: #FEBB60;
     border: 0px #FEBB60 solid;
 }
+
 /*Navbar css ends here*/
 
 .hero-banner {
-    min-height: 60vh;
+    height: 30vw;
     padding: 5%;
     color: white;
     background-image: url(../assets/images/faq_hero.jpg);
@@ -96,6 +97,7 @@ body {
     background-blend-mode: darken;
     background-color: #00000090;
 }
+
 .hero .text-area {
     height: 100%;
     padding: 0 1rem 3 3rem;
@@ -108,7 +110,7 @@ body {
 
 .hero {
     height: 100vw;
-    
+
     width: auto;
     /* background-image: url(./covid_test.jpeg); */
     background-position: center;
@@ -248,6 +250,40 @@ body {
     padding-bottom: 20px;
 }
 
+
+.accordion,
+.accordion-item,
+.accordion-header {
+    border-radius: 0 !important;
+}
+
+/*Change the active accordion to be green*/
+.accordion-button:hover,
+.accordion-button:focus,
+.accordion-button:active {
+    background-color: #41B188;
+    color: white;
+    border-radius: 0 !important;
+}
+
+.accordion-button:not(.collapsed) {
+    color: #FFF !important;
+    background-color: #41B188 !important;
+    border-radius: 0 !important;
+}
+
+/*Arrow change to white*/
+.accordion-button:not(.collapsed)::after {
+    filter: brightness(0) invert(100)
+}
+
+.accordion-button:not(.collapsed)::after:hover{
+    filter: brightness(0) invert(100)
+}
+
+
+
+
 /* Start of Footer CSS*/
 .footer-container {
     background-color: #41B188;
@@ -282,6 +318,7 @@ body {
 .footer-logo:hover {
     color: #FEBB60;
 }
+
 /*End of footer css*/
 .button {
     font-family: 'Noto Sans', sans-serif;
