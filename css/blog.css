@@ -29,6 +29,15 @@ body {
 
 }
 
+p{
+    font-weight: 300;
+    text-align: left;
+}
+
+a{
+    color:#333333;
+}
+
 
 #fixedheader {
     position: fixed;
@@ -116,7 +125,7 @@ body {
 .hero h1 {
     font-size: 3.5rem !important;
     font-family: 'Playfair Display', serif;
-    font-weight: 400;
+    font-weight: 300;
     text-decoration: none;
     color: black;
     cursor: pointer;
@@ -147,7 +156,7 @@ body {
 
 .hero .btn:hover {
     background-color: transparent !important;
-    color: #1B4965 !important;
+    color: #41B188 !important;
 }
 
 .text_container {
@@ -158,7 +167,7 @@ body {
     font-family: 'Playfair Display', serif !important;
     font-weight: 400;
     text-decoration: none;
-    color: #34906e;
+    color: #41B188;
     cursor: pointer;
     font-size: 2.5vw !important;
 }
@@ -169,13 +178,16 @@ body {
 
 .text_container .list-group {
     padding-right: 10px !important;
+    color: #333333;
 }
 
 
 .text_container .list-group-item {
     align-self: left !important;
     font-family: 'Playfair Display', serif !important;
+    color:#333333;
 }
+
 
 .news_box_group {
     padding: 50px 150px 0px 150px;
@@ -190,6 +202,11 @@ body {
     width: 66%;
     background: url(../assets/images/major_blog.jfif) no-repeat;
     background-size: cover;
+    transition-duration: 0.3s;
+}
+
+.area_major{
+    cursor: pointer;
 }
 
 .news_box_group .text_area_major {
@@ -200,17 +217,17 @@ body {
 }
 
 .news_box_group .title {
-    font-family: 'Roboto Serif', serif !important;
+    font-family: 'Playfair Display', sans-serif;
     color: black;
-    font-weight: 700;
-    font-size: 1rem;
+    font-weight: bold;
+    font-size: 1.2rem;
 }
 
 .news_box_group .content {
     color: black;
     font-size: 1rem;
     font-family: 'Noto Sans', sans-serif;
-    text-align: justify;
+    text-align: left;
 }
 
 .news_box_group .area_sub {
@@ -218,6 +235,12 @@ body {
     width: 32%;
     background: url(../assets/images/vaccine_blog.jpg) no-repeat;
     background-size: 100% 60%;
+    transition-duration: 0.3s;
+}
+
+.area_sub:hover, .area_major:hover{
+    filter: brightness(106%);
+    transform: scale(1.05);
 }
 
 .area_sub1 {
@@ -243,11 +266,15 @@ body {
 
 .news_box_group .text_area_sub {
     width: 100%;
-    padding-top: 200px;
+    padding-top: 190px;
     padding-left: 10px;
     padding-right: 10px;
 
 }
+#list-item-hover:hover{
+    color:red;
+}
+
 
 /*Start of Navbar*/
 #fixedheader {
