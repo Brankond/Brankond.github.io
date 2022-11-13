@@ -3,8 +3,9 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Aurora Medical : Mobile Pre Departure Test</title>
-    <meta name="description" content="Aurora Medical's mobile departure swab test combines both the reliability of a PCR and the convenience of a SART into one. ">
+    <title>Aurora Medical : PCR Test</title>
+    <meta name="description"
+        content="Aurora Medical offers the Polymerase Chain Reaction (PCR) Test, the most accurate test for COVID-19. ">
     <meta name="keywords" content="Mobile Departure Swab test, PCR Test, Covid-19 Test, Aurora Medical">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -37,9 +38,6 @@
             color: white;
             background: #FEBB60;
         }
-
-
-
 
         .row {
             width: 100%;
@@ -103,10 +101,6 @@
             margin-top: 3%;
         }
 
-        h3 {
-            text-align: left;
-
-        }
 
         .checkout-border {
             background-color: #41B188;
@@ -201,87 +195,94 @@
             margin-top: 5%;
         }
 
-        .plans {
-            border-style: solid;
-            border-radius: 15px;
-            text-align: center;
-            justify-items: center;
-            height: 50vw;
-            padding: 10%;
-        }
 
         a {
             font-family: 'Noto Sans', sans-serif;
             font-size: 1rem;
         }
-        
+
         h1 {
             color: white;
         }
-        h3 {
-            font-size: 4rem;
-            font-family: "Playfair Display", serif;
-        }
-        .accordion-button
-        {
+
+        .accordion-button {
             font-size: 1rem;
             font-family: 'Noto Sans';
-        } 
+        }
+
         li {
             font-size: 1rem;
             font-family: 'Noto Sans';
-        }       
+        }
+
         h2 {
             font-family: 'Playfair Display';
             font-size: 3rem;
         }
-        a:link { text-decoration: none; }
-        .list-group-item {
-            border-color: #41B188;
-            border-style: solid;
-            border-width: 2px;
+
+        a:link {
+            text-decoration: none;
         }
+
         .ms-2 {
             font-family: 'Noto Sans', Sans-serif;
             font-weight: 300;
             font-size: 1rem;
         }
+
         .accordion-item {
             font-family: Noto Sans;
             Font-weight: 300;
         }
+
         .accordion-button {
             font-weight: 500;
             font-family: 'Playfair Display';
 
         }
+
         .footnote {
             font-size: 1.5rem;
             font-weight: 500;
         }
-        div h3, div h4, div h5 {
+
+        div h3,
+        div h4,
+        div h5 {
             color: #333333;
         }
-        div h4, div h5 {
+
+        div h4,
+        div h5 {
             font-weight: 300;
         }
+
+        h3 {
+            font-size: 1.5rem;
+            font-weight: 300;
+            text-align: left;
+        }
+
+        h4 {
+            font-size: 3rem;
+        }
+
         .hero-banner {
-    min-height: 60vh;
-    background-image: url('../assets/images/bg.png');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-blend-mode: darken;
-    background-color: rgba(0, 0, 0, 0.47);
-    padding: 5%;
-}
-h4 {
-    font-size: 3rem;
-}
-h1 {
-    font-family: 'Playfair Display', serif;
-}
-.button {
+            min-height: 60vh;
+            background-image: url('../assets/images/bg.png');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-blend-mode: darken;
+            background-color: rgba(0, 0, 0, 0.47);
+            padding: 5%;
+        }
+
+        h1 {
+            font-family: 'Playfair Display', serif;
+        }
+
+        .button {
             font-family: 'Noto Sans', sans-serif;
             font-size: 1rem;
             font-weight: bold;
@@ -295,14 +296,113 @@ h1 {
 
         .button:hover {
             color: white;
-            background-color: #112F24;
+            background-color: #41B188;
+            border-bottom: #41B188 solid 2px;
+        }
+
+        .plans {
+            border-style: solid;
+            border-radius: 0;
+            text-align: center;
+            justify-items: center;
+            padding: 10%;
+            height: 30rem;
+        }
+
+        .express-plan{
+            border-color: #FEBB60;
+        }
+
+        .plans-col {
+            height: auto;
+        }
+
+        .plans-title {
+            font-size: 3rem;
+            font-weight: 300;
+            text-align: center;
+            margin-bottom: 10%;
+        }
+
+        .plans-details {
+            color: #333333;
+            font-size: 1.2rem;
+            font-weight: 300;
+            margin-bottom: 10%;
+            height: 6rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .plans-price {
+            font-size: 3rem;
+            color: #333333;
+            font-weight: 300;
+            margin-bottom: 10%;
+        }
+
+        .button {
+            font-family: 'Noto Sans', sans-serif;
+            font-size: 1rem;
+            font-weight: bold;
+            color: #333333;
+            background-color: transparent;
+            border: none;
+            border-bottom: 2px solid #333333;
+            padding: 1rem;
+            transition: all 0.3s;
+            margin-top: 0;
+        }
+
+        .button:hover {
+            color: white;
+            background-color: #41B188;
+            border-bottom: 2px solid #41B188;
+        }
+
+        #express:hover {
+            color: white;
+            background-color: #FEBB60;
+            border-bottom: 2px solid #FEBB60;
+
+        }
+
+        .accordion-button:hover,
+        .accordion-button:focus,
+        .accordion-button:active {
+            background-color: #41B188;
+            color: white;
+            border-radius: 0 !important;
+        }
+
+        .accordion-button:not(.collapsed) {
+            color: #FFF !important;
+            background-color: #41B188 !important;
+            border-radius: 0 !important;
+        }
+
+        /*Arrow change to white*/
+        .accordion-button:not(.collapsed)::after {
+            filter: brightness(0) invert(100)
+        }
+
+        .accordion-button:not(.collapsed)::after:hover {
+            filter: brightness(0) invert(100)
+        }
+
+        .accordion-header {
+            font-family: 'Noto Sans', sans-serif;
         }
     </style>
 </head>
+</style>
+</head>
 
-<div>
+<body>
     <!-- navbar -->
-    <nav class="container-fluid d-flex justify-content-between align-items-center p-3 flex-wrap position-fixed" style="z-index: 10000; background-color: white" id="navbar">
+    <nav class="container-fluid d-flex justify-content-between align-items-center p-3 flex-wrap position-fixed"
+        style="z-index: 10000; background-color: white" id="navbar">
         <div>
             <a href="../index.html">
                 <h1 style="font-size: 2rem; font-weight: 400; color: #41B188">
@@ -326,8 +426,8 @@ h1 {
 
     <section class="hero-banner container-fluid d-flex justify-content-center align-items-center">
         <div class="text-center">
-            <h1 style="font-size: 5rem; line-height: 5rem;">
-                Mobile Departure <br> Swab Test
+            <h1 style="font-size: 5rem; line-height: 5rem; font-weight: 500;">
+                Mobile Departure Swab Test
             </h1>
 
         </div>
@@ -338,143 +438,160 @@ h1 {
         <div class="row">
             <div class="col-sm-8">
                 <h2 style="text-align: left">What is a Mobile Departure Swab Test?</h2>
-                <hr style="width: 50px; color: #333333; opacity: 1; border-top: 1.5px solid; margin: 1.5rem 0;" class="mx-auto">
-                <a style="text-align: justify;">
+                <hr style="width: 50px; color: #333333; opacity: 1; border-top: 1.5px solid; margin: 1.5rem 0; "
+                    class="mx-auto">
+                <a style="text-align: justify; font-weight: 300;">
                     Travelling somewhere soon? We offer mobile departure swab tests for those who are unable to travel down to any one of our branches. Just make sure to book at least 20 hours in advance for our normal mobile pre-departure swab tests, and at least 5 hours in advance for our express mobile departure swab tests.
                     <br>
                     <br>
-                    <a>Note: This service is only applicable for addresses in mainland Singapore and excludes Sentosa. All tests will be conducted in one appointment and location. This service does not include serology test and is not suitable for those travelling to countries which require IgM or anti-bodies tests.
+                    Note: This service is only applicable for addresses in mainland Singapore and excludes Sentosa. All tests will be conducted in one appointment and location. This service does not include serology test and is not suitable for those travelling to countries which require IgM or anti-bodies tests.
+                    <br><br>
+                    <h3>Test result will be available within 6 hours</h3>
                     <br>
-                    <br>
-                    <hr style="width: 50px; color: #333333; opacity: 1; border-top: 1.5px solid; margin: 1.5rem 0;" class="mx-auto">
-                    <h3 class="footnote">Test result will be available within 6 hours
+                    <h3>Mobile Departure Swab Test Timings:
                         <br>
+                        Monday - Sunday
                         <br>
-                        (Mobile Departure Swab tests only available from 8am-9pm 7 days of the week.).</h3>
+                        8am-9pm</h3>
                 </a>
             </div>
             <div class="col-sm-4" style="display:flex; align-items: center;">
-                <img src="../assets/images/mobile.jpg"
-                    style="object-fit: contain; height: auto; width: 150%; vertical-align: center;">
+                <img src="../assets/images/pcrtest.png"
+                    style="object-fit: contain; height: 20vw; width: auto; vertical-align: center;">
             </div>
         </div>
-        <div style=" align-items: center; justify-content: center; display: flex; margin-top: 5%;">
+        <!--div style=" align-items: center; justify-content: center; display: flex; margin-top: 5%;">
             <div class="text-start">
-                <a href="./booknow.html">
+                <a href="./cart_pcr_prefilled.html">
                     <button class="button mt-4" id="slide-to-form-btn">
-                        Buy Plan
+                        Buy PCR Test
                     </button>
                 </a>
             </div>
-        </div>
+        </div-->
     </div>
     <div class="box2">
         <h1 style="text-transform: uppercase; font-size: 4rem; color: #333333; font-family: 'Playfair Display';"
             class="text-center">
-            Options
+            Plans
         </h1>
-        <hr style="width: 50px; color: #333333; opacity: 1; border-top: 1.5px solid; margin: 1.5rem 0;" class="mx-auto">
-        <br>
-        <div class="row">
-            <div class="col">
-                <div class="plans">
-                    <div class="row" style="height: 33%;">
-                        <h3 style="text-align: center; font-size: 4vw">Standard</h3>
-                        <hr>
-                    </div>
-                    <div class="row" style="height: 33%;">
 
-                        <h5>Book 20 hours in advance, for tomorrow!</h5>
-                    </div>
-                    <div class="row" style="height: 33%;">
-                        <hr>
-                        <h4>S$140</h4>
-                        <a href="booknow.html"><button href="#" class="bookbtn herobtn">Book Now</button></a>
-                    </div>
-                </div>
-            </div>
-            <div class="col">
+        <hr style="width: 50px; color: #333333; opacity: 1; border-top: 1.5px solid; margin: 1.5rem 0; margin-bottom: 6%;"
+            class="mx-auto">
+
+        <!--Standard and Express Boxes-->
+        <div class="row">
+            <div class="col plans-col">
                 <div class="plans">
-                    <div class="row" style="height: 33%;">
-                        <h3 style="text-align: center; font-size: 4vw;">Express</h3>
-                        <hr>
+                    <div class="row">
+                        <h3 class="plans-title">Standard</h3>
+                        <div class="plans-details">
+                            Subject to avaliability, booking available for next day only
+                            <br><br>
+                            Test results available within 6 hours
+                        </div>
                     </div>
-                    <div class="row" style="height: 33%;">
-                        <h5>Book for 6 hours from now, minimum! </h5>
+                    <div class="row">
+
+                        <h4 class="plans-price">S$140</h4>
+                        <a href="./cart_pcr_prefilled.html" class="">
+                            <button class="button" style="margin: 0;" href="./cart_pcr_prefilled.html">
+                                Buy Standard
+                            </button>
+                        </a>
                     </div>
-                    <div class="row" style="height: 33%;">
-                        <hr>
-                        <h4>S$230</h4>
-                        <a href="booknow.html"><button href="#" class="bookbtn herobtn">Book Now</button></a>
+                </div>
+            </div>
+
+            <div class="col plans-col">
+                <div class="plans express-plan">
+                    <div class="row">
+                        <h3 class="plans-title">Express</h3>
+                        <div class="plans-details">
+                            Arrives within 3 hours or less, anywhere
+                            <br><br>
+                            Test results available within 2 hours
+                        </div>
+                    </div>
+                    <div class="row">
+
+                        <h4 class="plans-price">S$250</h4>
+                        <a href="./cart_pcr_prefilled.html" class="">
+                            <button class="button" style="margin: 0;" href="./cart_pcr_prefilled.html" id="express">
+                                Buy Express
+                            </button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+    <!--End of 2 boxes-->
+
+
+    <!--Branches-->
+    <div class="box1">
+        <h1 style="text-transform: uppercase; font-size: 4rem; color: #333333; font-family: 'Playfair Display';"
+            class="text-center">
+            Branches
+        </h1>
+        <hr style="width: 50px; color: #333333; opacity: 1; border-top: 1.5px solid; margin: 1.5rem 0; margin-bottom: 6%;"
+            class="mx-auto">
+        <div class="accordion accordion-flush" id="accordionFlushExample">
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="flush-headingOne">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne"
+                       >
+                        Bishan
+                    </button>
+                </h2>
+                <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne"
+                    data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body">284 Bishan Street 22<br>
+                        Singapore 570284<br>
+                        +65 6734 3728
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1994.3481981193293!2d103.84308556905142!3d1.3587920179148039!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31da1722002ee71f%3A0xf805deb532eae57b!2sNeighborhood%20Clinic!5e0!3m2!1sen!2ssg!4v1668347501422!5m2!1sen!2ssg" width="100%" height="250rem" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="flush-headingTwo">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                        NTU
+                    </button>
+                </h2>
+                <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo"
+                    data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body">21 Nanyang Link<br>
+                        Singapore 637371 <br>
+                        +65 6873 7432
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.7244796675313!2d103.67984915009859!3d1.3416771619711447!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31da0f75f1b46c61%3A0x9bc89e72d25f4d5f!2s21%20Nanyang%20Link%2C%20School%20of%20Physical%20and%20Mathematical%20Sciences%2C%20Singapore%20637371!5e0!3m2!1sen!2ssg!4v1668347595540!5m2!1sen!2ssg" width="100%" height="250rem" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="flush-headingThree">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                        Tampines
+                    </button>
+                </h2>
+                <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree"
+                    data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body">827 Tampines Street 81, #01-142 <br>Singapore 520827
+                        <br>
+                        Contact: +65 6372 9382
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.710992085907!2d103.9306400500986!3d1.3499239619469796!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31da3d6c0e64fd83%3A0x48bc2fe6c24c486a!2s827%20Tampines%20Street%2081%2C%20%2301%20142%2C%20Singapore%20520827!5e0!3m2!1sen!2ssg!4v1668347762693!5m2!1sen!2ssg" width="100%" height="250rem" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-   <div class="box1">
-    <h1 style="text-transform: uppercase; font-size: 4rem; color: #333333; font-family: 'Playfair Display';"
-    class="text-center">
-    Branches
-</h1>
-<hr style="width: 50px; color: #333333; opacity: 1; border-top: 1.5px solid; margin: 1.5rem 0;" class="mx-auto">
-<div class="accordion accordion-flush" id="accordionFlushExample">
-    <div class="accordion-item">
-        <h2 class="accordion-header" id="flush-headingOne">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
-                Mandai
-            </button>
-        </h2>
-        <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne"
-            data-bs-parent="#accordionFlushExample">
-            <div class="accordion-body">Mandai Ave 1234124<br>
-                Singapore 123124<br>
-                Contact: 123412
-                <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.6194581434756!2d103.7884388500985!3d1.404612661783859!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31da13d91b72b4d3%3A0x900f5e4b86449d19!2s80%20Mandai%20Lake%20Rd%2C%20Singapore%20729826!5e0!3m2!1sen!2ssg!4v1665648782937!5m2!1sen!2ssg"
-                    width="100%" height="200vw" style="border:0;" allowfullscreen="" loading="lazy"
-                    referrerpolicy="no-referrer-when-downgrade"></iframe>
-            </div>
-        </div>
-    </div>
-    <div class="accordion-item">
-        <h2 class="accordion-header" id="flush-headingTwo">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
-                NTU
-            </button>
-        </h2>
-        <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo"
-            data-bs-parent="#accordionFlushExample">
-            <div class="accordion-body">NTU Ave 1239819283<br>
-                Contact: 123891283
-                <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.6194581434756!2d103.7884388500985!3d1.404612661783859!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31da13d91b72b4d3%3A0x900f5e4b86449d19!2s80%20Mandai%20Lake%20Rd%2C%20Singapore%20729826!5e0!3m2!1sen!2ssg!4v1665648782937!5m2!1sen!2ssg"
-                    width="100%" height="200vw" style="border:0;" allowfullscreen="" loading="lazy"
-                    referrerpolicy="no-referrer-when-downgrade"></iframe>
-            </div>
-        </div>
-    </div>
-    <div class="accordion-item">
-        <h2 class="accordion-header" id="flush-headingThree">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
-                Jurong East
-            </button>
-        </h2>
-        <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree"
-            data-bs-parent="#accordionFlushExample">
-            <div class="accordion-body">NTU Ave 1239819283<br>
-                Contact: 123891283
-                <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.6194581434756!2d103.7884388500985!3d1.404612661783859!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31da13d91b72b4d3%3A0x900f5e4b86449d19!2s80%20Mandai%20Lake%20Rd%2C%20Singapore%20729826!5e0!3m2!1sen!2ssg!4v1665648782937!5m2!1sen!2ssg"
-                    width="100%" height="200vw" style="border:0;" allowfullscreen="" loading="lazy"
-                    referrerpolicy="no-referrer-when-downgrade"></iframe>
-            </div>
-        </div>
-    </div>
-</div>
-</div>
 
     <!-- Footer -->
     <div class="container-fluid footer-container">
@@ -488,10 +605,14 @@ h1 {
             </div>
 
             <div class="col-4 text-center px-2" style="font-weight: 400;">
-                <div class="quicklinksdiv"><a href="./contact-us.html#contact-info" class="quicklinks midlinks">Find a Clinic</a></div>
-                <div class="quicklinksdiv"><a href="../index.html#package-recommendation" class="quicklinks midlinks">Tests for Travel</a></div>
-                <div class="quicklinksdiv"><a href="./booknow.html" class="quicklinks midlinks">Book an Appointment</a></div>
-                <div class="quicklinksdiv"><a href="./contact-us.html" class="quicklinks midlinks">Make An Enquiry</a></div>
+                <div class="quicklinksdiv"><a href="./contact-us.html#contact-info" class="quicklinks midlinks">Find a
+                        Clinic</a></div>
+                <div class="quicklinksdiv"><a href="../index.html#package-recommendation"
+                        class="quicklinks midlinks">Tests for Travel</a></div>
+                <div class="quicklinksdiv"><a href="./booknow.html" class="quicklinks midlinks">Book an Appointment</a>
+                </div>
+                <div class="quicklinksdiv"><a href="./contact-us.html" class="quicklinks midlinks">Make An Enquiry</a>
+                </div>
             </div>
 
             <div class="col-4 text-center px-2">
@@ -565,6 +686,8 @@ h1 {
         </div>
     </div>
     <!--End of footer-->
+
+
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
