@@ -45,6 +45,10 @@
         h1 {
             font-family: 'Playfair Display', sans-serif;
         }
+        ::selection {
+            color: white;
+            background: #FEBB60;
+        }
 
         a {
             text-decoration: none;
@@ -219,6 +223,7 @@
 
         .countrycontainer {
             padding: 5rem 5%;
+            padding-bottom: 0;
             color: #112F24;
         }
 
@@ -354,13 +359,14 @@
         }
 
         .pcrcontainer .button {
-            color: #112F24;
-            border-bottom-color: #112F24;
+            color: #333333;
+            border-bottom-color: #333333;
         }
 
         .pcrcontainer .button:hover {
-            background-color: #112F24;
+            background-color: #41B188;
             color: white;
+            border-bottom-color:white;
         }
 
         /* Start of Footer CSS*/
@@ -503,6 +509,74 @@
         <h1 style="font-size: 3rem;" class="text-center">
             Get a curated plan for your destination
         </h1>
+
+        <div class="w-75 p-4 mx-auto my-5" style="background-color:#41B188; color: white;">
+            <div class="row align-items-center">
+                <div class="col-lg-5 col-md-12 py-2" style="font-size: 1.25rem; font-weight: 400;">
+                    Select your destination 
+                </div>
+                <div class="col-lg-7 col-md-12 py-2">
+                    <div class="row dropdownrow">
+                        <div class="col-12">
+                            <div class="dropdown-center ">
+                                <button class="btn btn-secondary dropdown-toggle countrydropdown rounded-0 text-center"
+                                    type="button" data-bs-toggle="dropdown" aria-expanded="false" id="countrydopdownbtn">
+                                    <span class="" id="countrydopdownbtnspan"></span>
+                                    <span id="countrydopdownbtntext" style="font-size: 1rem;">Select a Country</span>
+                                </button>
+                                <ul class="dropdown-menu shadow">
+                                    <li><a class="dropdown-item" id="dropdownbtnChina"><span class="fi fi-cn"></span> China</a></li>
+                                    <li><a class="dropdown-item" id="dropdownbtnChina"><span class="fi fi-in"></span> India</a></li>
+                                    <li><a class="dropdown-item" id="dropdownbtnChina"><span class="fi fi-ph"></span> Philippines</a></li>
+                                    <li><a class="dropdown-item" id="dropdownbtnChina"><span class="fi fi-mm"></span> Myanmar</a></li>
+                                    <li><a class="dropdown-item" id="dropdownbtnFrance"><span class="fi fi-fr"></span> France</a>
+                                    </li>
+                                    <li><a class="dropdown-item" id="dropdownbtnGermany"><span class="fi fi-de"></span> Germany</a>
+                                    </li>
+                                    <li><a class="dropdown-item" id="dropdownbtnItaly"><span class="fi fi-it"></span> Italy</a></li>
+                                    <li><a class="dropdown-item" id="dropdownbtnKorea"><span class="fi fi-kr"></span> Korea</a></li>
+                                    <li><a class="dropdown-item" id="dropdownbtnMexico"><span class="fi fi-mx"></span> Mexico</a>
+                                    </li>
+                                    <li><a class="dropdown-item" id="dropdownbtnSpain"><span class="fi fi-es"></span> Spain</a></li>
+                                    <li><a class="dropdown-item" id="dropdownbtnTaiwan"><span class="fi fi-tw"></span> Taiwan</a>
+                                    </li>
+                                    <li><a class="dropdown-item" id="dropdownbtnThailand"><span class="fi fi-th"></span>
+                                            Thailand</a></li>
+                                    <li><a class="dropdown-item" id="dropdownbtnTurkey"><span class="fi fi-tr"></span> Turkey</a>
+                                    </li>
+                                    <li><a class="dropdown-item" id="dropdownbtnUnitedKingdom"><span class="fi fi-gb"></span> United
+                                            Kingdom</a></li>
+                                    <li><a class="dropdown-item" id="dropdownbtnUnitedStates"><span class="fi fi-us"></span> United
+                                            States</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div class="row align-items-center">
+                <div class="col-lg-5 col-md-12 py-2" style="font-size: 1.25rem; font-weight: 400;">
+                    Number of people
+                </div>
+                <div class="col-lg-7 col-md-12 py-2">
+                    <div class="row mx-auto align-items-center">
+                        <div class="col-4" style="padding-left: 0;">
+                            <button style="background-color: white; color: #112F24; border: none;" class="px-3 py-1 d-block" id="decrement-people-count-btn">
+                                -
+                            </button>
+                        </div>
+                        <div class="col-4 text-center" id="people-count" style="font-weight: 400;">1</div>
+                        <div class="col-4 d-flex justify-content-end" style="padding-right: 0;">
+                            <button style="background-color: white; color: #112F24; border: none" class="px-3 py-1 d-block" id="increment-people-count-btn">
+                                +
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
         <!--Box for recommended Plan-->
         <div class="recommplancontainer w-75 my-5 mx-auto" style="color: #112F24;">
             <h2 class="text-center display-6 mt-5" style="font-size: 3rem;">
@@ -570,72 +644,9 @@
             </div>
         </div>
 
-        <div class="w-75 p-4 mx-auto my-5" style="background-color:#41B188; color: white;">
-            <div class="row align-items-center">
-                <div class="col-lg-5 col-md-12 py-2" style="font-size: 1.25rem; font-weight: 400;">
-                    Select your destination 
-                </div>
-                <div class="col-lg-7 col-md-12 py-2">
-                    <div class="row dropdownrow">
-                        <div class="col-12">
-                            <div class="dropdown-center ">
-                                <button class="btn btn-secondary dropdown-toggle countrydropdown rounded-0 text-center"
-                                    type="button" data-bs-toggle="dropdown" aria-expanded="false" id="countrydopdownbtn">
-                                    <span class="" id="countrydopdownbtnspan"></span>
-                                    <span id="countrydopdownbtntext" style="font-size: 1rem;">Select a Country</span>
-                                </button>
-                                <ul class="dropdown-menu shadow">
-                                    <li><a class="dropdown-item" id="dropdownbtnChina"><span class="fi fi-cn"></span> China</a></li>
-                                    <li><a class="dropdown-item" id="dropdownbtnFrance"><span class="fi fi-fr"></span> France</a>
-                                    </li>
-                                    <li><a class="dropdown-item" id="dropdownbtnGermany"><span class="fi fi-de"></span> Germany</a>
-                                    </li>
-                                    <li><a class="dropdown-item" id="dropdownbtnItaly"><span class="fi fi-it"></span> Italy</a></li>
-                                    <li><a class="dropdown-item" id="dropdownbtnKorea"><span class="fi fi-kr"></span> Korea</a></li>
-                                    <li><a class="dropdown-item" id="dropdownbtnMexico"><span class="fi fi-mx"></span> Mexico</a>
-                                    </li>
-                                    <li><a class="dropdown-item" id="dropdownbtnSingapore"><span class="fi fi-sg"></span>
-                                            Singapore</a></li>
-                                    <li><a class="dropdown-item" id="dropdownbtnSpain"><span class="fi fi-es"></span> Spain</a></li>
-                                    <li><a class="dropdown-item" id="dropdownbtnTaiwan"><span class="fi fi-tw"></span> Taiwan</a>
-                                    </li>
-                                    <li><a class="dropdown-item" id="dropdownbtnThailand"><span class="fi fi-th"></span>
-                                            Thailand</a></li>
-                                    <li><a class="dropdown-item" id="dropdownbtnTurkey"><span class="fi fi-tr"></span> Turkey</a>
-                                    </li>
-                                    <li><a class="dropdown-item" id="dropdownbtnUnitedKingdom"><span class="fi fi-gb"></span> United
-                                            Kingdom</a></li>
-                                    <li><a class="dropdown-item" id="dropdownbtnUnitedStates"><span class="fi fi-us"></span> United
-                                            States</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <hr>
-            <div class="row align-items-center">
-                <div class="col-lg-5 col-md-12 py-2" style="font-size: 1.25rem; font-weight: 400;">
-                    Number of people
-                </div>
-                <div class="col-lg-7 col-md-12 py-2">
-                    <div class="row mx-auto align-items-center">
-                        <div class="col-4" style="padding-left: 0;">
-                            <button style="background-color: white; color: #112F24; border: none;" class="px-3 py-1 d-block" id="decrement-people-count-btn">
-                                -
-                            </button>
-                        </div>
-                        <div class="col-4 text-center" id="people-count" style="font-weight: 400;">1</div>
-                        <div class="col-4 d-flex justify-content-end" style="padding-right: 0;">
-                            <button style="background-color: white; color: #112F24; border: none" class="px-3 py-1 d-block" id="increment-people-count-btn">
-                                +
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+        <!--Dropdown for country selection-->
+
+        
 
     <hr class="mx-auto" style="width: 90%">
 
